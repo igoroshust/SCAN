@@ -44,6 +44,7 @@ img {
 .header {
     position: relative;
     min-height: 761px;
+    overflow-x: hidden;
 }
 
 /* Navigation */
@@ -171,12 +172,11 @@ img {
     display: flex;
     flex-direction: row;
     padding-top: 64px;
-    padding-left: 0;
     min-height: 620px;
 }
 
 .header__content {
-    max-width: 743px;
+    max-width: 720px;
 
     /* Чтобы картинка не налазила на текст при изменении окна браузера */
     position: relative;
@@ -215,8 +215,8 @@ img {
 
 .header__img img {
     position: absolute; /* чтобы картинка не сжимала другие блоки */
-    width: 629px;
-    height: 593px;
+    width: 629px; /* 629px */
+    height: 593px; /* 593 */
     pointer-events: none; /* запрет на сохранение картинке, иначе кнопки из nav становятся недоступны */
     bottom: 25px;
 }
