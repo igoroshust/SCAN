@@ -39,7 +39,7 @@ img {
     max-width: none;
 }
 
-/* ---------------------------------------------------- Header ------------------------------------------------------ */
+/* ---------------------------------------------------- Header Section ---------------------------------------------- */
 
 .header {
     position: relative;
@@ -147,7 +147,7 @@ img {
     color: var(--secondary);
 }
 
-/* Кнопка "Войти"  */
+/* Кнопка "Войти" */
 .btn.btn--login {
     background-color: var(--btn-header-bg-color);
     padding: 8px;
@@ -166,12 +166,12 @@ img {
     top: 1px;
 }
 
-/* HEADER 2 */
-
+/* HEADER CONTENT */
 .header__row {
     display: flex;
     flex-direction: row;
-    padding-top: 24px;
+    padding-top: 64px;
+    padding-left: 0;
     min-height: 620px;
 }
 
@@ -186,7 +186,7 @@ img {
 .header__title {
     font-size: 60px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .header__text {
@@ -199,11 +199,12 @@ img {
 .btn--header {
     width: 335px;
     height: 59px;
-    padding: 14px 64px;
+    padding: 15px 65px;
     border-radius: 5px;
     color: #fff;
     background: var(--btn-bg-color);
-    margin-bottom: 219px;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 .header__img {
@@ -217,6 +218,6 @@ img {
     width: 629px;
     height: 593px;
     pointer-events: none; /* запрет на сохранение картинке, иначе кнопки из nav становятся недоступны */
-
+    bottom: 25px;
 }
 
