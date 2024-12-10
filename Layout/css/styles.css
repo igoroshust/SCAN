@@ -9,7 +9,9 @@
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
     --bg-color: #fff;
     --footer-color: #029491;
-    --btn-bg-color: #7CE3E1;
+    --btn-header-bg-color: #7CE3E1;
+    --btn-bg-color: #5970FF;
+
 }
 
 /* Скрываение реализованных элементов при модульной вёрстке */
@@ -39,8 +41,12 @@ img {
 
 /* ---------------------------------------------------- Header ------------------------------------------------------ */
 
-/* Navigation */
+.header {
+    position: relative;
+    min-height: 761px;
+}
 
+/* Navigation */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -49,7 +55,7 @@ img {
 }
 
 .nav > :nth-child(2) {
-     margin-left: 273px;
+     margin-left: 200px; /*273*/
 }
 
 .nav__list {
@@ -108,21 +114,21 @@ img {
     flex-direction: column;
     gap: 3px;
     justify-content: flex-end;
-    padding-bottom: 12px;
 
     position: relative;
     font-size: 14px;
     color: rgb(0, 0, 0, 0.7);
+    white-space: normal; /* перенос текста */
 }
 
-.header__user-info span {
-    position: absolute;
-    right: 0;
+.header__user-info a {
     font-size: 10px;
     color: var(--secondary);
+    align-self: flex-end;
 }
 
 /* Секция "Зарегистрироваться | Войти" */
+
 .nav__login {
     display: flex;
     align-items: center;
@@ -130,8 +136,8 @@ img {
 }
 
 .nav__login span {
-    width: 1px;
-    height: 30px;
+    width: 2px;
+    height: 34px;
     background-color: var(--footer-color);
 }
 
@@ -141,12 +147,76 @@ img {
     color: var(--secondary);
 }
 
+/* Кнопка "Войти"  */
 .btn.btn--login {
-    background-color: var(--btn-bg-color);
-    padding: 6px;
+    background-color: var(--btn-header-bg-color);
+    padding: 8px;
     border-radius: 5px;
     color: #000;
     font-size: 14px;
     font-weight: 500;
+}
+.btn:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* HEADER 2 */
+
+.header__row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    min-height: 620px;
+}
+
+.header__content {
+    max-width: 743px;
+
+    /* Чтобы картинка не налазила на текст при изменении окна браузера */
+    position: relative;
+    z-index: 1;
+}
+
+.header__title {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.header__text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 70px;
+    max-width: 534px; /* сабтайтл не выходит за пределы заголовка */
+}
+
+.btn--header {
+    width: 335px;
+    height: 59px;
+    padding: 14px 64px;
+    border-radius: 5px;
+    color: #fff;
+    background: var(--btn-bg-color);
+    margin-bottom: 219px;
+}
+
+.header__img {
+    content: "",
+    position: relative;
+    flex-grow: 1; /* чтобы картинка растянулась и не налазила на блоки с контентом */
+}
+
+.header__img img {
+    position: absolute; /* чтобы картинка не сжимала другие блоки */
+    width: 629px;
+    height: 593px;
+    pointer-events: none; /* запрет на сохранение картинке, иначе кнопки из nav становятся недоступны */
+
 }
 
