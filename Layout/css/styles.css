@@ -8,6 +8,8 @@
     --container-padding: 60px;
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
     --bg-color: #fff;
+    --footer-color: #029491;
+    --btn-bg-color: #7CE3E1;
 }
 
 /* Скрываение реализованных элементов при модульной вёрстке */
@@ -36,7 +38,6 @@ img {
 }
 
 /* ---------------------------------------------------- Header ------------------------------------------------------ */
-
 
 /* Navigation */
 
@@ -120,3 +121,32 @@ img {
     font-size: 10px;
     color: var(--secondary);
 }
+
+/* Секция "Зарегистрироваться | Войти" */
+.nav__login {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.nav__login span {
+    width: 1px;
+    height: 30px;
+    background-color: var(--footer-color);
+}
+
+.nav__login .reg {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
+.btn.btn--login {
+    background-color: var(--btn-bg-color);
+    padding: 6px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
