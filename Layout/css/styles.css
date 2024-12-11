@@ -7,10 +7,13 @@
     --container-width: 1440px;
     --container-padding: 60px;
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
+    --secondary-black: rgba(0,0,0,0.5);
     --bg-color: #fff;
     --footer-color: #029491;
     --btn-header-bg-color: #7CE3E1;
     --btn-bg-color: #5970FF;
+    --yellow: #FFB64F;
+    --blue-badge: #3BA5E0;
 
 }
 
@@ -225,6 +228,10 @@ img {
 
 /* ---------------------------------------------------- Factoids ---------------------------------------------------- */
 
+.main {
+    margin-top: 80px;
+}
+
 .h2 {
     font-size: 45px;
 }
@@ -278,4 +285,99 @@ img {
 }
 */
 
+
+/* ---------------------------------------------------- Rate -------------------------------------------------------- */
+
+.rate {
+    margin-top: 107px;
+}
+
+.rate__row {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 37px;
+}
+
+.rate-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 415px;
+    height: 540px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.rate-card--beginner {
+   border: 3px solid var(--yellow);
+}
+
+.rate__header {
+   padding: 11px 10px 24px 30px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.rate__header--beginner {
+    background-color: var(--yellow);
+}
+
+.rate__title {
+    margin-top: 8px;
+}
+
+.rate__title-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.rate__title-desc {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.rate__content {
+    padding: 0px 10px 24px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.rate__badge {
+    position: absolute;
+    right: 10px;
+    width: 134px;
+    height: 24px;
+    padding: 5px 13px 22px 13px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 10px;
+    background: var(--blue-badge);
+}
+
+.rate__price {
+    padding-top: 14px; /* 4px */
+}
+
+.rate__price-actually {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.rate__price-outdated {
+    margin-left: 19px;
+    color: var(--secondary-black);
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.rate__price-paragraph {
+    padding-top: 10px;
+}
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header none">
     <div class="container">
         <div class="header__top">
             <nav class="nav">
@@ -65,11 +65,11 @@
     </div>
 </header>
 
-<main>
-    <section class="factoids">
+<main class="main">
+    <section class="factoids none">
         <div class="container">
+          <h2 class="h2">ПОЧЕМУ ИМЕННО МЫ</h2>
             <div class="factoids__column">
-                           <h2 class="h2">ПОЧЕМУ ИМЕННО МЫ</h2>
 
                 <div class="factoids__content">
                         <button class="slider__btn slider__btn--prev">
@@ -99,6 +99,51 @@
                     <img src="./img/main/man-whole.png" alt="Почему именно СКАН" />
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="rate">
+        <div class="container">
+          <h2 class="h2">НАШИ ТАРИФЫ</h2>
+            <div class="rate__row">
+                <div class="rate-card rate-card--beginner">
+
+                    <div class="rate__header rate__header--beginner">
+                        <div class="rate__title">
+                            <p class="rate__title rate__title-title">Beginner</p>
+                            <p class="rate__title rate__title-desc">Для небольшого исследования</p>
+                        </div>
+                        <div class="rate__img">
+                            <img src="./img/main/lamp-rate.png" alt="СКАН ТАРИФ для небольшого исследования">
+                        </div>
+                    </div>
+
+                    <div class="rate__content">
+                        <div class="rate__badge">
+                            <p>Текущий тариф</p>
+                        </div>
+
+                        <div class="rate__price">
+                            <p class="rate__price rate__price-actually">799 ₽<span class="rate__price rate__price-outdated">1200 ₽</span></p>
+                            <p class="paragrath rate__price-paragraph">или 150 ₽/мес. при рассрочке на 24 мес.</p>
+                        </div>
+
+                        <ul class="rate__list">
+                             <p>В тариф входит:</p>
+                            <li>Безлимитная история запросов</li>
+                            <li>Безопасная сделка</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+
+                        <button class="btn">
+                            <a href="#!">Перейти в личный кабинет</a>
+                        </button>
+
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </section>
