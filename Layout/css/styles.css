@@ -13,6 +13,7 @@
     --btn-header-bg-color: #7CE3E1;
     --btn-bg-color: #5970FF;
     --yellow: #FFB64F;
+    --aquamarine: #7CE3E1;
     --blue-badge: #3BA5E0;
     --btn-gray-bg-color: #D2D2D2;
 
@@ -255,8 +256,8 @@ img {
 }
 
 .factoids__item {
-    width: 400px;
-    min-height: 225px;
+    width: 400px; /* ? */
+    min-height: 225px; /* ? */
     padding: 30px 35px 40px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -314,6 +315,10 @@ img {
    border: 3px solid var(--yellow);
 }
 
+.rate-card--pro {
+    border: 3px solid var(--aquamarine);
+}
+
 .rate__header {
    padding: 11px 10px 24px 30px;
    display: flex;
@@ -322,6 +327,10 @@ img {
 
 .rate__header--beginner {
     background-color: var(--yellow);
+}
+
+.rate__header--pro {
+    background-color: var(--aquamarine);
 }
 
 .rate__title {
@@ -337,6 +346,18 @@ img {
     margin-top: 10px;
     font-size: 18px;
     font-weight: 400;
+}
+
+.rate__img {
+    max-width: 93px;
+    max-height: 83px;
+}
+
+.rate__img img {
+    max-width: 100%;
+    height: auto; /* Сохранение пропорций */
+    display: block; /* Убираем пробелы под изображением */
+    object-fit: cover;
 }
 
 .rate__content {
@@ -420,9 +441,18 @@ img {
     width: 355px;
     height: 59px;
     padding: 15px 40px 17px 45px;
-    background: var(--btn-gray-bg-color);
+    text-align: center;
     font-size: 20px;
     font-weight: 400;
-    color: #000;
     border-radius: 5px;
+}
+
+.btn--rate-beginner {
+    background: var(--btn-gray-bg-color);
+    color: #000;
+}
+
+.btn--rate-pro {
+    background: var(--btn-bg-color);
+    color: #fff;
 }
