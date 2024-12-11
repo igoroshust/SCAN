@@ -5,7 +5,7 @@
 /* Объявляем CSS-переменные. root - верхний уровень (html) */
 :root {
     --container-width: 1440px;
-    --container-padding: 60px;
+    --container-padding: 60px; /* 60 */
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
     --secondary-black: rgba(0,0,0,0.5);
     --bg-color: #fff;
@@ -63,13 +63,13 @@ img {
 }
 
 .nav > :nth-child(2) {
-     margin-left: 200px; /*273*/
+     margin-left: 273px; /*273*/
 }
 
 .nav__list {
     display: flex;
     justify-content: space-between;
-    gap: 49px;
+    gap: 50px;
 }
 
 .nav__list a {
@@ -81,7 +81,7 @@ img {
 .header__info {
     min-width: 175px;
     height: 63px;
-    padding: 3px;
+    padding: 14px 16px 18px 10px;
     text-align: center;
     background-color: rgba(217,217,217,0.3);
     border-radius: 5px;
@@ -93,8 +93,9 @@ img {
 }
 
 .header__info p {
-    color: var(--secondary);
+    color: var(--secondary-black);
     font-size: 10px;
+    font-weight: 450;
 }
 
 .header__info span {
@@ -143,7 +144,7 @@ img {
     column-gap: 20px;
 }
 
-.nav__login span {
+.nav__login >:nth-child(2) {
     width: 2px;
     height: 34px;
     background-color: var(--footer-color);
@@ -500,4 +501,8 @@ img {
 
 .nav__footer >:nth-child(4) {
     margin-top: 21px;
+}
+
+.nav__footer a {
+    color: #fff;
 }
