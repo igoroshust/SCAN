@@ -221,3 +221,35 @@ img {
     bottom: 25px;
 }
 
+/* ---------------------------------------------------- Factoids ---------------------------------------------------- */
+
+.h2 {
+    font-size: 45px;
+}
+
+.factoids__column {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.factoids__content {
+    margin-top: 70px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.factoids__item {
+    width: 400px;
+    height: 225px;
+    padding: 30px 40px 68px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.paragraph {
+    padding-top: 19px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
