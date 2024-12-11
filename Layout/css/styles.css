@@ -29,6 +29,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -37,6 +38,7 @@ h1, h2, h3 {
 
 img {
     max-width: none;
+    pointer-events: none;
 }
 
 /* ---------------------------------------------------- Header Section ---------------------------------------------- */
@@ -228,21 +230,26 @@ img {
 }
 
 .factoids__column {
+    margin-top: 81px;
     display: flex;
     flex-direction: column;
     gap: 70px;
 }
 
 .factoids__content {
-    margin-top: 70px;
     display: flex;
-    column-gap: 30px;
+    column-gap: 4px;
+}
+
+.factoids__content > :nth-child(3),
+.factoids__content > :nth-child(4) {
+   margin-left: 30px;
 }
 
 .factoids__item {
     width: 400px;
-    height: 225px;
-    padding: 30px 40px 68px 20px;
+    min-height: 225px;
+    padding: 30px 35px 40px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -252,4 +259,23 @@ img {
     font-size: 18px;
     font-weight: 400;
 }
+
+.factoids__img {
+    width: 1307px; /* 1307 */
+    height: 575px; /* 575 */
+}
+
+/* Графические элементы вокруг картинки
+.factoids__img::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 600px;
+    height: 500px;
+
+    background-image: url('../img/main/factoids-elements.png');
+    background-size: 100%;
+}
+*/
+
 
