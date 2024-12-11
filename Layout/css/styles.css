@@ -307,7 +307,7 @@ img {
     gap: 12px;
     width: 415px;
     max-width: 100%;
-    height: 540px;
+    max-height: 540px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
@@ -333,7 +333,7 @@ img {
    display: flex;
    justify-content: space-between;
    border-radius: 10px 10px 0 0;
-   /* max-height: 119px; */
+   max-height: 119px;
 }
 
 .rate__header--beginner {
@@ -377,7 +377,7 @@ img {
 }
 
 .rate__content {
-    padding: 0px 10px 24px 30px;
+    padding: 0px 30px 24px 30px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -400,6 +400,7 @@ img {
 
 .rate__price {
     padding-top: 14px; /* 4px */
+    width: 380px;
     position: relative;
 }
 
@@ -430,7 +431,7 @@ img {
 }
 
 .rate__tax-business {
-    margin-top: 42px;
+    margin-top: 44px;
 }
 
 .rate__tax-paragraph {
@@ -481,4 +482,22 @@ img {
 .btn--rate-md {
     background: var(--btn-bg-color);
     color: #fff;
+}
+
+/* ---------------------------------------------------- Footer ------------------------------------------------------ */
+
+.footer {
+    margin-top: 118px;
+    background: var(--footer-color);
+}
+
+.nav__footer {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    text-align: right;
+}
+
+.nav__footer >:nth-child(4) {
+    margin-top: 21px;
 }
