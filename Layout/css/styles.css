@@ -155,8 +155,7 @@ img {
 
 .nav__login .reg {
     font-size: 14px;
-    font-weight: 400;
-    color: var(--secondary);
+    color: var(--secondary-black);
 }
 
 /* Кнопка "Войти" */
@@ -541,13 +540,23 @@ img {
 .authorization-form {
     position: absolute;
     width: 429px;
-    height: 530px; /* 523 */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 537px; /* 523 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     top: 50px; /* 74 */
     left: 45px;
     right: 0;
     bottom: -10px;
+}
+
+.authorization-form::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 92px;
+    top: -55px;
+    left: -48px;
+    background-image: url('../img/auth/lock.png');
 }
 
 .authorization-form__container {
@@ -577,6 +586,7 @@ img {
 
 .authorization-form__btn {
     font-size: 16px;
+    font-weight: 300;
     padding-bottom: 8px;
     /* width: 100%; */
 }
@@ -584,13 +594,13 @@ img {
 .authorization-form__btn-login {
     width: 151px;
     color: var(--footer-color);
-    border-bottom: 2px solid var(--footer-color);
+    border-bottom: 2.5px solid var(--footer-color);
 }
 
 .authorization-form__btn-signup {
     width: 213px;
     color: var(--btn-signup);
-    border-bottom: 2px solid var(--btn-signup);
+    border-bottom: 2.5px solid var(--btn-signup);
 }
 
 .authorization-form__content {
@@ -614,8 +624,7 @@ img {
 .authorization-form__input {
     width: 379px;
     height: 43px;
-    border: 1px solid var(--btn-signup);
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    border: 1px solid var(--btn-signup); /* можно использовать inset */
     border-radius: 5px;
     padding: 0px 20px;
     margin-top: 15px;
@@ -651,6 +660,7 @@ img {
 }
 
 .authorization-form__oauth-paragraph {
+    margin-top: 5px;
     font-size: 16px;
     color: var(--auth-label-color);
 }
@@ -668,4 +678,8 @@ img {
     border-radius: 3px;
     border: 1px solid var(--oauth-btn-border-color);
     padding: 6px 18px;
+}
+
+.oauth__btn-facebook {
+    padding-top: 8px;
 }
