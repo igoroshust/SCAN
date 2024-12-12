@@ -17,6 +17,8 @@
     --blue-badge: #3BA5E0;
     --btn-gray-bg-color: #D2D2D2;
     --btn-signup: #C7C7C7;
+    --auth-label-color: #949494;
+    --oauth-btn-border-color: rgba(89,112,255,0.5);
 
 }
 
@@ -518,7 +520,6 @@ img {
 .auth__content {
     margin-top: 55px;
     width: 817px;
-    border: 2px solid red;
 }
 
 .auth__title {
@@ -534,16 +535,16 @@ img {
 .auth__form {
     min-width: 480px;
     min-height: 578px;
-    border: 2px solid teal;
     position: relative;
 }
 
 .authorization-form {
     position: absolute;
     width: 429px;
-    height: 523px;
-    border: 2px dotted red;
-    top: 40px; /* 74 */
+    height: 530px; /* 523 */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    top: 50px; /* 74 */
     left: 45px;
     right: 0;
     bottom: -10px;
@@ -551,32 +552,120 @@ img {
 
 .authorization-form__container {
     padding: 25px 25px 39px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.authorization-form__container > *:nth-child(-n+4) {
+    margin-bottom: 30px;
+}
+
+.authorization-form__container > *:nth-last-child(2) {
+    margin-bottom: 25px;
 }
 
 .authorization-form__navigation {
     max-width: 379px;
     height: 29px;
     display: flex;
-    justify-content: space-between;
-    gap:15px;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 .authorization-form__navigation {
-
 }
 
 .authorization-form__btn {
     font-size: 16px;
     padding-bottom: 8px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .authorization-form__btn-login {
+    width: 151px;
     color: var(--footer-color);
     border-bottom: 2px solid var(--footer-color);
 }
 
 .authorization-form__btn-signup {
+    width: 213px;
     color: var(--btn-signup);
     border-bottom: 2px solid var(--btn-signup);
+}
+
+.authorization-form__content {
+    margin-top: 10px;
+}
+
+.authorization-form__content_input_password {
+    margin-top: 20px;
+}
+
+.authorization-form__content_btn-login {
+    margin-top: 30px; /* 55 */
+}
+
+.authorization-form__label {
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--auth-label-color);
+}
+
+.authorization-form__input {
+    width: 379px;
+    height: 43px;
+    border: 1px solid var(--btn-signup);
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin-top: 15px;
+}
+
+.auth-btn__btn-login {
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    background: var(--btn-bg-color);
+    border-radius: 5px;
+    width: 379px;
+    height: 59px;
+    padding: 16px 156px;
+    opacity: 0.5;
+}
+
+/* Обнуление стилей для кнопки "Войти" */
+.auth-btn__btn-login:hover,
+.auth-btn__btn-login:active {
+    opacity: 0.5;
+    position: none;
+    top: 0;
+}
+
+.auth-btn__btn-recovery {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline !important;
+    color: var(--btn-bg-color);
+}
+
+.authorization-form__oauth-paragraph {
+    font-size: 16px;
+    color: var(--auth-label-color);
+}
+
+.oauth__btns {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.oauth__btn {
+    width: 96px;
+    height: 31px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid var(--oauth-btn-border-color);
+    padding: 6px 18px;
 }

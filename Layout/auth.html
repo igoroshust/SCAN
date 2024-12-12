@@ -44,10 +44,41 @@
                         <div class="auth__form">
                                 <form class="authorization-form">
                                     <div class="authorization-form__container">
-                                    <div class="authorization-form__navigation">
-                                        <button class="authorization-form__btn authorization-form__btn-login">Войти</button>
-                                        <button class="authorization-form__btn authorization-form__btn-signup">Зарегистрироваться</button>
-                                    </div>
+
+                                        <div class="authorization-form__navigation">
+                                            <button class="authorization-form__btn authorization-form__btn-login">Войти</button>
+                                            <button class="authorization-form__btn authorization-form__btn-signup">Зарегистрироваться</button>
+                                        </div>
+
+
+                                        <div class="authorization-form__content">
+
+                                            <div class="authorization-form__content authorization-form__content_input_login">
+                                                 <label class="authorization-form__label" for="login">Логин или номер телефона:</label>
+                                                 <input class="authorization-form__input" type="text" id="login" name="login">
+                                            </div>
+                                            <div class="authorization-form__content authorization-form__content_input_password">
+                                                <label class="authorization-form__label" for="password">Пароль: </label>
+                                                <input class="authorization-form__input" type="password" id="password" name="password">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="authorization-form__content authorization-form__content_btn-login">
+                                            <a href="#!" class="btn auth-btn__btn-login">Войти</a>
+                                        </div>
+                                            <a href="#!" class="auth-btn__btn-recovery">Восстановить пароль</a>
+
+                                        <div class="authorization-form__oauth">
+                                            <p class="authorization-form__oauth-paragraph">Войти через:</p>
+
+                                            <div class="oauth__btns">
+                                                <button class="oauth__btn oauth__btn-google"><img src="./img/auth/google.svg" alt="СКАН войти через google"></button>
+                                                <button class="oauth__btn oauth__btn-facebook"><img src="./img/auth/facebook.svg" alt="СКАН войти через facebook"></button>
+                                                <button class="oauth__btn oauth__btn-yandex"><img src="./img/auth/yandex.svg" alt="СКАН войти через yandex"></button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </form>
                         </div>
