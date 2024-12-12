@@ -468,7 +468,7 @@ img {
 .btn--rate {
     width: 355px;
     height: 59px;
-    padding: 15px 40px 17px 45px;
+    padding: 15px 40px 5px 45px;
     text-align: center;
     font-size: 20px;
     font-weight: 400;
@@ -505,4 +505,33 @@ img {
 
 .nav__footer a {
     color: #fff;
+}
+
+/* ---------------------------------------------------- Auth Section ------------------------------------------------ */
+
+.auth__row {
+    display: flex;
+    margin-top: 14px;
+}
+
+.auth__content {
+    margin-top: 55px;
+    width: 817px;
+    border: 2px solid red;
+}
+
+.auth__title {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.auth__img {
+    margin-top: 14px;
+    padding-left: 112px;
+}
+
+.auth__form {
+    width: 480px;
+    height: 578px;
+    border: 2px solid teal;
 }
