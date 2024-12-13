@@ -20,18 +20,18 @@
                     <img src="./img/main/logo-header.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
                 </div>
 
-                <ul class="nav__list nav__list-header"> <!-- доп.класс добавлен, т.к. в футере список пропадает -->
+                <ul class="nav__list nav__list-header none"> <!-- доп.класс добавлен, т.к. в футере список пропадает -->
                     <li><a href="#!">Главная</a></li>
                     <li><a href="#!">Тарифы</a></li>
                     <li><a href="#!">FAQ</a></li>
                 </ul>
 
-                <div class="header__info">
+                <div class="header__info none">
 <!--                    <img src="./img/main/spinner.svg" alt="СКАН loader spinner">-->
                     <p>Использовано компаний: <span class="first-value">34</span></p>
                     <p>Лимит по категориям: <span class="second-value">100</span></p>
                 </div>
-                <div class="header__user">
+                <div class="header__user none">
                     <div class="header__user-info">
                         <p>Алексей А.</p>
                         <a href="#!" class="reg">Выйти</a>
@@ -47,12 +47,21 @@
                     <li></li>
                     <li><a href="#!" class="btn btn--login">Войти</a></li>
                 </ul>
+
+                <!-- Бургер-меню-->
+                <button type="button" class="nav__toggle">
+                    <div class="menu-icon-wrapper">
+                        <div class="menu-icon"></div>
+                    </div>
+                </button>
+
+
             </nav>
         </div>
     </div>
 </header>
 
-<main class="main">
+<main class="main none">
 
     <section class="header-content">
             <div class="container">

@@ -27,6 +27,11 @@
     display: none !important;
 }
 
+/* Убираем вертикальный скролл */
+.no-scroll {
+    overflow-y: hidden;
+}
+
 /* Создание контейнера для контента */
 .container {
     max-width: var(--container-width);
@@ -725,3 +730,64 @@ img {
 .oauth__btn-facebook {
     padding-top: 8px;
 }
+
+/* ---------------------------------------------------- Burger Menu ------------------------------------------------- */
+
+.menu-icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Центральный прямоугольник бургера */
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: var(--footer-color);
+}
+
+/* Нижний прямоуголник бургера */
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 30px;
+    height: 5px;
+    background-color: var(--footer-color);
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s; /* размещение по центру */
+}
+
+/* Верхний прямоугольник бургера */
+.menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: var(--footer-color);
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+/* Анимация бургера */
+.menu-icon.menu-icon-active {
+    background-color: transparent;
+}
+
+.menu-icon.menu-icon-active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.menu-icon.menu-icon-active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+
