@@ -10,7 +10,8 @@
 </head>
 <body>
 
-<div class="test">
+<!-- Класс-надстройка для фиксации футера к низу страницы-->
+<div class="footer__sticky">
 <header class="header">
     <div class="container">
         <div class="header__top">
@@ -33,10 +34,16 @@
                 </ul>
             </nav>
 
-            <div class="auth">
+            </div>
+        </div>
+</header>
+
+<main class="main">
+    <section class="auth">
+        <div class="container">
                     <div class="auth__row">
                         <div class="auth__content">
-                            <h2 class="auth__title">ДЛЯ ОФОРМЛЕНИЯ ПОДПИСКИ НА ТАРИФ, НЕОБХОДИМО АВТОРИЗОВАТЬСЯ.</h2>
+                            <h2 class="auth__title">ДЛЯ ОФОРМЛЕНИЯ ПОДПИСКИ <br> НА ТАРИФ, НЕОБХОДИМО АВТОРИЗОВАТЬСЯ.</h2>
                             <div class="auth__img">
                                 <img src="./img/auth/key.png" alt="СКАН Авторизация Регистрация Оформление подписки Тариф">
                             </div>
@@ -82,15 +89,12 @@
                                     </div>
                                 </form>
                         </div>
-
                     </div>
-                </div>
-            </div>
-        </div>
-</header>
-
-
+                    </div>
+    </section>
+</main>
 </div>
+
 <footer class="footer">
     <div class="container">
         <div class="nav nav--footer">

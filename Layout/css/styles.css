@@ -37,10 +37,11 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
-    overflow-x: hidden;
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
+
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3 {
@@ -57,6 +58,7 @@ img {
 .header {
     position: relative;
     min-height: 93px;
+    min-width: var(--container-width);
     overflow-x: hidden;
 }
 
@@ -65,11 +67,11 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 128px;
+    gap: 128px; /* 128 */
 }
 
 .nav > :nth-child(2) {
-     margin-left: 273px; /*273*/
+     margin-left: 273px; /* 100 для шапки с кнопками "Зарегистрироваться | Войти" */
 }
 
 .nav__list {
@@ -185,7 +187,7 @@ img {
     display: flex;
     flex-direction: row;
     /* padding-top: 64px; */
-    margin-top: -15px;
+    margin-top: 60px;
     min-height: 620px;
 }
 
@@ -224,8 +226,8 @@ img {
 .header__img {
     content: "";
     position: relative;
-    top: -20px;
-    /* right: 29px; */
+    bottom: 40px;
+    right: 29px;
     flex-grow: 1; /* чтобы картинка растянулась и не налазила на блоки с контентом */
 }
 
@@ -239,16 +241,13 @@ img {
 
 /* ---------------------------------------------------- Factoids ---------------------------------------------------- */
 
-.main {
-    margin-top: 80px;
-}
-
 .h2 {
     font-size: 45px;
 }
 
 .factoids {
     margin-top: 65px;
+    min-width: var(--container-width);
 }
 
 .factoids__column {
@@ -286,14 +285,18 @@ img {
     width: 1307px; /* 1307 */
     height: 575px; /* 575 */
     position: relative;
+    bottom: 10px;
+    right: 5px;
 }
 
 .factoids__img::after {
     content: "";
-    width: 500px;
+    width: 600px;
     height: 500px;
+    background-repeat: no-repeat;
     position: absolute;
-    right: -100px;
+    right: 10px;
+    top: 20px;
     background-image: url('../img/main/factoids-elements.png');
 }
 
@@ -314,7 +317,8 @@ img {
 /* ---------------------------------------------------- Rate -------------------------------------------------------- */
 
 .rate {
-    margin-top: 80px;
+    margin-top: 90px;
+    min-width: var(--container-width);
 }
 
 .rate__row {
@@ -368,14 +372,20 @@ img {
 }
 
 .rate__header--pro .rate__img {
-/*  max-width: 103px;
-    max-height: 103px;
-    margin-top: -20px; */
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -20px;
 }
 
 .rate__header--business {
     background-color: #000;
     color: #fff;
+}
+
+.rate__header--business .rate__img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 8px;
 }
 
 .rate__title {
@@ -515,12 +525,13 @@ img {
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
 
-.test {
+.footer__sticky {
     flex-grow: 1;
 }
 
 .footer {
-    margin-top: 118px;
+    margin-top: 100px; /* 118 */
+    min-width: var(--container-width);
     background: var(--footer-color);
     flex-grow: 0;
 }
@@ -549,7 +560,7 @@ img {
 
 .auth__content {
     margin-top: 55px;
-    width: 817px;
+    min-width: 750px;
 }
 
 .auth__title {
