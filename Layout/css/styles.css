@@ -8,6 +8,7 @@
     --container-padding: 60px; /* 60 */
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
     --secondary-black: rgba(0,0,0,0.5);
+    --secondary-white: rgba(255,255,255,0.4); /* используется на подложке бургер-меню */
     --bg-color: #fff;
     --footer-color: #029491;
     --btn-header-bg-color: #7CE3E1;
@@ -163,7 +164,7 @@ img {
     background-color: var(--footer-color);
 }
 
-.nav__login .reg {
+.nav__login .btn--registration {
     font-size: 14px;
     color: var(--secondary-black);
 }
@@ -782,12 +783,93 @@ img {
     transform: rotate(45deg);
     top: 0;
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    background-color: #fff;
 }
 
 .menu-icon.menu-icon-active::after {
     transform: rotate(-45deg);
     top: 0;
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    background-color: #fff;
 }
 
 
+
+
+
+@media (max-width: 2000px) {
+
+    /* Подложка для мобильного меню, растянутая на всю ширину */
+    .nav--mobile {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+
+        background: var(--footer-color);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 74px;
+        padding-top: 40px;
+        padding-bottom: 74px;
+    }
+
+    /* Увеличиваем логотип, если nav--mobile активен */
+    .nav--mobile .logo--header {
+        background-image: url('../img/main/logo-footer.png')
+        border: 2px solid red;
+    }
+
+    /* Отображаем список, если .nav--mobile = true */
+    .nav--mobile .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 26px;
+        padding-right: 250px; /* 250px 25% */
+    }
+
+    .nav--mobile .nav__list a {
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    /* Убираем подчёркивание у активного элемента (которое задано по умолчанию для демонстрации) */
+    .nav--mobile .nav__list a.active::after,
+    .nav--mobile .nav__list a:hover::after {
+        display: none;
+    }
+
+    /* Отображаем кнопки, если .nav--mobile = true */
+   .nav--mobile .nav__login {
+        display: flex;
+        padding-top: 75px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Зарегистрироваться */
+    .nav--mobile .nav__login .btn--registration {
+        font-size: 16px;
+        font-size: 200;
+        color: var(--secondary-white);
+    }
+
+    /* Войти */
+    .nav--mobile .nav__login .btn--login {
+        font-size: 20px;
+        padding: 15px 117px;
+    }
+
+    /* Расположение бургура в левом верхнем углу, если .nav--mobile = true */
+   .nav--mobile .nav__toggle {
+        position: fixed;
+        top: 40px;
+        right: 28px;
+    }
+
+}
