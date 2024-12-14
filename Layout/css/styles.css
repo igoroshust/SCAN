@@ -775,7 +775,7 @@ img {
 /* Flex row секций внутри формы */
 .search-form__row {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     column-gap: 55px;
 }
 
@@ -821,7 +821,7 @@ img {
     height: 43px;
     border-radius: 5px;
     border: 1px solid var(--search-form-placeholder);
-    padding-left: 22px;
+    padding: 11px 30px 10px 22px;
 
 }
 
@@ -844,6 +844,27 @@ img {
     color: var(--search-form-placeholder);
 }
 
+.search-form__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 142px;
+    border: 2px solid red;
+}
+
+.search-form__checkboxes__column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-from__checkbox {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.search-from__checkbox.inactive {
+    color: var(--search-form-placeholder);
+}
 
 
 
