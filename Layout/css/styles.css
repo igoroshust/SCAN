@@ -19,25 +19,9 @@
     --btn-gray-bg-color: #D2D2D2;
     --btn-signup: #C7C7C7;
     --auth-label-color: #949494;
+    --search-form-placeholder: rgba(148,148,148,0.4);
     --oauth-btn-border-color: rgba(89,112,255,0.5);
 
-}
-
-/* Скрываение реализованных элементов при модульной вёрстке */
-.none {
-    display: none !important;
-}
-
-/* Убираем вертикальный скролл */
-.no-scroll {
-    overflow-x: hidden; /* был Y */
-}
-
-/* Создание контейнера для контента */
-.container {
-    max-width: var(--container-width);
-    padding: 0 var(--container-padding);
-    margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
 body {
@@ -58,6 +42,36 @@ img {
     max-width: none;
     pointer-events: none;
 }
+
+/* Скрываение реализованных элементов при модульной вёрстке */
+.none {
+    display: none !important;
+}
+
+/* Убираем вертикальный скролл */
+.no-scroll {
+    overflow-y: hidden; /* допустим X */
+}
+
+/* Создание контейнера для контента */
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto; /* выравнивание контейнера по центру */
+}
+
+/* Параграфы */
+
+.paragraph-18 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.paragraph-20 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 
 /* ---------------------------------------------------- Header Section ---------------------------------------------- */
 
@@ -212,8 +226,6 @@ img {
 }
 
 .header__text {
-    font-size: 20px;
-    font-weight: 400;
     margin-bottom: 70px;
     max-width: 534px; /* сабтайтл не выходит за пределы заголовка */
 }
@@ -281,10 +293,8 @@ img {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.paragraph {
+.factoids-paragraph {
     padding-top: 19px;
-    font-size: 18px;
-    font-weight: 400;
 }
 
 .factoids__img {
@@ -323,7 +333,7 @@ img {
 /* ---------------------------------------------------- Rate -------------------------------------------------------- */
 
 .rate {
-    margin-top: 90px;
+    margin-top: 100px;
     min-width: var(--container-width);
 }
 
@@ -569,7 +579,7 @@ img {
     min-width: 750px;
 }
 
-.auth__title {
+.title__h2 {
     font-size: 40px;
     font-weight: 500;
 }
@@ -672,7 +682,7 @@ img {
 .authorization-form__input {
     width: 379px;
     height: 43px;
-    border: 1px solid var(--btn-signup); /* можно использовать inset */
+    border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
     border-radius: 5px;
     padding: 0px 20px;
     margin-top: 15px;
@@ -731,6 +741,132 @@ img {
 .oauth__btn-facebook {
     padding-top: 8px;
 }
+
+
+/* ---------------------------------------------------- Search section ---------------------------------------------- */
+
+.search__row {
+    display: flex;
+    margin-top: 69px;
+
+}
+
+.search__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.search__content >:nth-child(2) {
+    margin-top: 25px;
+}
+
+.search__content >:nth-child(3) {
+    margin-top: 47px;
+}
+
+.search__form {
+    width: 872px;
+    height: 543px;
+    padding: 21px 38px 32px 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Flex row секций внутри формы */
+.search-form__row {
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 55px;
+}
+
+.search-form__section {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.search-form__label {
+
+}
+
+.search-form__asterisk {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.search-form__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 372px;
+    gap: 30px;
+}
+
+.search-form__input {
+    width: 242px;
+    height: 43px;
+    padding: 13px 70px; /* 93px - второе значение */
+    border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.search-form__input::placeholder {
+    font-size: 14px;
+    color: var(--search-form-placeholder);
+    text-align: center;
+}
+
+.search-form__select-big {
+    width: 242px;
+    height: 43px;
+    border-radius: 5px;
+    border: 1px solid var(--search-form-placeholder);
+    padding-left: 22px;
+
+}
+
+.search-form_section__row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.search-form__select-small {
+    width: 176px;
+    height: 43px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--search-form-placeholder);
+    text-align: center;
+}
+
+.search-form__select-small {
+    color: var(--search-form-placeholder);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------------------- Burger Menu ------------------------------------------------- */
 
@@ -830,7 +966,7 @@ img {
         align-items: center;
         justify-content: center;
         row-gap: 26px;
-        padding-top: 130px;
+        padding-top: 150px;
         padding-right: 270px;
 
     }

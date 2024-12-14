@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
     const nav = document.querySelector('.nav');
     const menuIcon = document.querySelector('.menu-icon');
     const logo = document.querySelector('.logo--header img');
+    const label = document.querySelector('.paragraph-18');
+    const select1 = document.getElementById('searchSelect1');
+    const select2 = document.getElementById('searchSelect2');
 
     // проверяем, что navBtn существует
     if (navBtn) {
@@ -22,5 +25,14 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
     } else {
         console.error('Элемент с классом `.nav__toggle` не был найден');
     }
+
+    label.addEventListener('click', function() {
+    // Переключаем фокус между селектами
+    if (document.activeElement === select1) {
+        select2.focus();
+    } else {
+        select1.focus();
+    }
+});
 
 });
