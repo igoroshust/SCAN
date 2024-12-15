@@ -7,7 +7,7 @@
     --container-width: 1440px;
     --container-padding: 60px; /* 60 */
     --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
-    --secondary-black: rgba(0,0,0,0.5);
+    --secondary-black: rgba(0,0,0,0.4);
     --secondary-white: rgba(255,255,255,0.4); /* используется на подложке бургер-меню */
     --bg-color: #fff;
     --footer-color: #029491;
@@ -753,7 +753,6 @@ img {
 .search__row {
     display: flex;
     margin-top: 69px;
-
 }
 
 .search__content {
@@ -853,6 +852,7 @@ img {
     display: flex;
     width: 406px;
     flex-direction: column;
+    position: relative;
     gap: 145px; /* 142 */
 }
 
@@ -869,6 +869,7 @@ img {
     padding-top: 18px;
     margin-left: -55px;
     max-height: 400px;
+    overflow-y: auto;
 }
 
 .search-from__checkbox {
@@ -895,6 +896,7 @@ img {
     align-items: center;
     cursor: pointer;
     position: relative;
+    color: var(--secondary-black);
 }
 
 .checkmark {
@@ -910,18 +912,26 @@ img {
     background-image: url('../img/search/checkbox-active-search.svg'); /* Изображение для отмеченного состояния */
 }
 
+.checkbox:checked + label {
+    color: #000;
+}
+
 .label-text {
     margin-left: 17px; /* Отступ между изображением и текстом */
     font-size: 18px;
 }
+/* Поиск - Обязательные для заполнения поля */
 
 .search-button__button {
     display: flex;
     margin-left: auto;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 11px;
+    margin-top: 111px;
     width: 335px;
+    position: absolute; /* Фиксируем положение кнопки и параграфа */
+    bottom: -43px;
+    right: 0;
 }
 
 .search-btn {
@@ -934,17 +944,61 @@ img {
     width: 100%; /* Занимает всю ширину родителя */
     display: flex; /* Делаем контейнер flex */
     justify-content: flex-start; /* Выравниваем содержимое по левому краю */
-    align-items: flex-start;
 }
 
 .search-paragraph {
     margin-top: 10px;
     color: var(--auth-label-color);
+    font-weight: 300;
 }
 
+/* Изображение */
 
+.search__img {
+    width: 509px;
+   /* height: 689px; */
+    position: relative;
 
+}
 
+.search__img img {
+    position: absolute;
+    bottom: 0;
+    left: 72px; /* 55 px - картинка по сетке */
+}
+
+.search__img::before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/search/document-search.png');
+    width: 91px;
+    height: 112px;
+    background-repeat: no-repeat;
+    top: 60px;
+}
+
+.search__img::after {
+    content: "";
+    position: absolute;
+    background-image: url('../img/search/folders-search.png');
+    width: 140px;
+    height: 69px;
+    background-repeat: no-repeat;
+    top: 80px;
+    left: 260px;
+}
+
+/*
+.factoids__img::after {
+    content: "";
+    width: 600px;
+    height: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-image: url('../img/main/factoids-elements.png');
+} */
 
 
 
