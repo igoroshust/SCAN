@@ -9,6 +9,7 @@
     --header__info-bg-color: rgba(217,217,217,0.3); /* Цвет подложки для header__info */
     --header__info_span-bg-color-green: #8AC540; /* Зелёный цвет для поля "Лимит по категориям" */
     --secondary: rgba(144,163,154,0.6); /* Полупрозрачный текст для сабтайтлов */
+    --box-shadow-color: rgba(0,0,0,0.3);
     --secondary-black: rgba(0,0,0,0.4);
     --secondary-black-07: rgba(0,0,0,0.7); /* Используется в шапке для имени пользователя */
     --secondary-white: rgba(255,255,255,0.4); /* Используется на подложке бургер-меню */
@@ -62,7 +63,8 @@ img {
     margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
-/* Параграфы (форматирование текста) */
+/* ----------------------------------------- Параграфы (форматирование текста) -------------------------------------- */
+
 .paragraph-10 {
     color: var(--secondary-black);
     font-size: 10px;
@@ -75,6 +77,16 @@ img {
     font-weight: 400;
 }
 
+.paragraph-16-300 {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.paragraph-16-200 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
 .paragraph-18 {
     font-size: 18px;
     font-weight: 400;
@@ -85,6 +97,25 @@ img {
     font-weight: 400;
 }
 
+.paragraph-22 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.paragraph-25 { /* Старая цена в разделе "Наши тарифы" */
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.paragraph-30 { /* Title карточке в разеделе "Наши тарифы" */
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.paragraph-40 {
+    font-size: 40px;
+    font-weight: 500;
+}
 
 /* ---------------------------------------------------- Header Section ---------------------------------------------- */
 
@@ -117,11 +148,13 @@ img {
     min-width: 175px;
     height: 63px;
     padding: 14px 16px 18px 10px;
+
     display: flex;
     gap: 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     background-color: var(--header__info-bg-color);
     border-radius: 5px;
@@ -167,7 +200,6 @@ img {
 }
 
 /* Секция "Зарегистрироваться | Войти" */
-
 .nav__login {
     display: flex;
     align-items: center;
@@ -187,13 +219,15 @@ img {
 
 /* Кнопка "Войти" */
 .btn.btn--login {
-    background-color: var(--btn-header-bg-color);
     padding: 8px;
-    border-radius: 5px;
-    color: var(--bg-color-black);
     font-size: 14px;
     font-weight: 500;
+    border-radius: 5px;
+    color: var(--bg-color-black);
+    background-color: var(--btn-header-bg-color);
 }
+
+/* Эффекты для кнопки "Войти" */
 .btn:hover {
     opacity: 0.9;
     transition: 0.2s ease-in;
@@ -204,13 +238,14 @@ img {
     top: 1px;
 }
 
-/* HEADER CONTENT */
+/* Header контент */
 .header__row {
+    min-height: 620px;
+    margin-top: 60px;
+    /* padding-top: 64px; */
+
     display: flex;
     flex-direction: row;
-    /* padding-top: 64px; */
-    margin-top: 60px;
-    min-height: 620px;
 }
 
 .header__content {
@@ -224,23 +259,25 @@ img {
 .header__title {
     font-size: 60px;
     font-weight: 500;
+}
+
+.header__title_main-h1 {
     margin-bottom: 24px;
 }
 
 .header__text {
-    margin-bottom: 70px;
     max-width: 534px; /* сабтайтл не выходит за пределы заголовка */
+    margin-bottom: 70px;
 }
 
 .btn--header {
     width: 335px;
     height: 59px;
     padding: 15px 65px;
+    font-size: 22px;
     border-radius: 5px;
     color: var(--bg-color-white);
     background: var(--btn-bg-color);
-    font-size: 22px;
-    font-weight: 400;
 }
 
 .header__img {
@@ -248,26 +285,27 @@ img {
     position: relative;
     bottom: 40px;
     right: 29px;
-    flex-grow: 1; /* чтобы картинка растянулась и не налазила на блоки с контентом */
+    flex-grow: 1; /* Чтобы картинка растянулась и не налазила на блоки с контентом */
 }
 
 .header__img img {
-    position: absolute; /* чтобы картинка не сжимала другие блоки */
-    width: 629px; /* 629px */
-    height: 593px; /* 593 */
-    pointer-events: none; /* запрет на сохранение картинке, иначе кнопки из nav становятся недоступны */
+    position: absolute; /* Чтобы картинка не сжимала другие блоки */
+    width: 629px;
+    height: 593px;
     bottom: 25px;
+    pointer-events: none; /* запрет на сохранение картинки, иначе кнопки из nav становятся недоступны */
 }
+
 
 /* ---------------------------------------------------- Factoids ---------------------------------------------------- */
-
-.h2 {
-    font-size: 45px;
-}
 
 .factoids {
     margin-top: 65px;
     min-width: var(--container-width);
+}
+
+.container__title-h2 {
+    font-size: 45px;
 }
 
 .factoids__column {
@@ -282,8 +320,8 @@ img {
     column-gap: 4px;
 }
 
-.factoids__content > :nth-child(3),
-.factoids__content > :nth-child(4) {
+.factoids__content >:nth-child(3),
+.factoids__content >:nth-child(4) {
    margin-left: 30px;
 }
 
@@ -292,7 +330,7 @@ img {
     min-height: 225px; /* ? */
     padding: 30px 35px 40px 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .factoids-paragraph {
@@ -300,8 +338,8 @@ img {
 }
 
 .factoids__img {
-    width: 1307px; /* 1307 */
-    height: 575px; /* 575 */
+    width: 1307px;
+    height: 575px;
     position: relative;
     bottom: 10px;
     right: 5px;
@@ -312,27 +350,14 @@ img {
     width: 600px;
     height: 500px;
     background-repeat: no-repeat;
+
     position: absolute;
     right: 10px;
     top: 20px;
     background-image: url('../img/main/factoids-elements.png');
 }
 
-/* Графические элементы вокруг картинки
-.factoids__img::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 600px;
-    height: 500px;
-
-    background-image: url('../img/main/factoids-elements.png');
-    background-size: 100%;
-}
-*/
-
-
-/* ---------------------------------------------------- Rate -------------------------------------------------------- */
+/* ------------------------------------------------- Rate Section --------------------------------------------------- */
 
 .rate {
     margin-top: 100px;
@@ -347,15 +372,16 @@ img {
 }
 
 .rate-card {
+    width: 415px; /* ? */
+    max-width: 100%;
+    max-height: 540px;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 415px;
-    max-width: 100%;
-    max-height: 540px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .rate-card--beginner:hover {
@@ -374,11 +400,12 @@ img {
 }
 
 .rate__header {
+   max-height: 119px;
    padding: 11px 10px 24px 30px;
+
    display: flex;
    justify-content: space-between;
    border-radius: 10px 10px 0 0;
-   max-height: 119px;
 }
 
 .rate__header--beginner {
@@ -410,15 +437,8 @@ img {
     margin-top: 8px;
 }
 
-.rate__title-title {
-    font-size: 30px;
-    font-weight: 500;
-}
-
 .rate__title-desc {
     margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
 }
 
 .rate__img {
@@ -430,7 +450,7 @@ img {
     max-width: 100%;
     height: auto; /* Сохранение пропорций */
     display: block; /* Убираем пробелы под изображением */
-    object-fit: cover;
+    object-fit: cover; /* Изображение масштабируется с сохранением пропорций, заполняя всю доступную область */
 }
 
 .rate__content {
@@ -442,42 +462,34 @@ img {
 }
 
 .rate__badge {
+    padding: 5px 13px 22px 13px;
     position: absolute;
     right: 10px;
     width: 134px;
     height: 24px;
-    padding: 5px 13px 22px 13px;
     text-align: center;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--bg-color-white);
     border-radius: 10px;
     background: var(--blue-badge);
 }
 
-.rate__price {
-    padding-top: 14px; /* 4px */
-    width: 380px;
-    position: relative;
+.rate__badge-paragraph {
+   color: var(--bg-color-white);
 }
 
-.rate__price-actually {
-    font-size: 30px;
-    font-weight: 500;
+.rate__price {
+    width: 380px;
+    padding-top: 14px; /* 4px */
+    position: relative;
 }
 
 .rate__price-outdated {
     margin-left: 19px;
     padding: 0;
-    color: var(--secondary-black);
-    font-size: 25px;
-    font-weight: 500;
-    text-decoration: line-through;
     position: absolute;
     bottom: 3px;
+    color: var(--secondary-black);
+    text-decoration: line-through; /* Перечёркнутый текст */
 }
-
-
 
 .rate__price-paragraph {
     padding-top: 10px;
@@ -492,7 +504,6 @@ img {
 }
 
 .rate__tax-paragraph {
-    font-size: 20px;
     font-weight: 500;
 }
 
@@ -501,23 +512,21 @@ img {
 }
 
 .rate__list li {
+    padding-left: 30px;
+    position: relative;
     display: flex;
     align-items: center;
-    font-size: 18px;
-    font-weight: 400;
-    position: relative;
-    padding-left: 30px;
 }
 
 .rate__list li::before {
     content: "";
-    background-image: url('../img/main/checkmark.svg');
-    background-size: 20px 20px;
+    position: absolute;
     width: 20px;
     height: 20px;
-    position: absolute;
     left: 0;
     top: 50%;
+    background-size: 20px 20px;
+    background-image: url('../img/main/checkmark.svg');
     transform: translateY(-50%); /* маркер на одной линии с текстом */
 }
 
@@ -526,8 +535,6 @@ img {
     height: 59px;
     padding: 15px 40px 5px 45px;
     text-align: center;
-    font-size: 20px;
-    font-weight: 400;
     border-radius: 5px;
 }
 
@@ -541,33 +548,6 @@ img {
     color: var(--bg-color-white);
 }
 
-/* ---------------------------------------------------- Footer ------------------------------------------------------ */
-
-.footer__sticky {
-    flex-grow: 1;
-}
-
-.footer {
-    margin-top: 100px; /* 118 */
-    min-width: var(--container-width);
-    background: var(--footer-color);
-    flex-grow: 0;
-}
-
-.nav__footer {
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--bg-color-white);
-    text-align: right;
-}
-
-.nav__footer >:nth-child(4) {
-    margin-top: 21px;
-}
-
-.nav__footer a {
-    color: var(--bg-color-white);
-}
 
 /* ---------------------------------------------------- Auth Section ------------------------------------------------ */
 
@@ -581,32 +561,31 @@ img {
     min-width: 750px;
 }
 
-.title__h2 {
-    font-size: 40px;
-    font-weight: 500;
-}
-
 .auth__img {
     margin-top: 14px;
     padding-left: 112px;
 }
 
+/* Секция для размещения формы */
 .auth__form {
     min-width: 480px;
     min-height: 578px;
     position: relative;
 }
 
+/* Форма авторизации */
 .authorization-form {
-    position: absolute;
     width: 429px;
     height: 537px; /* 523 */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    position: absolute;
     top: 50px; /* 74 */
     left: 45px;
     right: 0;
     bottom: -10px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .authorization-form::before {
@@ -641,22 +620,20 @@ img {
     gap: 15px;
 }
 
-.authorization-form__navigation {
-}
-
+/* Родительский класс для кнопок "Войти" и "Зарегистрироваться" */
 .authorization-form__btn {
-    font-size: 16px;
-    font-weight: 300;
     padding-bottom: 8px;
     /* width: 100%; */
 }
 
+/* Секция "Войти" в форме */
 .authorization-form__btn-login {
     width: 151px;
     color: var(--footer-color);
     border-bottom: 2.5px solid var(--footer-color);
 }
 
+/* Секция "Зарегистрироваться" в форме */
 .authorization-form__btn-signup {
     width: 213px;
     color: var(--btn-signup);
@@ -676,30 +653,28 @@ img {
 }
 
 .authorization-form__label {
-    font-size: 16px;
-    font-weight: 200;
     color: var(--auth-label-color);
 }
 
 .authorization-form__input {
     width: 379px;
     height: 43px;
-    border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
-    border-radius: 5px;
     padding: 0px 20px;
     margin-top: 15px;
+
+    border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
+    border-radius: 5px;
 }
 
+/* Кнопка "Войти" */
 .auth-btn__btn-login {
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--bg-color-white);
-    background: var(--btn-bg-color);
-    border-radius: 5px;
     width: 379px;
     height: 59px;
     padding: 16px 156px;
+    color: var(--bg-color-white);
     opacity: 0.5;
+    border-radius: 5px;
+    background: var(--btn-bg-color);
 }
 
 /* Обнуление стилей для кнопки "Войти" */
@@ -710,18 +685,17 @@ img {
     top: 0;
 }
 
+/* Восстановить пароль */
 .auth-btn__btn-recovery {
     margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 400;
+    color: var(--btn-bg-color);
     text-align: center;
     text-decoration: underline !important;
-    color: var(--btn-bg-color);
 }
 
+/* Войти через */
 .authorization-form__oauth-paragraph {
     margin-top: 5px;
-    font-size: 16px;
     color: var(--auth-label-color);
 }
 
@@ -734,10 +708,10 @@ img {
 .oauth__btn {
     width: 96px;
     height: 31px;
-    text-align: center;
-    border-radius: 3px;
-    border: 1px solid var(--oauth-btn-border-color);
     padding: 6px 18px;
+    text-align: center;
+    border: 1px solid var(--oauth-btn-border-color);
+    border-radius: 3px;
 }
 
 .oauth__btn-facebook {
@@ -770,7 +744,7 @@ img {
     height: 543px;
     padding: 21px 38px 32px 45px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 /* Flex row секций внутри формы */
@@ -1077,6 +1051,34 @@ img {
     top: 0;
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
     background-color: var(--bg-color-white);
+}
+
+
+/* ---------------------------------------------------- Footer ------------------------------------------------------ */
+
+.footer__sticky {
+    flex-grow: 1;
+}
+
+.footer {
+    margin-top: 100px; /* 118 */
+    min-width: var(--container-width);
+    background: var(--footer-color);
+    flex-grow: 0;
+}
+
+.nav__footer {
+    font-weight: 300;
+    text-align: right;
+    color: var(--bg-color-white);
+}
+
+.nav__footer >:nth-child(4) {
+    margin-top: 21px;
+}
+
+.nav__footer a {
+    color: var(--bg-color-white);
 }
 
 
