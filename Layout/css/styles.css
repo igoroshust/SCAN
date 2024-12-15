@@ -906,6 +906,7 @@ img {
     background-size: cover; /* Масштабируем изображение */
     display: inline-block; /* Отображение чек-бокса */
     transition: background-image 0.3s ease; /* Плавный переход */
+    flex-shrink: 0; /* Если текст располагается в две строчки, то чек-бокс не ужимается */
 }
 
 .checkbox:checked + label .checkmark {
