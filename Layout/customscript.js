@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
     const navBtn = document.querySelector('.nav__toggle'); // находим кнопку
     const nav = document.querySelector('.nav');
     const menuIcon = document.querySelector('.menu-icon');
-    const logo = document.querySelector('.logo--header img');
+    const logo = document.querySelector('.nav__logo_logo-header img');
     const label = document.querySelector('.paragraph-18');
     const select1 = document.getElementById('searchSelect1');
     const select2 = document.getElementById('searchSelect2');

@@ -78,6 +78,7 @@ img {
 }
 
 .paragraph-14-300 {
+    color: var(--bg-color-black);
     font-size: 14px;
     font-weight: 300;
 }
@@ -110,6 +111,11 @@ img {
 .paragraph-22 {
     font-size: 22px;
     font-weight: 400;
+}
+
+.paragraph-22-500 { /* Поиск в разделе "Регистрация" */
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .paragraph-25-500 { /* Старая цена в разделе "Наши тарифы" */
@@ -280,13 +286,13 @@ img {
     background-color: var(--footer-color);
 }
 
-.nav__login .btn--registration {
+.nav__login .nav__login_btn-registration {
     font-size: 14px;
     color: var(--secondary-black);
 }
 
 /* Кнопка "Войти" */
-.btn.btn--login {
+.nav__login_btn-login {
     padding: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -295,7 +301,7 @@ img {
     background-color: var(--btn-header-bg-color);
 }
 
-/* Эффекты для кнопки "Войти" */
+/* Эффекты для всех кнопок */
 .btn:hover {
     opacity: 0.9;
     transition: 0.2s ease-in;
@@ -303,7 +309,7 @@ img {
 
 .btn:active {
     position: relative;
-    top: 1px;
+    top: 1.5px;
 }
 
 /* Header контент */
@@ -338,7 +344,7 @@ img {
     margin-bottom: 70px;
 }
 
-.btn--header {
+.header__text_btn-request {
     width: 335px;
     height: 59px;
     padding: 15px 65px;
@@ -439,7 +445,7 @@ img {
     gap: 37px;
 }
 
-.rate-card {
+.rate__card {
     width: 415px; /* ? */
     max-width: 100%;
     max-height: 540px;
@@ -452,17 +458,17 @@ img {
     box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
-.rate-card--beginner:hover {
+.rate__card-beginner:hover {
    outline: 2px solid var(--yellow);
    cursor: pointer;
 }
 
-.rate-card--pro:hover {
+.rate__card-pro:hover {
    outline: 2px solid var(--aquamarine);
    cursor: pointer;
 }
 
-.rate-card--business:hover {
+.rate__card-business:hover {
     outline: 2px solid var(--bg-color-black);
     cursor: pointer;
 }
@@ -598,7 +604,7 @@ img {
     transform: translateY(-50%); /* маркер на одной линии с текстом */
 }
 
-.btn--rate {
+.btn__rate {
     width: 355px;
     height: 59px;
     padding: 15px 40px 5px 45px;
@@ -606,12 +612,12 @@ img {
     border-radius: 5px;
 }
 
-.btn--rate-beginner {
+.btn__rate-beginner {
     background: var(--btn-gray-bg-color);
     color: var(--bg-color-black);
 }
 
-.btn--rate-md {
+.btn__rate-md {
     background: var(--btn-bg-color);
     color: var(--bg-color-white);
 }
@@ -1068,7 +1074,7 @@ img {
     }
 
     /* Увеличиваем логотип, если nav--mobile активен */
-    .nav--mobile .logo--header {
+    .nav--mobile .nav__logo_logo-header {
         margin-top: 0; /* Убираем отрицательный отступ */
         position: absolute; /* Позиционируем элемент независимо от flex */
         left: 14px; /* Фиксированное значение от левого края */
@@ -1090,7 +1096,7 @@ img {
 
     .nav--mobile .nav__list a {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400; /* Можно использовать 300 */
         color: var(--bg-color-white);
     }
 
@@ -1109,14 +1115,14 @@ img {
     }
 
     /* Зарегистрироваться */
-    .nav--mobile .nav__login .btn--registration {
+    .nav--mobile .nav__login .nav__login_btn-registration {
         font-size: 16px;
         font-size: 200;
         color: var(--secondary-white);
     }
 
     /* Войти */
-    .nav--mobile .nav__login .btn--login {
+    .nav--mobile .nav__login .nav__login_btn-login {
         font-size: 20px;
         padding: 15px 117px;
     }
@@ -1127,4 +1133,5 @@ img {
         top: 40px;
         right: 28px;
     }
+
 }

@@ -19,7 +19,7 @@
     <div class="container">
         <div class="header__top">
             <nav class="nav">
-                <div class="nav__logo logo--header">
+                <div class="nav__logo nav__logo_logo-header">
                     <img src="./img/main/logo-header.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
                 </div>
 
@@ -36,19 +36,19 @@
 
                 <div class="header__user">
                     <div class="header__user-info">
-                        <p class="paragraph-14 header__user-info_paragraph-username">Алексей А.</p>
+                        <p class="header__user-info_paragraph-username paragraph-14">Алексей А.</p>
                         <a class="paragraph-10" href="#!">Выйти</a>
                     </div>
                     <div class="user__logo">
-                        <a href="#!"><img src="./img/main/user-nav.png" alt="user profile"></a>
+                        <a class="user__logo user__logo_image" href="#!"><img src="./img/main/user-nav.png" alt="user profile"></a>
                     </div>
                 </div>
 
                 <!-- Секция "Зарегистирироваться | Войти" -->
-                <ul class="nav__login nav__login--header none">
-                    <li><a  class="btn btn--registration" href="#!">Зарегистрироваться</a></li>
+                <ul class="nav__login nav__login-header none">
+                    <li><a  class="btn nav__login_btn nav__login_btn-registration" href="#!">Зарегистрироваться</a></li>
                     <li></li> <!-- Пустой item для отображения вертикальной черты между пунктами списка -->
-                    <li><a class="btn btn--login" href="#!">Войти</a></li>
+                    <li><a class="btn nav__login_btn nav__login_btn-login" href="#!">Войти</a></li>
                 </ul>
 
                 <!-- Бургер-меню-->
@@ -73,9 +73,9 @@
                     <div class="header__content">
                         <h1 class="header__title header__title_main-h1">Сервис по поиску публикаций <br> о компании <br> по его ИНН</h1>
                         <div class="header__text">
-                            <p class="paragraph-20 header__paragraph">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</p>
+                            <p class="header__paragraph paragraph-20">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</p>
                         </div><br><br>
-                            <a class="btn btn--header" href="#!">Запросить данные</a>
+                            <a class="btn header__text_btn header__text_btn-request" href="#!">Запросить данные</a>
                     </div>
 
                     <div class="header__img">
@@ -91,32 +91,33 @@
             <div class="factoids__column">
 
                 <div class="factoids__content">
-                        <button class="slider__btn slider__btn--prev">
-                            <img src="./img/main/arrow-left.svg" alt="СКАН стрелочка">
+                        <button class="slider__btn slider__btn-prev">
+                            <img src="./img/main/arrow-left.svg" alt="СКАН стрелочка влево">
                         </button>
 
                     <div class="factoids__item item-1">
                         <img src="./img/main/clock-facts.svg" alt="СКАН Высокая и оперативная скорость обработки заявки">
-                        <p class="paragraph-18 factoids-paragraph">Высокая и оперативная скорость обработки заявки</p>
-                    </div>
-                    <div class="factoids__item item-2">
-                        <img src="./img/main/search-facts.svg" alt="СКАН Огромная база данных">
-                        <p class="paragraph-18 factoids-paragraph">Огромная комплексная база данных, обеспечивающая объективный ответ на запрос</p>
-                    </div>
-                    <div class="factoids__item item-3">
-                        <img src="./img/main/lock-facts.svg" alt="СКАН защита конфиденциальных сведений">
-                        <p class="paragraph-18 factoids-paragraph">Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству</p>
+                        <p class="factoids-paragraph paragraph-18">Высокая и оперативная скорость обработки заявки</p>
                     </div>
 
-                        <button class="slider__btn slider__btn--next">
-                            <img src="./img/main/arrow-right.svg" alt="СКАН стрелочка">
+                    <div class="factoids__item item-2">
+                        <img src="./img/main/search-facts.svg" alt="СКАН Огромная база данных">
+                        <p class="factoids-paragraph paragraph-18">Огромная комплексная база данных, обеспечивающая объективный ответ на запрос</p>
+                    </div>
+
+                    <div class="factoids__item item-3">
+                        <img src="./img/main/lock-facts.svg" alt="СКАН защита конфиденциальных сведений">
+                        <p class="factoids-paragraph paragraph-18">Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству</p>
+                    </div>
+
+                        <button class="slider__btn slider__btn-next">
+                            <img src="./img/main/arrow-right.svg" alt="СКАН стрелочка вправо">
                         </button>
                 </div>
 
                 <div class="factoids__img">
                     <img src="./img/main/man-factoids.png" alt="Почему именно СКАН" />
                 </div>
-
             </div>
         </div>
     </section>
@@ -127,7 +128,7 @@
             <div class="rate__row">
 
                 <!-- BEGINNER -->
-                <div class="rate-card rate-card--beginner">
+                <div class="rate__card rate__card-beginner">
                     <div class="rate__header rate__header--beginner">
                         <div class="rate__title">
                             <p class="rate__title rate__title-title paragraph-30">Beginner</p>
@@ -141,12 +142,12 @@
 
                         <div class="rate__content">
                             <div class="rate__badge">
-                                <p class="paragraph-14 rate__badge-paragraph">Текущий тариф</p>
+                                <p class="rate__badge-paragraph paragraph-14">Текущий тариф</p>
                         </div>
 
                         <div class="rate__price">
                             <p class="rate__price rate__price-actually paragraph-30">799 ₽<span class="rate__price rate__price-outdated paragraph-25-500">1 200 ₽</span></p>
-                            <p class="paragraph-18 rate__price-paragraph">или 150 ₽/мес. при рассрочке на 24 мес.</p>
+                            <p class="rate__price-paragraph paragraph-18">или 150 ₽/мес. при рассрочке на 24 мес.</p>
                         </div>
 
                         <div class="rate__tax">
@@ -158,12 +159,12 @@
                             </ul>
                         </div>
 
-                            <a class="btn btn--rate btn--rate-beginner paragraph-20" href="#!">Перейти в личный кабинет</a>
+                            <a class="btn btn__rate btn__rate-beginner paragraph-20" href="#!">Перейти в личный кабинет</a>
                     </div>
                 </div>
 
                 <!-- PRO -->
-                <div class="rate-card rate-card--pro">
+                <div class="rate__card rate__card-pro">
 
                     <div class="rate__header rate__header--pro">
                         <div class="rate__title rate__title-pro">
@@ -180,7 +181,7 @@
 
                         <div class="rate__price">
                             <p class="rate__price rate__price-actually paragraph-30">1 299 ₽<span class="rate__price rate__price-outdated paragraph-25-500">2 600 ₽</span></p>
-                            <p class="paragraph-18 rate__price-paragraph">или 279 ₽/мес. при рассрочке на 24 мес.</p>
+                            <p class="rate__price-paragraph paragraph-18 ">или 279 ₽/мес. при рассрочке на 24 мес.</p>
                         </div>
 
                         <div class="rate__tax">
@@ -192,13 +193,13 @@
                             </ul>
                         </div>
 
-                            <a class="btn btn--rate btn--rate-md paragraph-20" href="#!">Подробнее</a>
+                            <a class="btn btn__rate btn__rate-md paragraph-20" href="#!">Подробнее</a>
 
                     </div>
                 </div>
 
                 <!-- Business -->
-                <div class="rate-card rate-card--business">
+                <div class="rate__card rate__card-business">
 
                     <div class="rate__header rate__header--business">
                         <div class="rate__title">
@@ -212,26 +213,25 @@
                     </div>
 
                         <div class="rate__content">
+                            <div class="rate__price">
+                                <p class="rate__price rate__price-actually paragraph-30">2 379 ₽<span class="rate__price rate__price-outdated paragraph-25-500">3 700 ₽</span></p>
+                            </div>
 
-                        <div class="rate__price">
-                            <p class="rate__price rate__price-actually paragraph-30">2 379 ₽<span class="rate__price rate__price-outdated paragraph-25-500">3 700 ₽</span></p>
+                            <div class="rate__tax rate__tax-business">
+                                <p class="rate__tax-paragraph paragraph-20">В тариф входит:</p>
+                                <ul class="rate__list">
+                                    <li class="paragraph-18">Все пункты тарифа Pro</li>
+                                    <li class="paragraph-18">Безлимитное количество запросов</li>
+                                    <li class="paragraph-18">Приоритетная поддержка</li>
+                                </ul>
+                            </div>
+
+                            <a class="btn btn__rate btn__rate-md paragraph-20" href="#!">Подробнее</a>
+
                         </div>
-
-                        <div class="rate__tax rate__tax-business">
-                            <p class="rate__tax-paragraph paragraph-20">В тариф входит:</p>
-                            <ul class="rate__list">
-                                <li class="paragraph-18">Все пункты тарифа Pro</li>
-                                <li class="paragraph-18">Безлимитное количество запросов</li>
-                                <li class="paragraph-18">Приоритетная поддержка</li>
-                            </ul>
-                        </div>
-
-                            <a class="btn btn--rate btn--rate-md paragraph-20" href="#!">Подробнее</a>
-
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
 </main>
@@ -239,9 +239,9 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="nav nav--footer">
+        <div class="nav nav-footer">
 
-            <div class="nav__logo logo--footer">
+            <div class="nav__logo nav__logo_logo-footer">
                     <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
             </div>
 
