@@ -6,10 +6,16 @@
 :root {
     --container-width: 1440px;
     --container-padding: 60px; /* 60 */
-    --secondary: rgba(144,163,154, 0.6); /* Полупрозрачный текст для сабтайтлов */
+    --header__info-bg-color: rgba(217,217,217,0.3); /* Цвет подложки для header__info */
+    --header__info_span-bg-color-green: #8AC540; /* Зелёный цвет для поля "Лимит по категориям" */
+    --secondary: rgba(144,163,154,0.6); /* Полупрозрачный текст для сабтайтлов */
     --secondary-black: rgba(0,0,0,0.4);
-    --secondary-white: rgba(255,255,255,0.4); /* используется на подложке бургер-меню */
-    --bg-color: #fff;
+    --secondary-black-07: rgba(0,0,0,0.7); /* Используется в шапке для имени пользователя */
+    --secondary-white: rgba(255,255,255,0.4); /* Используется на подложке бургер-меню */
+    --search-form-placeholder: rgba(148,148,148,0.4);
+    --oauth-btn-border-color: rgba(89,112,255,0.5);
+    --bg-color-white: #fff;
+    --bg-color-black: #000;
     --footer-color: #029491;
     --btn-header-bg-color: #7CE3E1;
     --btn-bg-color: #5970FF;
@@ -19,18 +25,14 @@
     --btn-gray-bg-color: #D2D2D2;
     --btn-signup: #C7C7C7;
     --auth-label-color: #949494;
-    --search-form-placeholder: rgba(148,148,148,0.4);
-    --oauth-btn-border-color: rgba(89,112,255,0.5);
-
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-white);
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
-
     /* overflow-x: hidden; */
 }
 
@@ -40,7 +42,7 @@ h1, h2, h3 {
 
 img {
     max-width: none;
-    pointer-events: none;
+    pointer-events: none; /* изображения недоступны для скачивания */
 }
 
 /* Скрываение реализованных элементов при модульной вёрстке */
@@ -53,16 +55,22 @@ img {
     overflow-y: hidden; /* допустим X */
 }
 
-/* Создание контейнера для контента */
+/* Контейнера для контента */
 .container {
     max-width: var(--container-width);
     padding: 0 var(--container-padding);
     margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
-/* Параграфы */
+/* Параграфы (форматирование текста) */
+.paragraph-10 {
+    color: var(--secondary-black);
+    font-size: 10px;
+    font-weight: 450;
+}
 
 .paragraph-14 {
+    color: var(--bg-color-black);
     font-size: 14px;
     font-weight: 400;
 }
@@ -81,22 +89,22 @@ img {
 /* ---------------------------------------------------- Header Section ---------------------------------------------- */
 
 .header {
-    position: relative;
     min-height: 93px;
     min-width: var(--container-width);
+    position: relative;
     overflow-x: hidden;
 }
 
-/* Navigation */
+/* Навигация */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 128px; /* 128 */
+    gap: 128px;
 }
 
 .nav > :nth-child(2) {
-     margin-left: 273px; /* 100 для шапки с кнопками "Зарегистрироваться | Войти" */
+    margin-left: 273px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
 }
 
 .nav__list {
@@ -105,43 +113,31 @@ img {
     gap: 50px;
 }
 
-.nav__list a {
-   color: #000;
-   font-size: 14px;
-   font-weight: 400;
-}
-
 .header__info {
     min-width: 175px;
     height: 63px;
     padding: 14px 16px 18px 10px;
-    text-align: center;
-    background-color: rgba(217,217,217,0.3);
-    border-radius: 5px;
     display: flex;
     gap: 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-color: var(--header__info-bg-color);
+    border-radius: 5px;
 }
 
-.header__info p {
-    color: var(--secondary-black);
-    font-size: 10px;
-    font-weight: 450;
-}
-
-.header__info span {
+.header__info-span {
     font-size: 14px;
     font-weight: 700;
 }
 
-.first-value {
-    color: #000;
+.header__info_span_first-value {
+    color: var(--bg-color-black);
 }
 
-.second-value {
-    color: #8AC540;
+.header__info_span_second-value {
+    color: var(--header__info_span-bg-color-green);
 }
 
 .header__user {
@@ -158,14 +154,15 @@ img {
     justify-content: flex-end;
 
     position: relative;
-    font-size: 14px;
-    color: rgb(0, 0, 0, 0.7);
     white-space: normal; /* перенос текста */
 }
 
+.header__user-info_paragraph-username {
+    color: rgba(0,0,0,0.7);
+}
+
 .header__user-info a {
-    font-size: 10px;
-    color: var(--secondary);
+    font-weight: 300;
     align-self: flex-end;
 }
 
@@ -193,7 +190,7 @@ img {
     background-color: var(--btn-header-bg-color);
     padding: 8px;
     border-radius: 5px;
-    color: #000;
+    color: var(--bg-color-black);
     font-size: 14px;
     font-weight: 500;
 }
@@ -240,7 +237,7 @@ img {
     height: 59px;
     padding: 15px 65px;
     border-radius: 5px;
-    color: #fff;
+    color: var(--bg-color-white);
     background: var(--btn-bg-color);
     font-size: 22px;
     font-weight: 400;
@@ -372,7 +369,7 @@ img {
 }
 
 .rate-card--business:hover {
-    outline: 2px solid #000;
+    outline: 2px solid var(--bg-color-black);
     cursor: pointer;
 }
 
@@ -399,8 +396,8 @@ img {
 }
 
 .rate__header--business {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--bg-color-black);
+    color: var(--bg-color-white);
 }
 
 .rate__header--business .rate__img {
@@ -453,7 +450,7 @@ img {
     text-align: center;
     font-size: 14px;
     font-weight: 400;
-    color: #fff;
+    color: var(--bg-color-white);
     border-radius: 10px;
     background: var(--blue-badge);
 }
@@ -536,12 +533,12 @@ img {
 
 .btn--rate-beginner {
     background: var(--btn-gray-bg-color);
-    color: #000;
+    color: var(--bg-color-black);
 }
 
 .btn--rate-md {
     background: var(--btn-bg-color);
-    color: #fff;
+    color: var(--bg-color-white);
 }
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
@@ -560,7 +557,7 @@ img {
 .nav__footer {
     font-size: 14px;
     font-weight: 300;
-    color: #fff;
+    color: var(--bg-color-white);
     text-align: right;
 }
 
@@ -569,7 +566,7 @@ img {
 }
 
 .nav__footer a {
-    color: #fff;
+    color: var(--bg-color-white);
 }
 
 /* ---------------------------------------------------- Auth Section ------------------------------------------------ */
@@ -696,7 +693,7 @@ img {
 .auth-btn__btn-login {
     font-size: 22px;
     font-weight: 400;
-    color: #fff;
+    color: var(--bg-color-white);
     background: var(--btn-bg-color);
     border-radius: 5px;
     width: 379px;
@@ -808,10 +805,9 @@ img {
 .search-form__input {
     width: 242px;
     height: 43px;
-    padding: 13px 70px; /* 93px - второе значение */
+    padding: 13px 19px; /* 93px - второе значение */
     border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
     border-radius: 5px;
-    text-align: center;
 }
 
 .search-form__input::placeholder {
@@ -914,7 +910,7 @@ img {
 }
 
 .checkbox:checked + label {
-    color: #000;
+    color: var(--bg-color-black);
 }
 
 .label-text {
@@ -1073,14 +1069,14 @@ img {
     transform: rotate(45deg);
     top: 0;
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    background-color: #fff;
+    background-color: var(--bg-color-white);
 }
 
 .menu-icon.menu-icon-active::after {
     transform: rotate(-45deg);
     top: 0;
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-    background-color: #fff;
+    background-color: var(--bg-color-white);
 }
 
 
@@ -1130,7 +1126,7 @@ img {
     .nav--mobile .nav__list a {
         font-size: 16px;
         font-weight: 300;
-        color: #fff;
+        color: var(--bg-color-white);
     }
 
     /* Убираем подчёркивание у активного элемента (которое задано по умолчанию для демонстрации) */

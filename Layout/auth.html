@@ -1,12 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Подключение скриптов -->
+    <script src="./customscript.js"></script>
 
-    <title>Auth</title>
+    <title>СКАН – регистрация</title>
 </head>
 <body>
 
@@ -21,76 +24,98 @@
                 </div>
 
                 <ul class="nav__list nav__list-header"> <!-- доп.класс добавлен, т.к. в футере список пропадает -->
-                    <li><a href="#!">Главная</a></li>
-                    <li><a href="#!">Тарифы</a></li>
-                    <li><a href="#!">FAQ</a></li>
+                    <li><a class="paragraph-14" href="#!">Главная</a></li>
+                    <li><a class="paragraph-14" href="#!">Тарифы</a></li>
+                    <li><a class="paragraph-14" href="#!">FAQ</a></li>
                 </ul>
+
+                <div class="header__info none">
+                    <p class="paragraph-10">Использовано компаний: <span class="header__info-span header__info_span_first-value">34</span></p>
+                    <p class="paragraph-10">Лимит по категориям: <span class="header__info-span header__info_span_second-value">100</span></p>
+                </div>
+
+                <div class="header__user none">
+                    <div class="header__user-info">
+                        <p class="paragraph-14 header__user-info_paragraph-username">Алексей А.</p>
+                        <a class="paragraph-10" href="#!">Выйти</a>
+                    </div>
+                    <div class="user__logo">
+                        <a href="#!"><img src="./img/main/user-nav.png" alt="user profile"></a>
+                    </div>
+                </div>
 
                 <!-- Секция "Зарегистирироваться | Войти" -->
                 <ul class="nav__login nav__login--header">
-                    <li><a href="#!" class="btn--registration">Зарегистрироваться</a></li>
-                    <li></li>
-                    <li><a href="#!" class="btn btn--login">Войти</a></li>
+                    <li><a  class="btn btn--registration" href="#!">Зарегистрироваться</a></li>
+                    <li></li> <!-- Пустой item для отображения вертикальной черты между пунктами списка -->
+                    <li><a class="btn btn--login" href="#!">Войти</a></li>
                 </ul>
-            </nav>
 
-            </div>
+                <!-- Бургер-меню-->
+                <button type="button" class="nav__toggle">
+                    <div class="menu-icon-wrapper">
+                        <div class="menu-icon"></div>
+                    </div>
+                </button>
+
+                <!-- Спиннер (Loader) -->
+                <!-- <img src="./img/main/spinner.svg" alt="СКАН loader spinner"> -->
+            </nav>
         </div>
+    </div>
 </header>
 
 <main class="main">
     <section class="auth">
         <div class="container">
-                    <div class="auth__row">
-                        <div class="auth__content">
-                            <h2 class="title__h2 auth-title">ДЛЯ ОФОРМЛЕНИЯ ПОДПИСКИ <br> НА ТАРИФ, НЕОБХОДИМО АВТОРИЗОВАТЬСЯ.</h2>
-                            <div class="auth__img">
-                                <img src="./img/auth/key.png" alt="СКАН Авторизация Регистрация Оформление подписки Тариф">
+            <div class="auth__row">
+                <div class="auth__content">
+                    <h2 class="title__h2 auth-title">ДЛЯ ОФОРМЛЕНИЯ ПОДПИСКИ <br> НА ТАРИФ, НЕОБХОДИМО АВТОРИЗОВАТЬСЯ.</h2>
+                    <div class="auth__img">
+                        <img src="./img/auth/key.png" alt="СКАН Авторизация Регистрация Оформление подписки Тариф">
+                    </div>
+                </div>
+
+                <div class="auth__form">
+                    <form class="authorization-form">
+                        <div class="authorization-form__container">
+
+                            <div class="authorization-form__navigation">
+                                <button class="authorization-form__btn authorization-form__btn-login">Войти</button>
+                                <button class="authorization-form__btn authorization-form__btn-signup">Зарегистрироваться</button>
+                            </div>
+
+                            <div class="authorization-form__content">
+                                <div class="authorization-form__content authorization-form__content_input_login">
+                                    <label class="authorization-form__label" for="login">Логин или номер телефона:</label>
+                                    <input class="authorization-form__input" type="text" id="login" name="login">
+                                </div>
+
+                                <div class="authorization-form__content authorization-form__content_input_password">
+                                    <label class="authorization-form__label" for="password">Пароль: </label>
+                                    <input class="authorization-form__input" type="password" id="password" name="password">
+                                </div>
+                            </div>
+
+                            <div class="authorization-form__content authorization-form__content_btn-login">
+                                <a href="#!" class="btn auth-btn__btn-login">Войти</a>
+                            </div>
+                            <a class="auth-btn__btn-recovery" href="#!">Восстановить пароль</a>
+
+                            <div class="authorization-form__oauth">
+                                <p class="authorization-form__oauth-paragraph">Войти через:</p>
+
+                                <div class="oauth__btns">
+                                    <a class="btn oauth__btn oauth__btn-google" href="#!"><img src="./img/auth/google.svg" alt="СКАН войти через google"></a>
+                                    <a class="btn oauth__btn oauth__btn-facebook" href="#!"><img src="./img/auth/facebook.svg" alt="СКАН войти через facebook"></a>
+                                    <a class="btn oauth__btn oauth__btn-yandex" href="#!"><img src="./img/auth/yandex.svg" alt="СКАН войти через yandex"></a>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="auth__form">
-                                <form class="authorization-form">
-                                    <div class="authorization-form__container">
-
-                                        <div class="authorization-form__navigation">
-                                            <button class="authorization-form__btn authorization-form__btn-login">Войти</button>
-                                            <button class="authorization-form__btn authorization-form__btn-signup">Зарегистрироваться</button>
-                                        </div>
-
-                                        <div class="authorization-form__content">
-
-                                            <div class="authorization-form__content authorization-form__content_input_login">
-                                                 <label class="authorization-form__label" for="login">Логин или номер телефона:</label>
-                                                 <input class="authorization-form__input" type="text" id="login" name="login">
-                                            </div>
-                                            <div class="authorization-form__content authorization-form__content_input_password">
-                                                <label class="authorization-form__label" for="password">Пароль: </label>
-                                                <input class="authorization-form__input" type="password" id="password" name="password">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="authorization-form__content authorization-form__content_btn-login">
-                                            <a href="#!" class="btn auth-btn__btn-login">Войти</a>
-                                        </div>
-                                            <a href="#!" class="auth-btn__btn-recovery">Восстановить пароль</a>
-
-                                        <div class="authorization-form__oauth">
-                                            <p class="authorization-form__oauth-paragraph">Войти через:</p>
-
-                                            <div class="oauth__btns">
-                                                <a class="btn oauth__btn oauth__btn-google" href="#!"><img src="./img/auth/google.svg" alt="СКАН войти через google"></a>
-                                                <a class="btn oauth__btn oauth__btn-facebook" href="#!"><img src="./img/auth/facebook.svg" alt="СКАН войти через facebook"></a>
-                                                <a class="btn oauth__btn oauth__btn-yandex" href="#!"><img src="./img/auth/yandex.svg" alt="СКАН войти через yandex"></a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </form>
-                        </div>
-                    </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 </div>
@@ -98,8 +123,9 @@
 <footer class="footer">
     <div class="container">
         <div class="nav nav--footer">
+
             <div class="nav__logo logo--footer">
-                    <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
+                <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
             </div>
 
             <ul class="nav__footer">
@@ -112,7 +138,6 @@
         </div>
     </div>
 </footer>
-
 
 </body>
 </html>

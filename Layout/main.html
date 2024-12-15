@@ -1,10 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Подключение скриптов -->
     <script src="./customscript.js"></script>
 
     <title>СКАН – поиск информации о компании по ИНН</title>
@@ -22,20 +24,20 @@
                 </div>
 
                 <ul class="nav__list nav__list-header"> <!-- доп.класс добавлен, т.к. в футере список пропадает -->
-                    <li><a href="#!">Главная</a></li>
-                    <li><a href="#!">Тарифы</a></li>
-                    <li><a href="#!">FAQ</a></li>
+                    <li><a class="paragraph-14" href="#!">Главная</a></li>
+                    <li><a class="paragraph-14" href="#!">Тарифы</a></li>
+                    <li><a class="paragraph-14" href="#!">FAQ</a></li>
                 </ul>
 
-                <div class="header__info none">
-<!--                    <img src="./img/main/spinner.svg" alt="СКАН loader spinner">-->
-                    <p>Использовано компаний: <span class="first-value">34</span></p>
-                    <p>Лимит по категориям: <span class="second-value">100</span></p>
+                <div class="header__info">
+                    <p class="paragraph-10">Использовано компаний: <span class="header__info-span header__info_span_first-value">34</span></p>
+                    <p class="paragraph-10">Лимит по категориям: <span class="header__info-span header__info_span_second-value">100</span></p>
                 </div>
-                <div class="header__user none">
+
+                <div class="header__user">
                     <div class="header__user-info">
-                        <p>Алексей А.</p>
-                        <a href="#!" class="reg">Выйти</a>
+                        <p class="paragraph-14 header__user-info_paragraph-username">Алексей А.</p>
+                        <a class="paragraph-10" href="#!">Выйти</a>
                     </div>
                     <div class="user__logo">
                         <a href="#!"><img src="./img/main/user-nav.png" alt="user profile"></a>
@@ -43,20 +45,21 @@
                 </div>
 
                 <!-- Секция "Зарегистирироваться | Войти" -->
-                <ul class="nav__login nav__login--header">
-                    <li><a href="#!" class="btn--registration">Зарегистрироваться</a></li>
-                    <li></li>
-                    <li><a href="#!" class="btn btn--login">Войти</a></li>
+                <ul class="nav__login nav__login--header none">
+                    <li><a  class="btn btn--registration" href="#!">Зарегистрироваться</a></li>
+                    <li></li> <!-- Пустой item для отображения вертикальной черты между пунктами списка -->
+                    <li><a class="btn btn--login" href="#!">Войти</a></li>
                 </ul>
 
                 <!-- Бургер-меню-->
-                <button type="button" class="nav__toggle">
+                <button type="button" class="nav__toggle none">
                     <div class="menu-icon-wrapper">
                         <div class="menu-icon"></div>
                     </div>
                 </button>
 
-
+                <!-- Спиннер (Loader) -->
+                <!-- <img src="./img/main/spinner.svg" alt="СКАН loader spinner"> -->
             </nav>
         </div>
     </div>
@@ -72,7 +75,7 @@
                         <div class="header__text">
                             <p class="paragraph-20 header__paragraph">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</p>
                         </div><br><br>
-                            <a href="#!" class="btn btn--header">Запросить данные</a>
+                            <a class="btn btn--header" href="#!">Запросить данные</a>
                     </div>
 
                     <div class="header__img">
@@ -108,7 +111,6 @@
                         <button class="slider__btn slider__btn--next">
                             <img src="./img/main/arrow-right.svg" alt="СКАН стрелочка">
                         </button>
-
                 </div>
 
                 <div class="factoids__img">
@@ -157,7 +159,6 @@
                         </div>
 
                             <a class="btn btn--rate btn--rate-beginner" href="#!">Перейти в личный кабинет</a>
-
                     </div>
                 </div>
 
@@ -239,6 +240,7 @@
 <footer class="footer">
     <div class="container">
         <div class="nav nav--footer">
+
             <div class="nav__logo logo--footer">
                     <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
             </div>
@@ -249,7 +251,6 @@
                 <li><a href="mailto:info@skan.ru">info@skan.ru</a></li>
                 <li>Copyright, 2025</li>
             </ul>
-
         </div>
     </div>
 </footer>

@@ -1,12 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Подключение скриптов -->
+    <script src="./customscript.js"></script>
 
-    <title>Search</title>
+    <title>СКАН – поиск</title>
 </head>
 <body>
 
@@ -21,20 +24,20 @@
                 </div>
 
                 <ul class="nav__list nav__list-header"> <!-- доп.класс добавлен, т.к. в футере список пропадает -->
-                    <li><a href="#!">Главная</a></li>
-                    <li><a href="#!">Тарифы</a></li>
-                    <li><a href="#!">FAQ</a></li>
+                    <li><a class="paragraph-14" href="#!">Главная</a></li>
+                    <li><a class="paragraph-14" href="#!">Тарифы</a></li>
+                    <li><a class="paragraph-14" href="#!">FAQ</a></li>
                 </ul>
 
                 <div class="header__info">
-<!--                    <img src="./img/main/spinner.svg" alt="СКАН loader spinner">-->
-                    <p>Использовано компаний: <span class="first-value">34</span></p>
-                    <p>Лимит по категориям: <span class="second-value">100</span></p>
+                    <p class="paragraph-10">Использовано компаний: <span class="header__info-span header__info_span_first-value">34</span></p>
+                    <p class="paragraph-10">Лимит по категориям: <span class="header__info-span header__info_span_second-value">100</span></p>
                 </div>
+
                 <div class="header__user">
                     <div class="header__user-info">
-                        <p>Алексей А.</p>
-                        <a href="#!" class="reg">Выйти</a>
+                        <p class="paragraph-14 header__user-info_paragraph-username">Алексей А.</p>
+                        <a class="paragraph-10" href="#!">Выйти</a>
                     </div>
                     <div class="user__logo">
                         <a href="#!"><img src="./img/main/user-nav.png" alt="user profile"></a>
@@ -43,9 +46,9 @@
 
                 <!-- Секция "Зарегистирироваться | Войти" -->
                 <ul class="nav__login nav__login--header none">
-                    <li><a href="#!" class="btn--registration">Зарегистрироваться</a></li>
-                    <li></li>
-                    <li><a href="#!" class="btn btn--login">Войти</a></li>
+                    <li><a  class="btn btn--registration" href="#!">Зарегистрироваться</a></li>
+                    <li></li> <!-- Пустой item для отображения вертикальной черты между пунктами списка -->
+                    <li><a class="btn btn--login" href="#!">Войти</a></li>
                 </ul>
 
                 <!-- Бургер-меню-->
@@ -55,7 +58,8 @@
                     </div>
                 </button>
 
-
+                <!-- Спиннер (Loader) -->
+                <!-- <img src="./img/main/spinner.svg" alt="СКАН loader spinner"> -->
             </nav>
         </div>
     </div>
@@ -81,6 +85,7 @@
                                             <label class="paragraph-18" for="inn">ИНН компании<span class="search-form__asterisk">*</span></label><br>
                                             <input class="search-form__input" placeholder="10 цифр" maxlength="10" type="text" id="inn" name="inn">
                                         </div>
+
                                         <div class="search-form__section search-form__section_item-2">
                                             <label class="paragraph-18" for="tonality">Тональность</label><br>
                                             <select class="search-form__select-big search-form__select-big_item-1" id="tonality">
@@ -89,30 +94,31 @@
                                                 <option class="search-form__select-big_option search-form__select-big_option-2" value="Значение-2">Значение 2</option>
                                                 <option class="search-form__select-big_option search-form__select-big_option-3" value="Значение-3">Значение 3</option>
                                             </select>
-
                                         </div>
+
                                         <div class="search-form__section search-form__section_item-3">
                                             <label class="paragraph-18" for="documents_count">Количество документов в выдаче<span class="search-form__asterisk">*</span></label><br>
                                             <input class="search-form__input" placeholder="От 1 до 1000" maxlength="4" type="text" id="documents_count" name="documents_count">
                                         </div>
+
                                         <div class="search-form__section search-form__section_item-4">
                                             <label class="paragraph-18" for="searchSelect-small-1">Диапазон поиска<span class="search-form__asterisk">*</span></label><br>
                                             <div class="search-form_section__row">
-                                            <select class="search-form__select-small search-form__select-small_item-1" id="searchSelect-small-1">
-                                                <option class="search-form__select-small_option search-form__select-small_option-1" value="Дата начала">Дата начала</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-2" value="Значение 1">Значение 1</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-3" value="Значение 2">Значение 2</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-4" value="Значение 3">Значение 3</option>
-                                            </select>
-                                            <select class="search-form__select-small search-form__select-small_item-2" id="searchSelect-small-2">
-                                                <option class="search-form__select-small_option search-form__select-small_option-0" value="Дата конца">Дата конца</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-1" value="Значение 1">Значение 1</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-2" value="Значение 2">Значение 2</option>
-                                                <option class="search-form__select-small_option search-form__select-small_option-3" value="Значение 3">Значение 3</option>
-                                            </select>
+                                                <select class="search-form__select-small search-form__select-small_item-1" id="searchSelect-small-1">
+                                                    <option class="search-form__select-small_option search-form__select-small_option-1" value="Дата начала">Дата начала</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-2" value="Значение 1">Значение 1</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-3" value="Значение 2">Значение 2</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-4" value="Значение 3">Значение 3</option>
+                                                </select>
+
+                                                <select class="search-form__select-small search-form__select-small_item-2" id="searchSelect-small-2">
+                                                    <option class="search-form__select-small_option search-form__select-small_option-0" value="Дата конца">Дата конца</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-1" value="Значение 1">Значение 1</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-2" value="Значение 2">Значение 2</option>
+                                                    <option class="search-form__select-small_option search-form__select-small_option-3" value="Значение 3">Значение 3</option>
+                                                </select>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="search-form__checkboxes"> <!-- ТУТ колока чекбоксов + кнопка -->
@@ -120,74 +126,66 @@
                                             <!-- Оборачиваем checkbox в label для увеличения области кликабельности -->
 
                                             <div class="check check-0">
-                                            <input type="checkbox" name="option0" value="option0" class="checkbox" id="checkbox0" checked>
-                                            <label class="label" for="checkbox0">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Признак максимальной полноты</span>
-                                            </label>
+                                                <input type="checkbox" name="option0" value="option0" class="checkbox" id="checkbox0" checked>
+                                                <label class="label" for="checkbox0">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Признак максимальной полноты</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-1">
-                                            <input type="checkbox" name="option1" value="option1" class="checkbox" id="checkbox1" checked>
-                                            <label class="label" for="checkbox1">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Упоминания в бизнес-контексте</span>
-                                            </label>
+                                                <input type="checkbox" name="option1" value="option1" class="checkbox" id="checkbox1" checked>
+                                                <label class="label" for="checkbox1">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Упоминания в бизнес-контексте</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-2">
-                                            <input type="checkbox" name="option2" value="option2" class="checkbox" id="checkbox2" checked>
-                                            <label class="label" for="checkbox2">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Главная роль в публикации</span>
-                                            </label>
+                                                <input type="checkbox" name="option2" value="option2" class="checkbox" id="checkbox2" checked>
+                                                <label class="label" for="checkbox2">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Главная роль в публикации</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-3">
-                                            <input type="checkbox" name="option3" value="option3" class="checkbox" id="checkbox3">
-                                            <label class="label" for="checkbox3">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Публикации только с риск-факторами</span>
-                                            </label>
+                                                <input type="checkbox" name="option3" value="option3" class="checkbox" id="checkbox3">
+                                                <label class="label" for="checkbox3">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Публикации только с риск-факторами</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-4">
-                                            <input type="checkbox" name="option4" value="option4" class="checkbox" id="checkbox4">
-                                            <label class="label" for="checkbox4">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Включать технические новости рынков и всякое такое там ещё текст какой-то</span>
-                                            </label>
+                                                <input type="checkbox" name="option4" value="option4" class="checkbox" id="checkbox4">
+                                                <label class="label" for="checkbox4">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Включать технические новости рынков и всякое такое там ещё текст какой-то</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-5">
-                                            <input type="checkbox" name="option5" value="option5" class="checkbox" id="checkbox5" checked>
-                                            <label class="label" for="checkbox5">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Включать анонсы и календари</span>
-                                            </label>
+                                                <input type="checkbox" name="option5" value="option5" class="checkbox" id="checkbox5" checked>
+                                                <label class="label" for="checkbox5">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Включать анонсы и календари</span>
+                                                </label>
                                             </div>
 
                                             <div class="check check-6">
-                                            <input type="checkbox" name="option6" value="option6" class="checkbox" id="checkbox6">
-                                            <label class="label" for="checkbox6">
-                                                <span class="checkmark"></span>
-                                                <span class="label-text">Включать сводки новостей</span>
-                                            </label>
+                                                <input type="checkbox" name="option6" value="option6" class="checkbox" id="checkbox6">
+                                                <label class="label" for="checkbox6">
+                                                    <span class="checkmark"></span>
+                                                    <span class="label-text">Включать сводки новостей</span>
+                                                </label>
                                             </div>
-
-                                            <!-- <label class="search-from__checkbox search-from__checkbox-1 active"><input type="checkbox" name="option1" value="option1" checked>&nbsp;Признак максимальной полноты</label>
-                                            <label  class="search-from__checkbox search-from__checkbox-2 active"><input type="checkbox" name="option2" value="option2" checked>&nbsp;Признак максимальной полноты</label>
-                                            <label class="search-from__checkbox search-from__checkbox-3 inactive"><input type="checkbox" name="option3" value="option3">&nbsp;Признак максимальной полноты</label>
-                                            <label class="search-from__checkbox search-from__checkbox-4 inactive"><input type="checkbox" name="option4" value="option4">&nbsp;Признак максимальной полноты</label>
-                                            <label class="search-from__checkbox search-from__checkbox-5 active"><input type="checkbox" name="option5" value="option5" checked>&nbsp;Признак максимальной полноты</label>
-                                            <label  class="search-from__checkbox search-from__checkbox-6 inactive"><input type="checkbox" name="option6" value="option6">&nbsp;Признак максимальной полноты</label>
-                                             -->
                                         </div>
 
                                       <div class="search-button__button">
                                           <a class="btn auth-btn__btn-login search-btn" href="#!">Поиск</a>
                                           <div class="search-paragraph-container">
-                                                <p class="paragraph-14 search-paragraph">* Обязательные к заполнению поля</p>
+                                              <p class="paragraph-14 search-paragraph">* Обязательные к заполнению поля</p>
                                           </div>
                                       </div>
                                     </div>
@@ -195,7 +193,6 @@
                             </div>
                         </form>
                     </div>
-
                 </div>
 
                 <div class="search__img">
@@ -211,7 +208,7 @@
     <div class="container">
         <div class="nav nav--footer">
             <div class="nav__logo logo--footer">
-                    <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
+                <img src="./img/main/logo-footer.png" alt="Логотип компании СКАН" title="Логотип компании СКАН"/>
             </div>
 
             <ul class="nav__footer">

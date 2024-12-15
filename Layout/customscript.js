@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
         select2.focus();
     } else {
         select1.focus();
-    }
-});
+    }});
 
 });
