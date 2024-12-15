@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face { font-family: 'Ferry'; src: url('./fonts/ferry_black.otf') }
 
+
+/* ------------------------------------------- Настройки для всего проекта -------------------------------------------*/
+
 /* Объявляем CSS-переменные. root - верхний уровень (html) */
 :root {
     --container-width: 1440px;
@@ -63,6 +66,17 @@ img {
     margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
+/* Эффекты для всех кнопок */
+.btn:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1.5px;
+}
+
 /* ----------------------------------------- Параграфы (форматирование текста) -------------------------------------- */
 
 .paragraph-10 {
@@ -108,6 +122,11 @@ img {
     font-weight: 400;
 }
 
+.paragraph-20-500 { /* rate__tax-paragraph */
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .paragraph-22 {
     font-size: 22px;
     font-weight: 400;
@@ -134,7 +153,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Burger Menu ------------------------------------------------- */
+/* ---------------------------------------------------- Бургер-меню ------------------------------------------------- */
 
 .menu-icon-wrapper {
     width: 30px;
@@ -152,7 +171,7 @@ img {
     background-color: var(--footer-color);
 }
 
-/* Нижний прямоуголник бургера */
+/* Верхний прямоуголник бургера */
 .menu-icon::before {
     content: "";
     position: absolute;
@@ -164,7 +183,7 @@ img {
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s; /* размещение по центру */
 }
 
-/* Верхний прямоугольник бургера */
+/* Нижний прямоугольник бургера */
 .menu-icon::after {
     position: absolute;
     left: 0;
@@ -196,7 +215,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Header Section ---------------------------------------------- */
+/* ---------------------------------------------------- HEADER ------------------------------------------------------ */
 
 .header {
     min-height: 93px;
@@ -223,6 +242,7 @@ img {
     gap: 50px;
 }
 
+/* Блок "Использовано компаний | лимит по категориям" */
 .header__info {
     min-width: 175px;
     height: 63px;
@@ -247,6 +267,7 @@ img {
     color: var(--header__info_span-bg-color-green);
 }
 
+/* Информация об учётной записи пользователя */
 .header__user {
     min-width: 111px;
     display: flex;
@@ -286,6 +307,7 @@ img {
     background-color: var(--footer-color);
 }
 
+/* Кнопка "Зарегистрироваться" */
 .nav__login .nav__login_btn-registration {
     font-size: 14px;
     color: var(--secondary-black);
@@ -299,17 +321,6 @@ img {
     border-radius: 5px;
     color: var(--bg-color-black);
     background-color: var(--btn-header-bg-color);
-}
-
-/* Эффекты для всех кнопок */
-.btn:hover {
-    opacity: 0.9;
-    transition: 0.2s ease-in;
-}
-
-.btn:active {
-    position: relative;
-    top: 1.5px;
 }
 
 /* Header контент */
@@ -350,6 +361,7 @@ img {
     padding: 15px 65px;
     font-size: 22px;
     border-radius: 5px;
+
     color: var(--bg-color-white);
     background: var(--btn-bg-color);
 }
@@ -371,7 +383,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Factoids ---------------------------------------------------- */
+/* ---------------------------------------------------- Фактоиды ---------------------------------------------------- */
 
 .factoids {
     margin-top: 65px;
@@ -428,10 +440,12 @@ img {
     position: absolute;
     right: 10px;
     top: 20px;
+
     background-image: url('../img/main/factoids-elements.png');
 }
 
-/* ------------------------------------------------- Rate Section --------------------------------------------------- */
+
+/* ------------------------------------------------- Наши Тарифы ---------------------------------------------------- */
 
 .rate {
     margin-top: 100px;
@@ -458,6 +472,7 @@ img {
     box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
+/* Эффекты при наведении на карточки */
 .rate__card-beginner:hover {
    outline: 2px solid var(--yellow);
    cursor: pointer;
@@ -482,21 +497,21 @@ img {
    border-radius: 10px 10px 0 0;
 }
 
-.rate__header--beginner {
+.rate__header-beginner {
     background-color: var(--yellow);
 }
 
-.rate__header--pro {
+.rate__header-pro {
     background-color: var(--aquamarine);
 }
 
-.rate__header--pro .rate__img {
+.rate__header-pro .rate__img {
     max-width: 100%;
     max-height: 100%;
     margin-top: -20px;
 }
 
-.rate__header--business {
+.rate__header-business {
     background-color: var(--bg-color-black);
     color: var(--bg-color-white);
 }
@@ -536,12 +551,14 @@ img {
 }
 
 .rate__badge {
-    padding: 5px 13px 22px 13px;
-    position: absolute;
-    right: 10px;
     width: 134px;
     height: 24px;
+    padding: 5px 13px 22px 13px;
+
+    position: absolute;
+    right: 10px;
     text-align: center;
+
     border-radius: 10px;
     background: var(--blue-badge);
 }
@@ -556,6 +573,7 @@ img {
     position: relative;
 }
 
+/* Старая цена */
 .rate__price-outdated {
     margin-left: 19px;
     padding: 0;
@@ -577,10 +595,6 @@ img {
     margin-top: 44px;
 }
 
-.rate__tax-paragraph {
-    font-weight: 500;
-}
-
 .rate__list {
     margin-top: 10px;
 }
@@ -592,16 +606,19 @@ img {
     align-items: center;
 }
 
+/* Галочка слева от текста */
 .rate__list li::before {
     content: "";
-    position: absolute;
     width: 20px;
     height: 20px;
+
+    position: absolute;
     left: 0;
     top: 50%;
+
     background-size: 20px 20px;
     background-image: url('../img/main/checkmark.svg');
-    transform: translateY(-50%); /* маркер на одной линии с текстом */
+    transform: translateY(-50%); /* Маркер на одной линии с текстом */
 }
 
 .btn__rate {
@@ -623,7 +640,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Auth Section ------------------------------------------------ */
+/* ------------------------------------------------ Авторизация/Регистрация ----------------------------------------- */
 
 .auth__row {
     display: flex;
@@ -664,11 +681,13 @@ img {
 
 .authorization-form::before {
     content: "";
-    position: absolute;
     width: 75px;
     height: 92px;
+
+    position: absolute;
     top: -55px;
     left: -48px;
+
     background-image: url('../img/auth/lock.png');
 }
 
@@ -773,6 +792,7 @@ img {
     color: var(--auth-label-color);
 }
 
+/* Кнопки социальных сетей */
 .oauth__btns {
     display: flex;
     margin-top: 15px;
@@ -793,7 +813,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Search section ---------------------------------------------- */
+/* -------------------------------------------------- Поиск Данных -------------------------------------------------- */
 
 .search__row {
     display: flex;
@@ -860,7 +880,6 @@ img {
     padding: 11px 30px 10px 22px;
     border-radius: 5px;
     border: 1px solid var(--search-form-placeholder);
-
 }
 
 .search-form_section__row {
@@ -928,11 +947,13 @@ img {
 .checkmark {
     width: 20px;
     height: 20px;
+
+    display: inline-block; /* Отображение чек-бокса */
+    flex-shrink: 0; /* Если текст располагается в две строчки, то чек-бокс не ужимается */
+    transition: background-image 0.3s ease; /* Плавный переход */
+
     background-image: url('../img/search/checkbox-inactive-search.svg'); /* Изображение для неотмеченного состояния */
     background-size: cover; /* Масштабируем изображение */
-    display: inline-block; /* Отображение чек-бокса */
-    transition: background-image 0.3s ease; /* Плавный переход */
-    flex-shrink: 0; /* Если текст располагается в две строчки, то чек-бокс не ужимается */
 }
 
 .checkbox:checked + label .checkmark {
@@ -943,7 +964,7 @@ img {
     color: var(--bg-color-black);
 }
 
-/* Текстовое значение чек-бокса */
+/* Текста справа от чек-бокса */
 .label-text {
     margin-left: 17px; /* Отступ между изображением и текстом */
 }
@@ -1020,7 +1041,6 @@ img {
 }
 
 
-
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
 
 .footer__sticky {
@@ -1049,8 +1069,7 @@ img {
 }
 
 
-/* ---------------------------------------------------- Adaptive ---------------------------------------------------- */
-
+/* ---------------------------------------------- Адаптивная вёрстка ------------------------------------------------ */
 
 @media (max-width: 2000px) {
 
@@ -1077,8 +1096,8 @@ img {
     .nav--mobile .nav__logo_logo-header {
         margin-top: 0; /* Убираем отрицательный отступ */
         position: absolute; /* Позиционируем элемент независимо от flex */
-        left: 14px; /* Фиксированное значение от левого края */
-        top: -5px; /* Отступ сверху, если это необходимо */
+        left: 14px;
+        top: -5px;
     }
 
     /* Отображаем список (Главная Тарифы FAQ), если .nav--mobile = true */
