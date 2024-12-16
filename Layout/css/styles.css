@@ -156,9 +156,21 @@ img {
     font-weight: 400;
 }
 
-.paragraph-22-500 { /* Поиск в разделе "Регистрация" */
+.paragraph-22-500 { /* Поиск в разделе "Поиск" */
     font-size: 22px;
     font-weight: 500;
+}
+
+.paragraph-22-500-white {
+    color:
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.paragraph-22-500-white {
+    color: var(--bg-color-white);
+    font-size: 22px;
+    font-weight:
 }
 
 .paragraph-25-500 { /* Старая цена в разделе "Наши тарифы" */
@@ -1128,6 +1140,7 @@ img {
 
     width: 39px;
     height: 39px;
+
     background-repeat: no-repeat;
     background-image: url('../img/UI/arrow-left.svg');
 }
@@ -1145,7 +1158,9 @@ img {
 }
 
 /* Список документов */
-
+.documents {
+    margin-top: 107px;
+}
 .documents__row {
     display: flex;
     flex-direction: row;
@@ -1157,15 +1172,17 @@ img {
     min-width: 641px;
     min-height: 694px;
 
-    position: relative;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
+
+    position: relative;
 }
 
 .documents-card__column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%
 }
 
 .documents-card__column >:nth-child(2) {
@@ -1218,17 +1235,17 @@ img {
 }
 
 /* Читать в источнике + счётчик слов */
-
 .documents-card__footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 570px;
 
+    align-items: flex-end;
+
+    margin-top: auto;
     position: absolute;
-    bottom: 25px;
+    bottom: 30px;
+    width: 581px;
 }
-
 
 .documents-card__footer-btn {
     width: 223px;
@@ -1239,6 +1256,25 @@ img {
 
     border-radius: 5px;
     background: var(--aquamarine);
+}
+
+/* Кнопка "Показать больше" */
+
+.documents__btn_show-more {
+    width: 305px;
+    height: 59px;
+    padding: 16px 49px 16px 53px;
+
+    border-radius: 5px;
+    background: var(--btn-bg-color);
+}
+
+.documents__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
 }
 
 

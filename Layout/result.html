@@ -67,7 +67,7 @@
 
     <main class="main">
          <div class="container">
-            <section class="result none">
+            <section class="result">
                     <div class="result__row">
                         <div class="result__content">
                             <h2 class="result__title paragraph-40">ИЩЕМ. СКОРО БУДУТ РЕЗУЛЬТАТЫ</h2>
@@ -83,7 +83,7 @@
                     </div>
              </section>
 
-            <section class="summary none">
+            <section class="summary">
                     <div class="summary__column">
                         <h3 class="summary__title paragraph-30">Общая сводка</h3>
                         <p class="summary__paragraph paragraph-18-300">Найдено 4 221 вариантов</p>
@@ -97,6 +97,7 @@
 
              <section class="documents">
                  <h3 class="documents__title paragraph-30">Список документов</h3>
+                 <div class="documents__column"> <!-- Класс для привязки кнопки "Показать больше" -->
                  <div class="documents__row">
                      <div class="documents__card documents__card_card-1">
                         <div class="documents-card__container">
@@ -186,7 +187,6 @@
 
                                         В небольших компаниях и стартапах дата-сайентист делает все: собирает и очищает данные,
                                         создает математическую модель для их анализа, тестирует ее и презентует готовое решение бизнесу.
-
                                     </p>
                                 </div>
 
@@ -196,11 +196,15 @@
                                     <p class="documents-card__footer-paragraph paragraph-16-gray">3 233 слова</p>
                                 </div>
 
-                        </div>
+                            </div>
                         </div>
                      </div>
                  </div>
+
+                 <button class="btn documents__btn documents__btn_show-more paragraph-22-500-white">Показать больше</button>
+                </div>
              </section>
+
          </div>
     </main>
 </div>
