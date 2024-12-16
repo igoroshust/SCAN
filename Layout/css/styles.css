@@ -117,6 +117,12 @@ img {
     font-weight: 400;
 }
 
+.paragraph-18-300 { /* Сабтайтл в секции "Общая сводка" на странице "Результаты поиска" */
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--auth-label-color);
+}
+
 .paragraph-20 {
     font-size: 20px;
     font-weight: 400;
@@ -1045,6 +1051,7 @@ img {
 
 /* ----------------------------------------------- Результаты поиска ------------------------------------------------ */
 
+/* Ищем. Скоро будут результаты */
 .result {
     margin-top: 25px;
 }
@@ -1064,6 +1071,55 @@ img {
 
 .result__text {
     margin-top: 36px;
+}
+
+/* Общая сводка */
+
+.summary {
+    min-width: 1346px;
+}
+
+.summary__paragraph {
+    margin-top: 17px;
+}
+
+
+/* Таблица */
+
+.table {
+    position: relative;
+}
+
+.shit {
+    margin-top: 27px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 158px;
+    border: 2px solid var(--footer-color);
+}
+
+.shit::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: -10px;
+
+    width: 39px;
+    height: 39px;
+    background-repeat: no-repeat;
+    background-image: url('../img/UI/arrow-left.svg');
+}
+
+.shit::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    right: -10px;
+
+    width: 39px;
+    height: 39px;
+    background-repeat: no-repeat;
+    background-image: url('../img/UI/arrow-right.svg');
 }
 
 
