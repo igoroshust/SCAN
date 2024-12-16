@@ -815,9 +815,12 @@ img {
 
 /* -------------------------------------------------- Поиск Данных -------------------------------------------------- */
 
+.search {
+    margin-top: 69px;
+}
+
 .search__row {
     display: flex;
-    margin-top: 69px;
 }
 
 .search__content {
@@ -1039,6 +1042,39 @@ img {
     background-repeat: no-repeat;
     background-image: url('../img/search/folders-search.png');
 }
+
+/* ----------------------------------------------- Результаты поиска ------------------------------------------------ */
+
+.result {
+    margin-top: 25px;
+}
+
+.result__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 215px; /* 215 */
+}
+
+.result__content {
+    min-width: 509px;
+    /* height: 180px; */
+    padding: 40px 20px 40px 0px;
+}
+
+.result__text {
+    margin-top: 36px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
