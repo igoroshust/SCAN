@@ -1084,7 +1084,7 @@ img {
     background-image: url('../img/search/folders-search.png');
 }
 
-/* ----------------------------------------------- Результаты поиска ------------------------------------------------ */
+/* ----------------------------------------------- Результаты Поиска ------------------------------------------------ */
 
 /* Ищем. Скоро будут результаты */
 .result {
@@ -1161,19 +1161,31 @@ img {
 .documents {
     margin-top: 107px;
 }
+
 .documents__row {
+    margin-top: 58px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 38px;
+}
+
+/* Привязка кнопки "Показать больше" к секции с карточками */
+.documents__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 38px;
 }
 
 .documents__card {
-    margin-top: 58px;
-    min-width: 641px;
+    max-width: 641px;
     min-height: 694px;
 
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
+
+    flex: 0 1 300px; /* Устанавливаем фиксированную ширину 300px и возможность сжатия */
 
     position: relative;
 }
@@ -1259,7 +1271,6 @@ img {
 }
 
 /* Кнопка "Показать больше" */
-
 .documents__btn_show-more {
     width: 305px;
     height: 59px;
@@ -1267,15 +1278,10 @@ img {
 
     border-radius: 5px;
     background: var(--btn-bg-color);
+
+    transform: translateX(509px);
 }
 
-.documents__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 38px;
-}
 
 
 
