@@ -29,6 +29,7 @@
     --btn-gray-bg-color: #D2D2D2;
     --btn-signup: #C7C7C7;
     --auth-label-color: #949494;
+    --result-badge-yellow: #FFB64F;
 }
 
 body {
@@ -85,6 +86,11 @@ img {
     font-weight: 450;
 }
 
+.paragraph-12 {
+    font-size: 12px;
+    font-weight: 450;
+}
+
 .paragraph-14 {
     color: var(--bg-color-black);
     font-size: 14px;
@@ -102,14 +108,26 @@ img {
     font-weight: 700;
 }
 
-.paragraph-16-300 {
+.paragraph-16-black {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--bg-color-black);
+}
+
+.paragraph-16-gray {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--auth-label-color);
 }
 
 .paragraph-16-200 {
     font-size: 16px;
     font-weight: 200;
+}
+
+.paragraph-16-300 {
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .paragraph-18 {
@@ -145,6 +163,11 @@ img {
 
 .paragraph-25-500 { /* Старая цена в разделе "Наши тарифы" */
     font-size: 25px;
+    font-weight: 500;
+}
+
+.paragraph-26-500 { /* Заголовок документа в разделе "Результаты поиска" */
+    font-size: 26px;
     font-weight: 500;
 }
 
@@ -1085,7 +1108,6 @@ img {
 
 
 /* Таблица */
-
 .table {
     position: relative;
 }
@@ -1101,7 +1123,7 @@ img {
 .shit::before {
     content: '';
     position: absolute;
-    top: 60px;
+    top: 57px;
     left: -10px;
 
     width: 39px;
@@ -1113,7 +1135,7 @@ img {
 .shit::after {
     content: '';
     position: absolute;
-    top: 60px;
+    top: 57px;
     right: -10px;
 
     width: 39px;
@@ -1122,8 +1144,102 @@ img {
     background-image: url('../img/UI/arrow-right.svg');
 }
 
+/* Список документов */
+
+.documents__row {
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+}
+
+.documents__card {
+    margin-top: 58px;
+    min-width: 641px;
+    min-height: 694px;
+
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+}
+
+.documents-card__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.documents-card__column >:nth-child(2) {
+    margin-top: 24px;
+}
+
+.documents-card__column >:nth-child(3),
+.documents-card__column >:nth-child(4) {
+    margin-top: 14px;
+}
+
+.documents-card__column >:nth-child(5) {
+    margin-top: 20px;
+}
+
+.documents-card__column >:nth-child(6) {
+    margin-top: 32px;
+}
+
+.documents-card__container {
+    padding: 19px 30px 35px 30px;
+}
+
+.documents-card__info {
+    display: flex;
+    gap: 15px;
+}
+
+.documents-card__info_paragraph-source {
+    text-decoration: underline;
+}
+
+/* Бэйджик */
+.documents-card__badge-technical-news {
+    width: 157px;
+    height: 22px;
+    padding: 4px 11px 3px 14px;
+
+    text-align-center;
+    border-radius: 5px;
+    background: var(--result-badge-yellow);
+}
+
+/* Изображение */
+.documents-card__img img {
+    width: 581px;
+    height: 158px;
+    border-radius: 10px;
+    object-fit: cover; /* Картинка помещается в указанные пределы с сохранением пропорций */
+}
+
+/* Читать в источнике + счётчик слов */
+
+.documents-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 570px;
+
+    position: absolute;
+    bottom: 25px;
+}
 
 
+.documents-card__footer-btn {
+    width: 223px;
+    height: 47px;
+
+    padding: 14px 33px;
+    text-align: center;
+
+    border-radius: 5px;
+    background: var(--aquamarine);
+}
 
 
 
