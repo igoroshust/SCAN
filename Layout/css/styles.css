@@ -1120,7 +1120,66 @@ img {
 
 /* Таблица */
 .table {
+    margin-top: 30px;
+    width: 100%;
+    height: 158px;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 10px;
+    border: 2px solid var(--footer-color);
+    background: #fff;
+}
+
+.row {
+    display: flex;
+}
+
+.table__header {
+    width: 133px;
+    padding: 18px 19px 22px 14px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--footer-color);
+    border-radius: 5px 0px 0px 5px;
+
+    color: var(--bg-color-white);
+}
+
+.table__data {
+    width: 133px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 18px 19px 22px 14px;
+    align-items: center;
+    background: var(--bg-color-white);
+
     position: relative;
+}
+
+.table__data::after {
+    content: "";
+    position: absolute;
+    top: 20px; /* Значение, равное padding */
+    right: 0;
+    width: 1px;
+    height: calc(100% - 40px); /* Высота бордера с учетом padding */
+    background-color: var(--auth-label-color);
+}
+
+.data {
+    flex-grow: 1;
+    /* padding: 16px; */
+    border-right: 1px solid gray;
+
+    background: #fff;
 }
 
 .shit {
