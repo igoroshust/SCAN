@@ -78,6 +78,15 @@ img {
     top: 1.5px;
 }
 
+.anchor:hover {
+    border-bottom: 4px solid var(--footer-color);
+    transition: 0.2s ease-in;
+}
+
+.anchor-gray:hover {
+    border-bottom: 2px solid var(--auth-label-color);
+}
+
 /* ----------------------------------------- Параграфы (форматирование текста) -------------------------------------- */
 
 .paragraph-10 {
@@ -332,7 +341,7 @@ img {
 }
 
 .header__user-info_paragraph-username {
-    color: rgba(0,0,0,0.7);
+    color: var(--secondary-black-07);
 }
 
 .header__user-info a {
@@ -1060,6 +1069,7 @@ img {
 
 .search__img img {
     position: absolute;
+    width: 415px;
     bottom: 0;
     left: 72px; /* 55 px - картинка по сетке */
 }
