@@ -50,7 +50,7 @@ img {
     pointer-events: none; /* Изображения недоступны для скачивания */
 }
 
-/* Скрываение реализованных элементов при модульной вёрстке */
+/* Сокрытие реализованных элементов при модульной вёрстке */
 .none {
     display: none !important;
 }
@@ -60,14 +60,14 @@ img {
     overflow-y: hidden; /* допустим X */
 }
 
-/* Контейнера для контента */
+/* Контейнер для контента */
 .container {
     max-width: var(--container-width);
     padding: 0 var(--container-padding);
     margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
-/* Эффекты для всех кнопок */
+/* Эффекты для кнопок */
 .btn:hover {
     opacity: 0.9;
     transition: 0.2s ease-in;
@@ -86,6 +86,7 @@ img {
 .anchor-gray:hover {
     border-bottom: 2px solid var(--auth-label-color);
 }
+
 
 /* ----------------------------------------- Параграфы (форматирование текста) -------------------------------------- */
 
@@ -155,7 +156,7 @@ img {
     font-weight: 400;
 }
 
-.paragraph-20-300 { /* table__row table__data - не используется */
+.paragraph-20-300 { /* table__row table__data - временно не используется */
     font-size: 20px;
     font-weight: 300;
 }
@@ -170,7 +171,7 @@ img {
     font-weight: 400;
 }
 
-.paragraph-22-500 { /* Поиск в разделе "Поиск" */
+.paragraph-22-500 { /* Кнопка "Поиск" в разделе "Поиск" */
     font-size: 22px;
     font-weight: 500;
 }
@@ -204,6 +205,11 @@ img {
 
 .paragraph-40 {
     font-size: 40px;
+    font-weight: 500;
+}
+
+.paragraph-60-500 {
+    font-size: 60px;
     font-weight: 500;
 }
 
@@ -337,7 +343,7 @@ img {
     justify-content: flex-end;
 
     position: relative;
-    white-space: normal; /* перенос текста */
+    white-space: normal; /* Перенос текста */
 }
 
 .header__user-info_paragraph-username {
@@ -394,11 +400,6 @@ img {
     /* Чтобы картинка не налазила на текст при изменении окна браузера */
     position: relative;
     z-index: 1;
-}
-
-.header__title {
-    font-size: 60px;
-    font-weight: 500;
 }
 
 .header__title_main-h1 {
@@ -481,6 +482,7 @@ img {
 .factoids__img {
     width: 1307px;
     height: 575px;
+
     position: relative;
     bottom: 10px;
     right: 5px;
@@ -858,6 +860,7 @@ img {
     width: 96px;
     height: 31px;
     padding: 6px 18px;
+
     text-align: center;
     border: 1px solid var(--oauth-btn-border-color);
     border-radius: 3px;
@@ -1188,23 +1191,25 @@ img {
 /* Разделительная вертикальная черта между ячейками */
 .table__data::after {
     content: "";
+    height: calc(100% - 40px); /* Высота бордера с учетом padding */
+
     position: absolute;
     top: 20px; /* Значение, равное padding */
     right: 0;
     width: 1px;
-    height: calc(100% - 40px); /* Высота бордера с учетом padding */
+
     background-color: var(--auth-label-color);
 }
 
 /* Стрелочка слева от таблицы */
 .table::before {
     content: '';
+    width: 39px;
+    height: 39px;
+
     position: absolute;
     top: 57px;
     left: -10px;
-
-    width: 39px;
-    height: 39px;
 
     background-repeat: no-repeat;
     background-image: url('../img/UI/arrow-left.svg');
@@ -1213,12 +1218,12 @@ img {
 /* Стрелочка справа от таблицы */
 .table::after {
     content: '';
+    width: 39px;
+    height: 39px;
+
     position: absolute;
     top: 57px;
     right: 15px;
-
-    width: 39px;
-    height: 39px;
 
     background-repeat: no-repeat;
     background-image: url('../img/UI/arrow-right.svg');
@@ -1352,8 +1357,6 @@ img {
 
     transform: translateX(509px);
 }
-
-
 
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
