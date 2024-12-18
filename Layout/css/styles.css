@@ -3,7 +3,7 @@
 @font-face { font-family: 'Ferry'; src: url('./fonts/ferry_black.otf') }
 
 
-/* ------------------------------------------- Настройки для всего проекта -------------------------------------------*/
+/* ------------------------------------------- Глобальные стили проекта ----------------------------------------------*/
 
 /* Объявляем CSS-переменные. root - верхний уровень (html) */
 :root {
@@ -47,7 +47,7 @@ h1, h2, h3 {
 
 img {
     max-width: none;
-    pointer-events: none; /* изображения недоступны для скачивания */
+    pointer-events: none; /* Изображения недоступны для скачивания */
 }
 
 /* Скрываение реализованных элементов при модульной вёрстке */
@@ -78,9 +78,9 @@ img {
     top: 1.5px;
 }
 
+/* Эффекты для ссылок */
 .anchor:hover {
-    border-bottom: 4px solid var(--footer-color);
-    transition: 0.2s ease-in;
+    border-bottom: 4px solid var(--aquamarine);
 }
 
 .anchor-gray:hover {
@@ -679,7 +679,7 @@ img {
 .btn__rate {
     width: 355px;
     height: 59px;
-    padding: 15px 40px 5px 45px;
+    padding: 15px 30px 5px 45px;
     text-align: center;
     border-radius: 5px;
 }
