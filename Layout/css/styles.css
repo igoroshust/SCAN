@@ -964,10 +964,12 @@ img {
 
 .search__form {
     width: 872px;
-    height: 543px;
-    padding: 21px 38px 32px 45px;
+    min-height: 543px;
+    padding: 21px 38px 70px 45px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
+
+    position: relative;
 }
 
 /* Выравнивание по горизонтали секций внутри формы */
@@ -1040,7 +1042,7 @@ img {
 }
 
 .search-form__checkboxes__column {
-    max-height: 400px;
+    height: 400px;
     margin-left: -55px;
     padding-left: 34px;
     padding-top: 18px;
@@ -1101,7 +1103,7 @@ img {
 /* Секция "Поиск" + обязательные для заполнения поля */
 .search-button__button {
     width: 335px;
-    margin-top: 111px;
+    margin-top: 20px; /* 111 */
     margin-left: auto;
 
     display: flex;
@@ -1124,10 +1126,11 @@ img {
     width: 100%; /* Занимает всю ширину родителя */
     display: flex;
     justify-content: flex-start; /* Выравниваем содержимое по левому краю */
+    margin-top: 10px;
 }
 
 .search-paragraph {
-    margin-top: 10px;
+    margin: 0;
     color: var(--auth-label-color);
 }
 
@@ -1169,6 +1172,8 @@ img {
     background-repeat: no-repeat;
     background-image: url('../img/search/folders-search.png');
 }
+
+
 
 /* ----------------------------------------------- Результаты Поиска ------------------------------------------------ */
 
