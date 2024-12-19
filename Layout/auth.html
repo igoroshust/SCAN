@@ -52,7 +52,7 @@
                 </ul>
 
                 <!-- Бургер-меню-->
-                <button type="button" class="nav__toggle">
+                <button type="button" class="nav__toggle none">
                     <div class="menu-icon-wrapper">
                         <div class="menu-icon"></div>
                     </div>
@@ -82,28 +82,27 @@
 
                             <div class="authorization-form__navigation">
                                 <button class="authorization-form__btn authorization-form__btn-login paragraph-16">Войти</button>
-                                <button class="authorization-form__btn authorization-form__btn-signup paragraph-16">Зарегистрироваться</button>
+                                <button class="authorization-form__btn authorization-form__btn-signup paragraph-16-200">Зарегистрироваться</button>
                             </div>
 
                             <div class="authorization-form__content">
                                 <div class="authorization-form__content authorization-form__content_input_login">
-                                    <label class="authorization-form__label paragraph-16-200" for="login">Логин или номер телефона:</label>
+                                    <label class="authorization-form__label paragraph-16-gray" for="login">Логин или номер телефона:</label>
                                     <input class="authorization-form__input" type="text" id="login" name="login">
                                 </div>
 
                                 <div class="authorization-form__content authorization-form__content_input_password">
-                                    <label class="authorization-form__label paragraph-16-200" for="password">Пароль: </label>
+                                    <label class="authorization-form__label paragraph-16-gray" for="password">Пароль: </label>
                                     <input class="authorization-form__input" type="password" id="password" name="password">
                                 </div>
-                            </div>
 
                             <div class="authorization-form__content authorization-form__content_btn-login">
-                                <a class="btn auth-btn__btn-login paragraph-22" href="#!" role="button">Войти</a>
+                                <button class="btn auth-btn__btn-login paragraph-22" type="submit" name="authButton">Войти</button>
+                                <a class="auth-btn__btn-recovery paragraph-14" href="#!">Восстановить пароль</a>
                             </div>
-                            <a class="auth-btn__btn-recovery paragraph-14" href="#!">Восстановить пароль</a>
 
                             <div class="authorization-form__oauth">
-                                <p class="authorization-form__oauth-paragraph paragraph-16">Войти через:</p>
+                                <p class="authorization-form__oauth-paragraph paragraph-16-300">Войти через:</p>
 
                                 <div class="oauth__btns">
                                     <a class="btn oauth__btn oauth__btn-google" href="#!"><img src="./img/auth/google.svg" alt="СКАН войти через google"></a>

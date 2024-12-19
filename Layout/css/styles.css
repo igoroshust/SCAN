@@ -766,6 +766,7 @@ img {
 
 .auth__row {
     display: flex;
+    gap: 60px;
     margin-top: 14px;
 }
 
@@ -781,24 +782,23 @@ img {
 
 /* Секция для размещения формы */
 .auth__form {
+    margin-top: 60px;
     min-width: 480px;
-    min-height: 578px;
     position: relative;
 }
 
 /* Форма авторизации */
 .authorization-form {
-    width: 429px;
-    height: 537px; /* 523 */
+    width: 100%; /* Занимает всю ширину родительского контейнера */
+    max-width: 429px; /* Максимальная ширина формы */
+    padding: 25px;
 
-    position: absolute;
-    top: 50px; /* 74 */
-    left: 45px;
-    right: 0;
-    bottom: -10px;
+    display: flex;
+    flex-direction: column;
 
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
+
 }
 
 .authorization-form::before {
@@ -814,25 +814,20 @@ img {
 }
 
 .authorization-form__container {
-    padding: 25px 25px 39px 25px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
-.authorization-form__container > *:nth-child(-n+4) {
-    margin-bottom: 30px;
-}
 
-.authorization-form__container > *:nth-last-child(2) {
-    margin-bottom: 25px;
+.authorization-form__container > *:nth-last-child(1) {
+    margin-top: 20px;
 }
 
 .authorization-form__navigation {
-    max-width: 379px;
-    height: 29px;
     display: flex;
-    justify-content: space-around;
-    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 /* Родительский класс для кнопок "Войти" и "Зарегистрироваться" */
@@ -856,7 +851,9 @@ img {
 }
 
 .authorization-form__content {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение полей ввода */
+    flex-grow: 1; /* Позволяет содержимому занимать доступное пространство */
 }
 
 .authorization-form__content_input_password {
@@ -864,7 +861,7 @@ img {
 }
 
 .authorization-form__content_btn-login {
-    margin-top: 30px; /* 55 */
+    margin-top: 55px; /* 55 */
 }
 
 .authorization-form__label {
@@ -883,8 +880,7 @@ img {
 
 /* Кнопка "Войти" */
 .auth-btn__btn-login {
-    width: 379px;
-    height: 59px;
+    margin-top: -20px;
     padding: 16px 156px;
     color: var(--bg-color-white);
     opacity: 0.5;
@@ -902,23 +898,30 @@ img {
 
 /* Восстановить пароль */
 .auth-btn__btn-recovery {
-    margin-bottom: 15px;
-    color: var(--btn-bg-color);
+    margin-top: 15px;
+    display: block;
     text-align: center;
+    color: var(--btn-bg-color);
     text-decoration: underline !important;
 }
 
 /* Войти через */
+.authorization-form__oauth {
+    margin-top: 20px; /* Отступ сверху для секции "Войти через" */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+
 .authorization-form__oauth-paragraph {
-    margin-top: 5px;
+    margin-top: 10px;
     color: var(--auth-label-color);
 }
 
 /* Кнопки социальных сетей */
 .oauth__btns {
     display: flex;
-    margin-top: 15px;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .oauth__btn {
