@@ -35,3 +35,21 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
     }});
 
 });
+
+    function scrollTable(direction) {
+    const tableRow = document.querySelector('.table__row');
+    const scrollAmount = 133; // Ширина одной ячейки
+    tableRow.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+    function scrollFactoids(direction) {
+    const factoidsRow = document.querySelector('.factoids__content');
+    const itemWidth = 400; // Ширина одного элемента карусели
+    factoidsRow.scrollBy({
+        left: direction * itemWidth,
+        behavior: 'smooth'
+    });
+}

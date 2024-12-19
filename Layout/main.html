@@ -52,7 +52,7 @@
                 </ul>
 
                 <!-- Бургер-меню-->
-                <button type="button" class="nav__toggle none">
+                <button type="button" class="nav__toggle">
                     <div class="menu-icon-wrapper">
                         <div class="menu-icon"></div>
                     </div>
@@ -87,13 +87,14 @@
 
     <section class="factoids">
         <div class="container">
-          <h2 class="container__title factoids__title paragraph-45">ПОЧЕМУ ИМЕННО МЫ</h2>
+          <h2 class="factoids__title paragraph-45">ПОЧЕМУ ИМЕННО МЫ</h2>
             <div class="factoids__column">
 
+                <button class="slider__btn slider__btn-prev" onclick="scrollFactoids(-1)">
+                    <img src="./img/UI/arrow-left.svg" alt="СКАН стрелочка влево">
+                </button>
+
                 <div class="factoids__content">
-                        <button class="slider__btn slider__btn-prev">
-                            <img src="./img/UI/arrow-left.svg" alt="СКАН стрелочка влево">
-                        </button>
 
                     <div class="factoids__item item-1">
                         <img src="./img/main/clock-facts.svg" alt="СКАН Высокая и оперативная скорость обработки заявки">
@@ -110,10 +111,26 @@
                         <p class="factoids-paragraph paragraph-18">Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству</p>
                     </div>
 
-                        <button class="slider__btn slider__btn-next">
-                            <img src="./img/UI/arrow-right.svg" alt="СКАН стрелочка вправо">
-                        </button>
+                    <div class="factoids__item item-1">
+                        <img src="./img/main/clock-facts.svg" alt="СКАН Высокая и оперативная скорость обработки заявки">
+                        <p class="factoids-paragraph paragraph-18">Высокая и оперативная скорость обработки заявки</p>
+                    </div>
+
+                    <div class="factoids__item item-2">
+                        <img src="./img/main/search-facts.svg" alt="СКАН Огромная база данных">
+                        <p class="factoids-paragraph paragraph-18">Огромная комплексная база данных, обеспечивающая объективный ответ на запрос</p>
+                    </div>
+
+                    <div class="factoids__item item-3">
+                        <img src="./img/main/lock-facts.svg" alt="СКАН защита конфиденциальных сведений">
+                        <p class="factoids-paragraph paragraph-18">Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству</p>
+                    </div>
+
                 </div>
+
+                <button class="slider__btn slider__btn-next" onclick="scrollFactoids(1)">
+                    <img src="./img/UI/arrow-right.svg" alt="СКАН стрелочка вправо">
+                </button>
 
                 <div class="factoids__img">
                     <img src="./img/main/man-factoids.png" alt="Почему именно СКАН" />

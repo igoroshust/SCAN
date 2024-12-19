@@ -491,30 +491,46 @@ img {
     display: flex;
     flex-direction: column;
     gap: 70px;
+
+    position: relative;
+
 }
 
 .factoids__content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Чтобы кнопки были зафиксированы по бокам */
-    column-gap: 4px;
-}
+    justify-content: flex-start; /* Чтобы кнопки были зафиксированы по бокам  --был space-between-- */
+    gap: 25px;
+    padding: 0 5px;
 
-.factoids__content >:nth-child(3),
-.factoids__content >:nth-child(4) {
-   margin-left: 30px;
+    height: 250px;
+    width: auto;
+    margin: 0 30px;
+
+    overflow: hidden;
 }
 
 /* Кнопки слайдера */
 .slider__btn {
+    position: absolute;
+    top: 13%;
+    transform: translateY(-50%);
     background: transparent; /* Убираем фон */
     border: none; /* Убираем рамку */
     cursor: pointer;
+    z-index: 10;
+}
+
+.slider__btn-prev {
+    left: -10px;
+}
+
+.slider__btn-next {
+    right: -10px;
 }
 
 .factoids__item {
-    flex: 1; /* Позволяем элементами занимать равное пространство */
-    min-width: 400px; /* ? */
+    flex: 0 0 400px; /* Устанавливаем фиксированную ширину для каждого элемента */
     min-height: 225px; /* ? */
     padding: 30px 35px 40px 20px;
     border-radius: 10px;
@@ -1221,8 +1237,8 @@ img {
     flex-direction: row;
 
     background: var(--bg-color-white);
-    border-radius: 10px;
-    border: 2px solid var(--footer-color);
+    border-radius: 8px;
+    border: 3px solid var(--footer-color);
 }
 
 .table-section {
@@ -1245,6 +1261,7 @@ img {
 
 .table__row {
     display: flex;
+    overflow: hidden;
 }
 
 .table__data {
@@ -1274,32 +1291,38 @@ img {
     background-color: var(--auth-label-color);
 }
 
-/* Стрелочка слева от таблицы */
-.table::before {
-    content: '';
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.carousel-button.left {
     width: 39px;
     height: 39px;
-
-    position: absolute;
-    top: 57px;
-    left: -10px;
 
     background-repeat: no-repeat;
     background-image: url('../img/UI/arrow-left.svg');
+
+    left: -10px;
 }
 
-/* Стрелочка справа от таблицы */
-.table::after {
-    content: '';
+.carousel-button.right {
     width: 39px;
     height: 39px;
 
-    position: absolute;
-    top: 57px;
-    right: 15px;
-
     background-repeat: no-repeat;
     background-image: url('../img/UI/arrow-right.svg');
+
+    right: 15px;
 }
 
 /* Список документов */
@@ -1327,7 +1350,7 @@ img {
 
 .documents__card {
     max-width: 641px;
-    min-height: 694px;
+    height: 694px;
 
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
@@ -1335,6 +1358,11 @@ img {
     flex: 0 1 calc(50%); /* Устанавливаем фиксированную ширину и возможность сжатия (можно 300px) */
 
     position: relative;
+    overflow: hidden;
+}
+
+.documents-card__container {
+    padding: 19px 30px 35px 30px;
 }
 
 .documents-card__column {
@@ -1360,10 +1388,6 @@ img {
 
 .documents-card__column >:nth-child(6) {
     margin-top: 32px;
-}
-
-.documents-card__container {
-    padding: 19px 30px 35px 30px;
 }
 
 /* Дата + Источник */
@@ -1393,6 +1417,18 @@ img {
     height: 158px;
     border-radius: 10px;
     object-fit: cover; /* Картинка помещается в указанные пределы с сохранением пропорций */
+}
+
+
+/* Текст документа (форматирование) */
+.documents-card__paragraph {
+    display: box; /* Для старых браузеров */
+    display: -webkit-box; /* Используем flexbox для многострочного текста */
+    -webkit-box-orient: vertical; /* Устанавливаем ориентацию на вертикальную */
+    -webkit-line-clamp: 12; /* Ограничиваем количество строк до 12 */
+
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем троеточие */
 }
 
 /* "Читать в источнике" + счётчик слов */
