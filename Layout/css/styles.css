@@ -35,6 +35,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color-white);
+    /* width: var(--container-width); */
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
@@ -79,6 +80,10 @@ img {
 }
 
 /* Эффекты для ссылок */
+.anchor-gray {
+    border-bottom: 2px solid transparent; /* Задаем прозрачную границу по умолчанию */
+}
+
 .anchor:hover {
     border-bottom: 4px solid var(--aquamarine);
 }
@@ -290,7 +295,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 128px;
+    gap: 60px; /*128*/
 }
 
 .nav > :nth-child(2) {
@@ -318,6 +323,13 @@ img {
     text-align: center;
     background-color: var(--header__info-bg-color);
     border-radius: 5px;
+
+    overflow: hidden; /* Скрываем переполнение */
+}
+.header-info__span {
+    overflow: hidden;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    width: 100%; /* Занимаем всю ширину родителя */
 }
 
 .header-info__span_first-value {
@@ -334,6 +346,7 @@ img {
     display: flex;
     gap: 3px;
     align-items: center;
+
 }
 
 .header__user-info {
@@ -343,16 +356,36 @@ img {
     justify-content: flex-end;
 
     position: relative;
-    white-space: normal; /* Перенос текста */
+    max-width: 100%;
 }
 
+/* Ограничение содержимого для имени пользователя */
 .header__user-info_paragraph-username {
+    display: -webkit-box; /* Используем flexbox для многострочного текста */
+    display: box; /* Для старых браузеров */
+    -webkit-box-orient: vertical; /* Устанавливаем ориентацию на вертикальную */
+    -webkit-line-clamp: 2; /* Ограничиваем количество строк до 2 */
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем троеточие */
     color: var(--secondary-black-07);
 }
 
 .header__user-info a {
     font-weight: 300;
     align-self: flex-end;
+}
+
+/* Вся область картинки (ссылки) кликабельная */
+.user__logo.user__logo_image {
+    display: inline-block;
+}
+
+.user__logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+
+    object-fit: cover;
 }
 
 /* Секция "Зарегистрироваться | Войти" */
