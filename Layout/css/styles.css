@@ -1585,7 +1585,7 @@ img {
 /* ---------------------------------------------- Адаптивная вёрстка ------------------------------------------------ */
 
 @media (max-width: 1100px) {
-    /* Шапка */
+    /* Шапка + Футер */
     .nav > :nth-child(2) {
         margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
@@ -1687,7 +1687,6 @@ img {
         margin-top: 180px;
         margin-right: 40px;
         font-size: 20px;
-        font-weight: 500;
     }
 
     .nav--mobile .nav__list a {
@@ -1835,6 +1834,10 @@ img {
         width: 300px;
     }
 
+    .nav--mobile .nav__list-header {
+        margin-right: 0;
+    }
+
     /* ---------------- Footer ----------------*/
     .nav-footer {
         display: flex;
@@ -1845,9 +1848,20 @@ img {
         text-align: center;
         padding-bottom: 30px;
     }
+    .nav > :nth-child(2) {
+        margin-left: 0px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
+    }
 }
 
 @media (max-width: 390px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .nav-header {
+        gap: 80px;
+    }
 
      /* ---------------- Авторизация / Регистрация ----------------*/
     .auth__title {
