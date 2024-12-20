@@ -804,8 +804,8 @@ img {
 
 /* Форма авторизации */
 .authorization-form {
-    width: 100%; /* Занимает всю ширину родительского контейнера */
-    max-width: 429px; /* Максимальная ширина формы */
+    max-width: 100%; /* Занимает всю ширину родительского контейнера */
+    width: 429px; /* Максимальная ширина формы */
     padding: 25px;
 
     display: flex;
@@ -883,7 +883,7 @@ img {
 }
 
 .authorization-form__input {
-    width: 379px;
+    max-width: 379px;
     height: 43px;
     padding: 0px 20px;
     margin-top: 15px;
@@ -894,6 +894,8 @@ img {
 
 /* Кнопка "Войти" */
 .auth-btn__btn-login {
+
+    max-width: 379px;
     margin-top: -20px;
     padding: 16px 156px;
     color: var(--bg-color-white);
@@ -939,7 +941,7 @@ img {
 }
 
 .oauth__btn {
-    width: 96px;
+    max-width: 96px;
     height: 31px;
     padding: 6px 18px;
 
@@ -1585,23 +1587,55 @@ img {
 @media (max-width: 1100px) {
     /* Шапка */
     .nav > :nth-child(2) {
-        margin-left: 150px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
-    }
-
-}
-
-@media (max-width: 965px) {
-    /* Шапка */
-    .nav > :nth-child(2) {
         margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
+
+    .auth__title {
+        font-size: 35px;
+    }
+
+    .auth__img {
+        margin-top: 20px;
+        padding-left: 0px;
+    }
+
+    .authorization-form {
+        width: 400px;
+    }
+
+    /* Секция "Войти" в форме */
+    .authorization-form__btn-login {
+        width: 131px;
+        color: var(--footer-color);
+        border-bottom: 2.5px solid var(--footer-color);
+    }
+
+/* Секция "Зарегистрироваться" в форме */
+    .authorization-form__btn-signup {
+        width: 195px;
+        color: var(--btn-signup);
+        border-bottom: 2.5px solid var(--btn-signup);
+    }
+
+    .auth-btn__btn-login {
+        font-size: 18px;
+    }
+
+    .authorization-form__btn,
+    .authorization-form__content,
+    .authorization-form__label,
+    .authorization-form__oauth-paragraph {
+        font-size: 14px;
+    }
+
+    .auth-btn__btn-recovery {
+        font-size: 12px;
+    }
+
+
 }
 
-@media (max-width: 870px) {
-     /* Шапка */
-    .nav > :nth-child(2) {
-        margin-left: 0px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
-    }
+@media (max-width: 950px) {
 
     /* Подложка для мобильного меню, растянутая на всю ширину */
     .nav__toggle {
@@ -1709,40 +1743,91 @@ img {
     }
 
     .under__image {
-        margin-top: 50px;
         display: block !important;
     }
 
     .auth__title {
-        font-size: 30px; /* Убедитесь, что размер шрифта подходит для мобильных устройств */
-        text-align: center; /* Измените на center, если хотите центрировать текст */
+        font-size: 30px;
+        text-align: center;
         overflow-wrap: break-word; /* Позволяет переносить длинные слова */
         word-wrap: break-word; /* Для старых браузеров */
         hyphens: auto; /* Автоматически добавляет переносы слов */
     }
 
     .auth__form {
-        padding-left: 25px;
+        padding-left: 65px;
     }
 
     .authorization-form {
-        max-width: 429px; /* Максимальная ширина формы */
-}
+        width: 380px;
+    }
 
     .authorization-form::before {
         content: "";
-        left: -18px;
+        left: 10px;
+    }
+
+    .auth-btn__btn-login {
+        width: 325px;
+        padding: 16px 80px;
+    }
+
+    /* Секция "Войти" в форме */
+    .authorization-form__btn-login {
+        width: 111px;
+        color: var(--footer-color);
+        border-bottom: 2.5px solid var(--footer-color);
+    }
+
+    /* Секция "Зарегистрироваться" в форме */
+    .authorization-form__btn-signup {
+        width: 175px;
+        color: var(--btn-signup);
+        border-bottom: 2.5px solid var(--btn-signup);
+    }
+
+    .authorization-form__oauth-paragraph {
+        font-size: 14px;
     }
 
 
 }
 
-@media (max-width: 584px) {
+@media (max-width: 665px) {
 
+    .auth__title {
+        font-size: 23px;
+        max-width: 500px;
+        margin-left: 120px;
+    }
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 530px) {
+    .auth__title {
+        margin-top: -30px;
+        max-width: 350px;
+        margin-left: 200px;
+    }
+
+    .auth__row {
+        gap: 40px;
+    }
+
+    .auth__form {
+        padding-left: 50px;
+    }
+
+    .authorization-form::before {
+        content: "";
+        left: 170px;
+        top: -70px;
+    }
+
+    .under__image img {
+        width: 300px;
+    }
+
     /* Футер */
     .nav-footer {
         display: flex;
@@ -1755,6 +1840,73 @@ img {
     }
 }
 
+@media (max-width: 390px) {
+    .auth__title {
+        max-width: 280px;
+        margin-left: 240px;
+    }
+
+    .auth__form {
+        padding-left: 90px;
+    }
+
+    .authorization-form {
+        width: 300px;
+    }
+
+    .authorization-form::before {
+        content: "";
+        left: 165px;
+    }
+
+    /* Секция "Войти" в форме */
+    .authorization-form__btn-login {
+        width: 85px;
+        color: var(--footer-color);
+        border-bottom: 2.5px solid var(--footer-color);
+    }
+
+    /* Секция "Зарегистрироваться" в форме */
+    .authorization-form__btn-signup {
+        width: 145px;
+        color: var(--btn-signup);
+        border-bottom: 2.5px solid var(--btn-signup);
+    }
+
+    .auth-btn__btn-login {
+        width: 250px;
+        padding: 10px 80px;
+        font-size: 16px;
+    }
+
+    .authorization-form__btn,
+    .authorization-form__content,
+    .authorization-form__label,
+    .authorization-form__oauth-paragraph,
+    .auth-btn__btn-recovery {
+        font-size: 12px;
+    }
+
+    .authorization-form__oauth-paragraph {
+        font-size: 12px;
+    }
+
+    .oauth__btn {
+        width: 75px;
+        height: 25px;
+    }
+
+    .oauth__btn img {
+        margin-top: -4px;
+        width: 45px;
+        height: 20px;
+    }
+
+    .oauth__btn-facebook img {
+        margin-top: -7px;
+    }
+
+}
 
 
 
