@@ -39,7 +39,7 @@ body {
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -513,7 +513,7 @@ img {
 /* Кнопки слайдера */
 .slider__btn {
     position: absolute;
-    top: 13%;
+    top: 14%;
     transform: translateY(-50%);
     background: transparent; /* Убираем фон */
     border: none; /* Убираем рамку */
@@ -788,7 +788,7 @@ img {
 
 .auth__content {
     margin-top: 55px;
-    min-width: 750px;
+    width: 750px;
 }
 
 .auth__img {
@@ -1496,8 +1496,9 @@ img {
 }
 
 
-/* ---------------------------------------------- Адаптивная вёрстка ------------------------------------------------ */
+/* ---------------------------------------------- Адаптивная вёрстка (бургер) --------------------------------------- */
 
+/* Отображение бургер-меню */
 @media (max-width: 2000px) {
 
     /* Подложка для мобильного меню, растянутая на всю ширину */
@@ -1581,3 +1582,167 @@ img {
     }
 
 }
+
+/* ---------------------------------------------- Адаптивная вёрстка ------------------------------------------------ */
+
+
+@media (max-width: 1378px) {
+    /* Шапка */
+    .nav {
+        padding-right: 10vw;
+    }
+
+    /* Авторизация */
+    .auth__content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1279px) {
+     /* Шапка */
+     .nav {
+        padding-right: 15vw;
+     }
+
+}
+
+@media (max-width: 1180px) {
+     /* Шапка */
+     .nav {
+        padding-right: 300px;
+     }
+
+     /* Авторизация */
+    .auth__content {
+        max-width: 500px;
+    }
+
+    .auth__form {
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 1082px) {
+    /* Шапка */
+    .nav {
+        padding-right: 400px;
+     }
+     .nav__login {
+        display: none;
+    }
+
+    /* Авторизация */
+    .auth__content {
+        max-width: 400px;
+    }
+
+     /* Подложка для мобильного меню, растянутая на всю ширину */
+    .nav__toggle {
+        display: block !important;
+    }
+
+    .nav--mobile {
+        width: 100%;
+        height: 100%;
+
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 74px;
+        padding-top: 40px;
+        padding-bottom: 74px;
+
+        background: var(--footer-color);
+    }
+
+    /* Увеличиваем логотип, если nav--mobile активен */
+    .nav--mobile .nav__logo_logo-header {
+        margin-top: 0; /* Убираем отрицательный отступ */
+        position: absolute; /* Позиционируем элемент независимо от flex */
+        left: 14px;
+        top: -5px;
+    }
+
+    /* Отображаем список (Главная Тарифы FAQ), если .nav--mobile = true */
+    .nav--mobile .nav__list {
+        padding-top: 150px;
+        padding-right: 270px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 26px;
+
+    }
+
+    .nav--mobile .nav__list a {
+        font-size: 16px;
+        font-weight: 400; /* Можно использовать 300 */
+        color: var(--bg-color-white);
+    }
+
+    /* Убираем подчёркивание у активного элемента (которое задано по умолчанию для демонстрации) */
+    .nav--mobile .nav__list a.active::after,
+    .nav--mobile .nav__list a:hover::after {
+        display: none;
+    }
+
+    /* Отображаем кнопки, если .nav--mobile = true */
+   .nav--mobile .nav__login {
+        padding-top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Зарегистрироваться */
+    .nav--mobile .nav__login .nav__login_btn-registration {
+        font-size: 16px;
+        font-size: 200;
+        color: var(--secondary-white);
+    }
+
+    /* Войти */
+    .nav--mobile .nav__login .nav__login_btn-login {
+        font-size: 20px;
+        padding: 15px 117px;
+    }
+
+    /* Расположение бургура в левом верхнем углу, если .nav--mobile = true */
+   .nav--mobile .nav__toggle {
+        position: fixed;
+        top: 40px;
+        right: 28px;
+    }
+}
+
+@media (max-width: 981px) {
+      /* Шапка */
+         .nav {
+            padding-right: 500px;
+         }
+
+         .nav > :nth-child(2) {
+            margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
+        }
+
+    /* Авторизация */
+    .auth__row {
+        display: flex;
+        flex-direction: column;
+    }
+    .auth__img {
+        display: none;
+    }
+
+    .test__img {
+        margin-top: 30px;
+        display: block !important;
+    }
+} */
