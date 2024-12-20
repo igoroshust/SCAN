@@ -69,7 +69,7 @@ img {
 .container {
     max-width: var(--container-width);
     padding: 0 var(--container-padding);
-    margin: 0 auto; /* выравнивание контейнера по центру */
+    margin: 0 auto; /* Выравнивание контейнера по центру */
 }
 
 /* Эффекты для кнопок */
@@ -294,9 +294,8 @@ img {
 
 .header {
     min-height: 93px;
-    min-width: var(--container-width);
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Навигация */
@@ -814,7 +813,6 @@ img {
 
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
-
 }
 
 .authorization-form::before {
@@ -1476,7 +1474,6 @@ img {
 
 .footer {
     margin-top: 100px; /* 118 */
-    min-width: var(--container-width);
     background: var(--footer-color);
     flex-grow: 0;
 }
@@ -1484,6 +1481,7 @@ img {
 .nav__footer {
     font-weight: 300;
     text-align: right;
+    white-space: nowrap;
     color: var(--bg-color-white);
 }
 
@@ -1538,7 +1536,6 @@ img {
         justify-content: center;
         align-items: center;
         row-gap: 26px;
-
     }
 
     .nav--mobile .nav__list a {
@@ -1585,63 +1582,31 @@ img {
 
 /* ---------------------------------------------- Адаптивная вёрстка ------------------------------------------------ */
 
-
-@media (max-width: 1378px) {
+@media (max-width: 1100px) {
     /* Шапка */
-    .nav {
-        padding-right: 10vw;
-    }
-
-    /* Авторизация */
-    .auth__content {
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 1279px) {
-     /* Шапка */
-     .nav {
-        padding-right: 15vw;
-     }
-
-}
-
-@media (max-width: 1180px) {
-     /* Шапка */
-     .nav {
-        padding-right: 300px;
-     }
-
-     /* Авторизация */
-    .auth__content {
-        max-width: 500px;
-    }
-
-    .auth__form {
-        margin-left: 20px;
+    .nav > :nth-child(2) {
+        margin-left: 150px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
 
 }
 
-@media (max-width: 1082px) {
+@media (max-width: 965px) {
     /* Шапка */
-    .nav {
-        padding-right: 400px;
-     }
-     .nav__login {
-        display: none;
+    .nav > :nth-child(2) {
+        margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
+    }
+}
+
+@media (max-width: 870px) {
+     /* Шапка */
+    .nav > :nth-child(2) {
+        margin-left: 0px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
 
-    /* Авторизация */
-    .auth__content {
-        max-width: 400px;
-    }
-
-     /* Подложка для мобильного меню, растянутая на всю ширину */
+    /* Подложка для мобильного меню, растянутая на всю ширину */
     .nav__toggle {
         display: block !important;
     }
-
     .nav--mobile {
         width: 100%;
         height: 100%;
@@ -1669,16 +1634,21 @@ img {
     }
 
     /* Отображаем список (Главная Тарифы FAQ), если .nav--mobile = true */
+    .nav__list {
+        display: none;
+    }
+
     .nav--mobile .nav__list {
-        padding-top: 150px;
-        padding-right: 270px;
+        display: flex; /* Делаем список flex-контейнером */
+        flex-direction: column; /* Устанавливаем вертикальное направление */
+        justify-content: center; /* Центрируем элементы по вертикали */
+        align-items: center; /* Центрируем элементы по горизонтали */
+        padding: 0; /* Убираем отступы, если они есть */
+        gap: 20px; /* Устанавливаем промежуток между элементами списка */
+    }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 26px;
-
+    .nav--mobile .nav__list-header {
+        margin-top: 200px;
     }
 
     .nav--mobile .nav__list a {
@@ -1690,6 +1660,11 @@ img {
     /* Убираем подчёркивание у активного элемента (которое задано по умолчанию для демонстрации) */
     .nav--mobile .nav__list a.active::after,
     .nav--mobile .nav__list a:hover::after {
+        display: none;
+    }
+
+    /* Отображение "Зарегистрироваться | Войти" */
+    .nav__login {
         display: none;
     }
 
@@ -1719,30 +1694,70 @@ img {
         position: fixed;
         top: 40px;
         right: 28px;
+        z-index: 100;
     }
-}
 
-@media (max-width: 981px) {
-      /* Шапка */
-         .nav {
-            padding-right: 500px;
-         }
-
-         .nav > :nth-child(2) {
-            margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
-        }
-
-    /* Авторизация */
+    /* Контент */
     .auth__row {
-        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
     .auth__img {
         display: none;
     }
 
-    .test__img {
-        margin-top: 30px;
+    .under__image {
+        margin-top: 50px;
         display: block !important;
     }
-} */
+
+    .auth__title {
+        font-size: 30px; /* Убедитесь, что размер шрифта подходит для мобильных устройств */
+        text-align: center; /* Измените на center, если хотите центрировать текст */
+        overflow-wrap: break-word; /* Позволяет переносить длинные слова */
+        word-wrap: break-word; /* Для старых браузеров */
+        hyphens: auto; /* Автоматически добавляет переносы слов */
+    }
+
+    .auth__form {
+        padding-left: 25px;
+    }
+
+    .authorization-form {
+        max-width: 429px; /* Максимальная ширина формы */
+}
+
+    .authorization-form::before {
+        content: "";
+        left: -18px;
+    }
+
+
+}
+
+@media (max-width: 584px) {
+
+}
+
+
+@media (max-width: 500px) {
+    /* Футер */
+    .nav-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav__footer {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
