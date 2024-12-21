@@ -39,7 +39,7 @@ body {
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3 {
@@ -980,7 +980,7 @@ img {
 
 .search__form {
     width: 872px;
-    min-height: 543px;
+    height: 543px;
     padding: 21px 38px 70px 45px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
@@ -1118,31 +1118,23 @@ img {
 
 /* Секция "Поиск" + обязательные для заполнения поля */
 .search-button__button {
-    width: 335px;
-    margin-top: 20px; /* 111 */
-    margin-left: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 
     position: absolute; /* Фиксируем положение кнопки и параграфа */
-    bottom: -43px;
-    right: 0;
+    bottom: 30px;
+    right: 30px;
 }
 
 /* Кнопка "Поиск" */
 .search-btn {
-    max-width: 305px;
-    max-height: 59px;
+    width: 305px;
+    height: 59px;
     padding: 16px 117px;
 }
 
 .search-paragraph-container {
+    margin-top: 10px;
     width: 100%; /* Занимает всю ширину родителя */
     display: flex;
-    justify-content: flex-start; /* Выравниваем содержимое по левому краю */
-    margin-top: 10px;
 }
 
 .search-paragraph {
@@ -1675,12 +1667,12 @@ img {
     }
 
     .nav--mobile .nav__list {
-        display: flex; /* Делаем список flex-контейнером */
-        flex-direction: column; /* Устанавливаем вертикальное направление */
-        justify-content: center; /* Центрируем элементы по вертикали */
-        align-items: center; /* Центрируем элементы по горизонтали */
-        padding: 0; /* Убираем отступы, если они есть */
-        gap: 20px; /* Устанавливаем промежуток между элементами списка */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
     }
 
     .nav--mobile .nav__list-header {
@@ -1703,6 +1695,24 @@ img {
 
     /* Отображение "Зарегистрироваться | Войти" */
     .nav__login {
+        display: none;
+    }
+
+    /* Скрываем Юзер Инфо из шапки*/
+    .header__user {
+        display: none;
+    }
+
+    .nav--mobile .header__user {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .nav--mobile .header__user-info a {
+        align-self: center;
+    }
+
+    .nav--mobile .header__info {
         display: none;
     }
 
@@ -1736,7 +1746,6 @@ img {
     }
 
     /* ---------------- Авторизация / Регистрация ----------------*/
-
     .auth__row {
         flex-direction: column;
         justify-content: center;
@@ -1773,7 +1782,7 @@ img {
     }
 
     .auth-btn__btn-login {
-        width: 325px;
+        min-width: 325px;
         padding: 16px 80px;
     }
 
@@ -1794,7 +1803,143 @@ img {
     .authorization-form__oauth-paragraph {
         font-size: 14px;
     }
+
+    /* ---------------- Поиск (search) ----------------*/
+
+    .search__title {
+        font-size: 35px;
+    }
+
+    .search__paragraph {
+        font-size: 18px;
+    }
+
+    .search__form {
+        width: 700px;
+        padding: 25px 25px 70px 25px;
+    }
+
+    .search-form__section,
+     .search-form__section label,
+      .check label {
+        font-size: 16px;
+    }
+
+    .search-paragraph {
+        font-size: 12px;
+    }
+
+    .search-form__section {
+        width: 300px;
+    }
+
+    .search-form__section span {
+        font-size: 20px;
+    }
+
+    .search-button__button {
+       margin-bottom: 15px;
+    }
+
+    .search-btn {
+        padding: 0 !important!;
+    }
+
+
+
 }
+
+@media (max-width: 762px) {
+
+    /* ---------------- Поиск (search) ----------------*/
+
+   .search-form__checkboxes__column {
+        display: none;
+    }
+
+    .search__title {
+        font-size: 30px;
+    }
+
+    .search__paragraph {
+        font-size: 16px;
+    }
+
+    .search__form {
+        width: 500px;
+        height: 600px;
+        padding: 20px 20px 50px 20px;
+    }
+
+    .search-form__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-form__section,
+    .search-form__inputs,
+    .search-form__input,
+     .search-form__select-big,
+      .search-form__select-small {
+        width: 100%;
+    }
+
+    .search-button__button {
+       margin-bottom: -10px;
+       margin-right: 40px;
+    }
+
+    .search-paragraph-container {
+        justify-content: center;
+    }
+
+    .search-paragraph-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+  /* ---------------- Поиск (search) ----------------*/
+
+    .search__title {
+        font-size: 25px;
+    }
+
+    .search__paragraph {
+        font-size: 14px;
+    }
+
+    .search__form {
+        width: 400px;
+        height: 670px;
+        padding: 20px 20px 50px 20px;
+    }
+
+    .search-form__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-button__button {
+       width: 100%;
+       margin-bottom: -10px;
+       margin-right: -50px;
+    }
+
+    .search-btn {
+        width: 90%;
+    }
+
+    .search-paragraph-container {
+        justify-content: center;
+    }
+
+    .search-form_section__row {
+        flex-direction: column;
+    }
+}
+
 
 @media (max-width: 665px) {
 
