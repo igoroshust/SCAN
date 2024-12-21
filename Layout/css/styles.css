@@ -1166,6 +1166,8 @@ img {
 
     background-repeat: no-repeat;
     background-image: url('../img/search/document-search.png');
+
+    display: block;
 }
 
 .search__img::after {
@@ -1845,6 +1847,20 @@ img {
         width: 310px;
     }
 
+    .search__img img {
+        display: none;
+    }
+
+    .search__img::before {
+        content: "";
+        display: block;
+    }
+
+    .search__secret-img {
+        margin-top: 30px;
+        text-align: center;
+        display: block !important;
+    }
 
 
 }
@@ -2032,6 +2048,12 @@ img {
     .search-form_section__row {
         flex-direction: column;
     }
+
+    .search__img::before {
+        content: "";
+        display: inline-block;
+        right: 5px;
+    }
 }
 
 
@@ -2042,7 +2064,7 @@ img {
     }
 
     .nav-header {
-        margin-top: 10px;
+        padding-top: 10px;
         gap: 5px;
     }
 
@@ -2053,7 +2075,7 @@ img {
      /* ---------------- Поиск (search) ----------------*/
 
     .search {
-        margin-top: 10px;
+        padding-top: 10px;
     }
 
     .search__form {
@@ -2161,7 +2183,8 @@ img {
     }
 
     .search__form {
-        width: 313px;
+        width: 350px;
+        position: relative;
     }
 
     .search-button__button {
@@ -2171,14 +2194,17 @@ img {
     }
 
     .search-btn {
-        width: 260px;
+        width: 305px;
     }
 
     .search-paragraph-container {
         justify-content: flex-start;
     }
 
-
+    .search__secret-img img {
+        width: 300px;
+        height: 300px;
+    }
 
 }
 
