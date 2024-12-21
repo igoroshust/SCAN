@@ -1782,7 +1782,7 @@ img {
     }
 
     .auth-btn__btn-login {
-        min-width: 325px;
+        width: 325px; /* Здесь был min-width!! */
         padding: 16px 80px;
     }
 
@@ -1842,7 +1842,7 @@ img {
     }
 
     .search-btn {
-        padding: 0 !important!;
+        width: 310px;
     }
 
 
@@ -1886,7 +1886,7 @@ img {
 
     .search-button__button {
        margin-bottom: -10px;
-       margin-right: 40px;
+       margin-right: 50px;
     }
 
     .search-paragraph-container {
@@ -1895,6 +1895,17 @@ img {
 
     .search-paragraph-container {
         justify-content: center;
+    }
+}
+
+
+@media (max-width: 665px) {
+
+    /* ---------------- Авторизация / Регистрация ----------------*/
+    .auth__title {
+        font-size: 23px;
+        max-width: 500px;
+        margin-left: 120px;
     }
 }
 
@@ -1937,17 +1948,6 @@ img {
 
     .search-form_section__row {
         flex-direction: column;
-    }
-}
-
-
-@media (max-width: 665px) {
-
-    /* ---------------- Авторизация / Регистрация ----------------*/
-    .auth__title {
-        font-size: 23px;
-        max-width: 500px;
-        margin-left: 120px;
     }
 }
 
@@ -1998,15 +1998,94 @@ img {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 500px) {
+
+  /* ---------------- Поиск (search) ----------------*/
 
     .container {
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     .nav-header {
-        gap: 80px;
+        gap: 30px;
     }
+
+    .search {
+        margin-top: 10px;
+    }
+
+    .search-form__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-button__button {
+        width: 100%;
+       margin-bottom: -10px;
+       margin-right: -50px;
+    }
+
+    .search-btn {
+        width: 360px;
+    }
+
+    .search-form_section__row {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-header {
+        margin-top: 10px;
+        gap: 5px;
+    }
+
+    .nav__logo img {
+        width: 100px;
+    }
+
+     /* ---------------- Поиск (search) ----------------*/
+
+    .search {
+        margin-top: 10px;
+    }
+
+    .search__form {
+        width: 400px;
+        padding: 25px 25px 70px 25px;
+    }
+
+    .search-form__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-btn {
+        width: 360px;
+    }
+
+    .search-form_section__row {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    .container {
+        padding: 0 5px;
+    }
+
+    .nav-header {
+        gap: 0px;
+    }
+
 
      /* ---------------- Авторизация / Регистрация ----------------*/
     .auth__title {
@@ -2073,6 +2152,33 @@ img {
     .oauth__btn-facebook img {
         margin-top: -7px;
     }
+
+
+     /* ---------------- Поиск (search) ----------------*/
+
+    .search {
+        margin-top: 10px;
+    }
+
+    .search__form {
+        width: 313px;
+    }
+
+    .search-button__button {
+       width: 100%;
+       margin-bottom: -10px;
+       margin-right: -50px;
+    }
+
+    .search-btn {
+        width: 260px;
+    }
+
+    .search-paragraph-container {
+        justify-content: flex-start;
+    }
+
+
 
 }
 
