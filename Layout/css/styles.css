@@ -1587,7 +1587,6 @@ img {
 
     /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 85%;
     }
 
@@ -1626,7 +1625,6 @@ img {
 
     /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 73%;
     }
 
@@ -1640,8 +1638,12 @@ img {
 
     }
 
-    .factoids__img {
+    .factoids__img img{
 
+    }
+
+    .factoids__img::after {
+        right: 200px;
     }
 
     .factoids-paragraph {
@@ -1731,7 +1733,6 @@ img {
 
     /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 60%;
     }
 
@@ -1745,8 +1746,13 @@ img {
 
     }
 
-    .factoids__img {
+    .factoids__img img{
+        width: 500px;
+        height: auto;
+    }
 
+    .factoids__img::after {
+        display: none;
     }
 
     .factoids-paragraph {
@@ -2034,7 +2040,6 @@ img {
     /* Factoids */
 
     .factoids {
-        border: 2px solid red;
         margin-top: 400px;
     }
 
@@ -2043,8 +2048,11 @@ img {
 @media (max-width: 923px) {
         /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 50%;
+    }
+
+    .factoids__title {
+        margin-left: 20px;
     }
 
     .slider__btn-next {
@@ -2072,7 +2080,6 @@ img {
 
         /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 40%;
     }
 
@@ -2176,7 +2183,6 @@ img {
     /* Factoids */
 
     .factoids {
-        border: 2px solid red;
         margin-top: 300px;
     }
 }
@@ -2243,8 +2249,15 @@ img {
 
         /* Factoids */
     .factoids__content {
-        border: 2px solid red;
         width: 32%;
+    }
+
+    .factoids__column {
+        gap: 40px;
+    }
+
+    .factoids__title {
+        font-size: 35px;
     }
 
     .slider__btn-next {
@@ -2257,8 +2270,9 @@ img {
 
     }
 
-    .factoids__img {
-
+    .factoids__img img{
+        width: 400px;
+        height: auto;
     }
 
     .factoids-paragraph {
@@ -2439,8 +2453,33 @@ img {
         /* Factoids */
 
     .factoids {
-        border: 2px solid red;
         margin-top: 100px;
+    }
+
+    .factoids__title {
+        font-size: 30px;
+    }
+
+    .factoids__content {
+        width: 25%;
+    }
+
+    .slider__btn-next {
+        right: 995px;
+    }
+
+    .factoids__item {
+        flex: 0 0 340px;
+        padding: 10px;
+    }
+
+    .factoids__img img{
+        width: 300px;
+        height: auto;
+    }
+
+    .factoids-paragraph {
+        font-size: 15px;
     }
 
 }
@@ -2562,32 +2601,78 @@ img {
         width: 100%;
     }
 
+   /* Factoids */
 
-            /* ------------------------Главная страница------------------ */
+    .factoids {
+        margin-top: 100px;
+    }
 
-        /* Factoids */
+    .factoids__title {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+
     .factoids__content {
-        border: 2px solid red;
         width: 20%;
     }
 
     .slider__btn-next {
-        right: 1075px;
+        right: 1080px;
     }
 
     .factoids__item {
-        flex: 0 0 270px;
-        padding: 30px 15px;
+        flex: 0 0 278px;
+        padding: 10px;
     }
 
     .factoids__img {
-
     }
 
     .factoids-paragraph {
         font-size: 15px;
     }
 
+}
+
+@media (max-width: 320px) {
+        /* ---------------- Главная страница (Main Section) ----------------*/
+
+    .header__img {
+        bottom: 0px;
+        left: 20px;
+        width: 100%;
+    }
+
+   /* Factoids */
+
+    .factoids {
+        margin-top: 100px;
+    }
+
+    .factoids__title {
+        margin-left: 20px;
+        font-size: 23px;
+    }
+
+    .factoids__content {
+        width: 18%;
+    }
+
+    .slider__btn-next {
+        right: 1105px;
+    }
+
+    .factoids__item {
+        flex: 0 0 250px;
+        padding: 10px;
+    }
+
+    .factoids__img {
+    }
+
+    .factoids-paragraph {
+        font-size: 15px;
+    }
 }
 
 
