@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
     const tableRow = document.querySelector('.table__row');
     const scrollAmount = 133; // Ширина одной ячейки
     tableRow.scrollBy({
-        left: direction * scrollAmount,
+        left: direction * scrollAmount * 2,
         behavior: 'smooth'
     });
 }
