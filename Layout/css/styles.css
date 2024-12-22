@@ -577,14 +577,16 @@ img {
     display: flex;
     flex-direction: row;
     gap: 37px;
+
+    flex-wrap: wrap;
 }
 
 .rate__card {
-    width: 415px; /* ? */
-    max-width: 100%;
+    max-width: 415px; /* ? */
     max-height: 540px;
 
     display: flex;
+    flex: 1 1 calc(33.33% - 37px);
     flex-direction: column;
     gap: 12px;
 
@@ -619,7 +621,6 @@ img {
    justify-content: space-between;
    border-radius: 10px 10px 0 0;
 
-   overflow: hidden;
 }
 
 .rate__header-beginner {
@@ -726,6 +727,7 @@ img {
 
 .rate__tax {
     margin-top: auto;
+    max-height: 100px;
 }
 
 .rate__tax-business {
@@ -761,7 +763,7 @@ img {
 .btn__rate {
     width: 100%;
     height: 59px;
-    padding: 15px 30px 5px 45px;
+    padding: 15px 5px 5px;
 
     text-align: center;
     border-radius: 5px;
@@ -1203,7 +1205,7 @@ img {
 }
 
 .result__content {
-    min-width: 509px;
+    width: 509px;
     /* height: 180px; */
     padding: 40px 20px 40px 0px;
 }
@@ -1606,6 +1608,24 @@ img {
     .factoids-paragraph {
         font-size: 15px;
     }
+
+    .rate__card {
+        border: 2px solid red;
+        max-width: 360px;
+    }
+
+    .rate__title-title {
+        font-size: 25px;
+    }
+
+    .rate__title-desc {
+        font-size: 16px;
+    }
+
+    .rate__price-paragraph {
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 1345px) {
@@ -1618,6 +1638,24 @@ img {
     .header__content {
         width: 550px;
     }
+
+
+    /* ---------------- Результаты Поиска ----------- */
+    .result__row {
+        gap: 50px;
+    }
+
+
+}
+
+@media (max-width: 1220px) {
+
+    /* -------- Главная страница -------- */
+     .rate__card {
+        max-width: 300px;
+        border: 2px solid gold;
+    }
+
 }
 
 @media (max-width: 1248px) {
@@ -1759,6 +1797,14 @@ img {
         font-size: 15px;
     }
 
+}
+
+@media (max-width: 1060px) {
+    /* ---- Главная страница ---- */
+    .rate__row {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 950px) {
@@ -2072,6 +2118,12 @@ img {
     .factoids-paragraph {
         font-size: 15px;
     }
+
+    /* ---------------- Результаты Поиска ----------- */
+    .result__row {
+        flex-direction: column;
+        gap: 0px;
+    }
 }
 
 @media (max-width: 776px) {
@@ -2279,6 +2331,23 @@ img {
         font-size: 15px;
     }
 
+    /* ---------------- Результаты Поиска ----------- */
+    .result__row {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .result__title {
+        font-size: 36px;
+    }
+
+    .result__paragraph {
+        font-size: 18px;
+    }
+
+    .result__img img {
+        width: 450px;
+    }
 }
 
 
@@ -2319,7 +2388,18 @@ img {
         left: 0px;
     }
 
+    /* ---------------- Результаты Поиска ----------- */
+    .result__title {
+        font-size: 30px;
+    }
 
+    .result__paragraph {
+        font-size: 16px;
+    }
+
+    .result__img img {
+        width: 400px;
+    }
 
     /* ---------------- Footer ----------------*/
     .nav-footer {
@@ -2632,6 +2712,19 @@ img {
         font-size: 15px;
     }
 
+    /* ---------------- Результаты Поиска ----------- */
+    .result__title {
+        font-size: 25px;
+    }
+
+    .result__paragraph {
+        font-size: 14px;
+    }
+
+    .result__img img {
+        width: 300px;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -2673,6 +2766,7 @@ img {
     .factoids-paragraph {
         font-size: 15px;
     }
+
 }
 
 
