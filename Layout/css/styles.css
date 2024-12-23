@@ -569,24 +569,20 @@ img {
 
 .rate {
     margin-top: 100px;
-    min-width: var(--container-width);
 }
 
 .rate__row {
     margin-top: 70px;
     display: flex;
-    flex-direction: row;
     gap: 37px;
 
     flex-wrap: wrap;
 }
 
 .rate__card {
-    max-width: 415px; /* ? */
-    max-height: 540px;
 
     display: flex;
-    flex: 1 1 calc(33.33% - 37px);
+    width: calc((100% - 37px * 2) / 3));
     flex-direction: column;
     gap: 12px;
 
@@ -703,7 +699,6 @@ img {
 }
 
 .rate__price {
-    width: 380px;
     padding-top: 14px; /* 4px */
     position: relative;
 }
@@ -1609,9 +1604,9 @@ img {
         font-size: 15px;
     }
 
+    /* ---------------- Главная страница ----------------- */
     .rate__card {
-        border: 2px solid red;
-        max-width: 360px;
+        width: calc((100% - 37px) / 2);
     }
 
     .rate__title-title {
@@ -1642,16 +1637,6 @@ img {
     .result__row {
         gap: 50px;
     }
-}
-
-@media (max-width: 1220px) {
-
-    /* ---------------- Главная страница ----------------- */
-     .rate__card {
-        max-width: 300px;
-        border: 2px solid gold;
-    }
-
 }
 
 @media (max-width: 1248px) {
@@ -1799,7 +1784,11 @@ img {
     /* ---------------- Главная страница ----------------- */
     .rate__row {
         flex-direction: column;
-        flex-wrap: wrap;
+    }
+
+        /* ---------------- Главная страница ----------------- */
+     .rate__card {
+        width: auto;
     }
 }
 
