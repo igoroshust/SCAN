@@ -1326,7 +1326,6 @@ img {
 
 .documents__row {
     margin-top: 58px;
-    width: 1346px; /* Сделал, чтобы карточки при scale > 75 % не переносились. Нужно ли оставить? */
 
     display: flex;
     flex-direction: row;
@@ -1343,13 +1342,11 @@ img {
 }
 
 .documents__card {
-    max-width: 641px;
-    height: 694px;
+    width: calc((100% - 2 * 38px) / 2); /* flex-direction: column, width: auto; */
+    height: 720px;
 
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
-
-    flex: 0 1 calc(50%); /* Устанавливаем фиксированную ширину и возможность сжатия (можно 300px) */
 
     position: relative;
     overflow: hidden;
@@ -1407,7 +1404,7 @@ img {
 
 /* Изображение */
 .documents-card__img img {
-    width: 581px;
+    width: 100%; /* max width */
     height: 158px;
     border-radius: 10px;
     object-fit: cover; /* Картинка помещается в указанные пределы с сохранением пропорций */
@@ -1435,7 +1432,7 @@ img {
     margin-top: auto;
     position: absolute;
     bottom: 30px;
-    width: 581px;
+    width: calc(100% - 30px * 2);
 }
 
 .documents-card__footer-btn {
@@ -1786,11 +1783,22 @@ img {
         flex-direction: column;
     }
 
-        /* ---------------- Главная страница ----------------- */
-     .rate__card {
+    .rate__card {
         width: auto;
     }
 }
+
+@media (max-width: 1000px) {
+    .documents__row {
+        flex-direction: column;
+    }
+
+    .documents__card {
+        width: auto;
+    }
+}
+
+
 
 @media (max-width: 950px) {
 
@@ -2692,6 +2700,18 @@ img {
     .result__img img {
         width: 300px;
     }
+
+    .documents-card__footer-btn {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .documents-card__footer-paragraph {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+
 
 }
 
