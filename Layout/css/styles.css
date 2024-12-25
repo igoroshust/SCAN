@@ -1595,10 +1595,6 @@ img {
         flex: 0 0 350px;
     }
 
-    .factoids__img {
-
-    }
-
     .factoids-paragraph {
         font-size: 15px;
     }
@@ -1723,7 +1719,6 @@ img {
     .auth-btn__btn-login {
         font-size: 18px;
     }
-
 }
 
 @media (max-width: 1345px) {
@@ -1741,8 +1736,6 @@ img {
     .result__row {
         gap: 50px;
     }
-
-
 }
 
 @media (max-width: 1248px) {
@@ -1761,7 +1754,6 @@ img {
     .factoids__item {
         flex: 0 0 300px;
         padding: 30px 15px;
-
     }
 
     .factoids__img::after {
@@ -1784,8 +1776,6 @@ img {
     .nav > :nth-child(2) {
         margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
-
-
 
     /* ---------------- Главная страница ---------------- */
     .header__row {
@@ -1848,7 +1838,6 @@ img {
     .rate__card {
         width: calc((100% - 37px) / 2);
     }
-
 }
 
 @media (max-width: 1000px) {
@@ -1865,9 +1854,7 @@ img {
         height: unset;
         transform: unset;
     }
-
 }
-
 
 
 @media (max-width: 950px) {
@@ -2048,7 +2035,6 @@ img {
 
     /*----------- Поиск ----------*/
 
-
     .search__form {
         width: 700px;
         padding: 25px 25px 70px 25px;
@@ -2128,10 +2114,6 @@ img {
         padding: 30px 15px;
     }
 
-    .factoids__img {
-
-    }
-
     .factoids-paragraph {
         font-size: 15px;
     }
@@ -2168,10 +2150,6 @@ img {
     .factoids__item {
         flex: 0 0 400px;
         padding: 30px 15px;
-    }
-
-    .factoids__img {
-
     }
 
     .factoids-paragraph {
@@ -2257,9 +2235,7 @@ img {
     .auth__title {
         font-size: 25px;
         /* margin-left: 120px; */
-
     }
-
 }
 
 
@@ -2536,7 +2512,6 @@ img {
         bottom: 0px;
         left: 40px;
         width: 100%;
-
     }
 
     .header__img img {
@@ -2604,7 +2579,6 @@ img {
     .carousel-button.right {
         left: 380px;
     }
-
 }
 
 @media (max-width: 390px) {
@@ -2721,7 +2695,6 @@ img {
         height: 300px;
     }
 
-
     /* ---------------- Главная страница (Main Section) ----------------*/
 
     .header__img {
@@ -2822,8 +2795,6 @@ img {
     .factoids-paragraph {
         font-size: 15px;
     }
-
-
 }
 
 
