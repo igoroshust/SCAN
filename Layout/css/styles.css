@@ -39,7 +39,7 @@ body {
     min-height: 100vh; /* минимальная высота - высота экрана */
     display: flex;
     flex-direction: column;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -464,8 +464,8 @@ img {
 .header__img {
     content: "";
     position: relative;
-    bottom: 40px;
-    right: 29px;
+    bottom: 50px;
+    right: 40px;
     flex-grow: 1; /* Чтобы картинка растянулась и не налазила на блоки с контентом */
 }
 
@@ -481,7 +481,7 @@ img {
 /* ---------------------------------------------------- Фактоиды ---------------------------------------------------- */
 
 .factoids {
-    margin-top: 65px;
+    margin-top: 55px;
     min-width: var(--container-width);
 }
 
@@ -544,7 +544,6 @@ img {
 
 .factoids__img {
     width: 1307px;
-    height: 575px;
 
     position: relative;
     bottom: 5px;
@@ -1584,8 +1583,12 @@ img {
         width: 85%;
     }
 
+    .factoids__title {
+        font-size: 35px;
+    }
+
     .slider__btn-next {
-        right: 130px;
+        right: 140px;
     }
 
     .factoids__item {
@@ -1600,9 +1603,28 @@ img {
         font-size: 15px;
     }
 
-    /* ---------------- Главная страница ----------------- */
+    .header__title {
+        font-size: 45px;
+    }
+
+    .header__text_btn {
+        font-size: 20px;
+    }
+
+    .header__paragraph {
+        font-size: 18px;
+    }
+
+    .rate__row {
+        flex-wrap: nowrap;
+    }
+
     .rate__card {
         width: calc((100% - 37px) / 2);
+    }
+
+    .rate__title {
+        font-size: 35px;
     }
 
     .rate__title-title {
@@ -1616,72 +1638,51 @@ img {
     .rate__price-paragraph {
         font-size: 16px;
     }
-}
 
-@media (max-width: 1345px) {
+/* ---------------- Поиск (search) ----------------*/
 
-    /* ---------------- Главная страница ----------------- */
-    .header__row {
-        gap: 30px;
+    .search__title {
+        font-size: 35px;
     }
 
-    .header__content {
-        width: 550px;
+    .search__paragraph {
+        font-size: 18px;
     }
 
-    /* ---------------- Авторизация / Регистрация ----------------*/
-    .result__row {
-        gap: 50px;
-    }
-}
-
-@media (max-width: 1248px) {
-
-     /* ---------------- Главная страница ----------------- */
-
-    /* Factoids */
-    .factoids__content {
-        width: 73%;
+    .search-form__section,
+     .search-form__section label,
+      .check label {
+        font-size: 16px;
     }
 
-    .slider__btn-next {
-        right: 290px;
+    .search-paragraph {
+        font-size: 12px;
     }
 
-    .factoids__item {
-        flex: 0 0 300px;
-        padding: 30px 15px;
-
+    .search-form__section {
+        width: 300px;
     }
 
-    .factoids__img img{
-
+    .search-form__section span {
+        font-size: 20px;
     }
 
-    .factoids__img::after {
-        right: 200px;
+    .search-button__button {
+       margin-bottom: 15px;
     }
 
-    .factoids-paragraph {
-        font-size: 15px;
+    .search-btn {
+        width: 310px;
     }
 
-        .documents__btn_show-more {
-        transform: translateX(309px);
-    }
-}
-
-
-@media (max-width: 1100px) {
-
-    /* ---------------- Шапка + Футер ----------------- */
-    .nav > :nth-child(2) {
-        margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
+    .search__img img {
+        width: 360px;
     }
 
     /* ---------------- Авторизация / Регистрация ----------------*/
     .auth__title {
         font-size: 35px;
+        text-align: left;
     }
 
     .auth__img {
@@ -1723,6 +1724,69 @@ img {
         font-size: 18px;
     }
 
+}
+
+@media (max-width: 1345px) {
+
+    /* ---------------- Главная страница ----------------- */
+    .header__row {
+        gap: 30px;
+    }
+
+    .header__content {
+        width: 550px;
+    }
+
+    /* ---------------- Авторизация / Регистрация ----------------*/
+    .result__row {
+        gap: 50px;
+    }
+
+
+}
+
+@media (max-width: 1248px) {
+
+     /* ---------------- Главная страница ----------------- */
+
+    /* Factoids */
+    .factoids__content {
+        width: 73%;
+    }
+
+    .slider__btn-next {
+        right: 290px;
+    }
+
+    .factoids__item {
+        flex: 0 0 300px;
+        padding: 30px 15px;
+
+    }
+
+    .factoids__img::after {
+        right: 200px;
+    }
+
+    .factoids-paragraph {
+        font-size: 15px;
+    }
+
+    .documents__btn_show-more {
+        transform: translateX(309px);
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    /* ---------------- Шапка + Футер ----------------- */
+    .nav > :nth-child(2) {
+        margin-left: 50px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
+    }
+
+
+
     /* ---------------- Главная страница ---------------- */
     .header__row {
         gap: 0px;
@@ -1733,7 +1797,7 @@ img {
     }
 
     .header__title {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .header__paragraph {
@@ -1748,7 +1812,7 @@ img {
     }
 
     .header__text_btn {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* Factoids */
@@ -1767,7 +1831,6 @@ img {
 
     .factoids__img img{
         width: 500px;
-        height: auto;
     }
 
     .factoids__img::after {
@@ -1778,18 +1841,14 @@ img {
         font-size: 15px;
     }
 
-}
-
-@media (max-width: 1060px) {
-
-    /* ---------------- Главная страница ----------------- */
     .rate__row {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .rate__card {
-        width: auto;
+        width: calc((100% - 37px) / 2);
     }
+
 }
 
 @media (max-width: 1000px) {
@@ -1987,45 +2046,12 @@ img {
         font-size: 14px;
     }
 
-    /* ---------------- Поиск (search) ----------------*/
+    /*----------- Поиск ----------*/
 
-    .search__title {
-        font-size: 35px;
-    }
-
-    .search__paragraph {
-        font-size: 18px;
-    }
 
     .search__form {
         width: 700px;
         padding: 25px 25px 70px 25px;
-    }
-
-    .search-form__section,
-     .search-form__section label,
-      .check label {
-        font-size: 16px;
-    }
-
-    .search-paragraph {
-        font-size: 12px;
-    }
-
-    .search-form__section {
-        width: 300px;
-    }
-
-    .search-form__section span {
-        font-size: 20px;
-    }
-
-    .search-button__button {
-       margin-bottom: 15px;
-    }
-
-    .search-btn {
-        width: 310px;
     }
 
     .search__img img {
@@ -2077,10 +2103,6 @@ img {
         height: 517px;
     }
 
-    .header__text_btn {
-        font-size: 20px;
-    }
-
     /* Factoids */
 
     .factoids {
@@ -2114,11 +2136,20 @@ img {
         font-size: 15px;
     }
 
+    .rate__row {
+        flex-direction: column;
+    }
+
+    .rate__card {
+        width: auto;
+    }
+
     /* ---------------- Результаты Поиска ----------- */
     .result__row {
         flex-direction: column;
         gap: 0px;
     }
+
 }
 
 @media (max-width: 776px) {
@@ -2217,26 +2248,22 @@ img {
         height: auto;
     }
 
-    .header__text_btn {
-        font-size: 20px;
-    }
-
     /* Factoids */
     .factoids {
         margin-top: 300px;
+    }
+
+    /* ---------------- Авторизация / Регистрация ---------------- */
+    .auth__title {
+        font-size: 25px;
+        /* margin-left: 120px; */
+
     }
 
 }
 
 
 @media (max-width: 665px) {
-
-    /* ---------------- Авторизация / Регистрация ---------------- */
-    .auth__title {
-        font-size: 23px;
-        max-width: 500px;
-        margin-left: 120px;
-    }
 
     /* ---------------- Главная страница ---------------- */
     .header__img {
@@ -2317,6 +2344,10 @@ img {
         font-size: 15px;
     }
 
+    .slider__btn {
+        top: 20%;
+    }
+
     /* ---------------- Результаты Поиска ----------- */
     .result__row {
         flex-direction: column;
@@ -2343,8 +2374,8 @@ img {
     /* ---------------- Авторизация / Регистрация ----------------*/
     .auth__title {
         margin-top: -30px;
-        max-width: 350px;
-        margin-left: 200px;
+        width: 300px;
+        margin-left: 240px;
     }
 
     .auth__row {
@@ -2590,8 +2621,9 @@ img {
 
      /* ---------------- Авторизация / Регистрация ----------------*/
     .auth__title {
-        max-width: 280px;
-        margin-left: 240px;
+        width: 300px;
+        text-align: left;
+        margin-left: 225px;
     }
 
     .auth__form {
@@ -2654,6 +2686,10 @@ img {
         margin-top: -7px;
     }
 
+    .under__image img {
+        width: 250px;
+    }
+
 
      /* ---------------- Поиск (search) ----------------*/
 
@@ -2695,7 +2731,6 @@ img {
     }
 
    /* Factoids */
-
     .factoids {
         margin-top: 100px;
     }
@@ -2704,12 +2739,16 @@ img {
         font-size: 25px;
     }
 
+    .container__title {
+        font-size: 30px;
+    }
+
     .factoids__content {
         width: 20%;
     }
 
     .slider__btn-next {
-        right: 1080px;
+        right: 1075px;
     }
 
     .factoids__item {
@@ -2717,8 +2756,6 @@ img {
         padding: 10px;
     }
 
-    .factoids__img {
-    }
 
     .factoids-paragraph {
         font-size: 15px;
