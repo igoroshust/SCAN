@@ -1,11 +1,15 @@
 import './styles/styles.css';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
   return (
     <div className="App">
-        <Header />
+        <div className="footer__sticky">
+            <Header />
+        </div>
+            <Footer />
     </div>
   );
 }
