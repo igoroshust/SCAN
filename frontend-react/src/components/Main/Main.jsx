@@ -7,6 +7,7 @@ const Main = ({ isLoggedIn, userRate }) => {
     return (
         <main className="main">
             <MeetUs isLoggedIn={isLoggedIn} />
+            <Factoids />
         </main>
     );
 };

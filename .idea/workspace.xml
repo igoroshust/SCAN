@@ -6,71 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0d24525c-d5c5-4442-ad4a-fb449f5ef91d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/customscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/js/customscript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layout/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Layout/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/UI/arrow-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/arrow-left.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/UI/arrow-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/arrow-left.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/UI/arrow-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/arrow-right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/UI/arrow-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/arrow-right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/facebook.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/facebook.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/google.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/google.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/key.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/key.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/lock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/lock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/lock.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/yandex.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/yandex.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/auth/Страница авторизации. Десктоп.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/auth/Страница авторизации. Десктоп.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/checkmark.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/checkmark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/checkmark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/checkmark.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/clock-facts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/clock-facts.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/factoids-elements.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/factoids-elements.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/goal-rate.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/goal-rate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/lamp-rate.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/lamp-rate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/laptop-rate.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/laptop-rate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/lock-facts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/lock-facts.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/logo-footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/logo-footer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/logo-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/logo-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/main-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/main-desktop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/main-mobile.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/main-mobile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/man-alone.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/man-alone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/man-factoids.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/man-factoids.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/man-whole.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/man-whole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/oshust.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/oshust.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/search-facts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/search-facts.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/spinner.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/spinner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/spinner.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/UI/spinner.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/user-nav.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/user-nav.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/whywe-el-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/whywe-el-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/whywe-el-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/whywe-el-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/women-header-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/women-header-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/main/women-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/main/women-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/card-one-cut-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/card-one-cut-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/card-one-full-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/card-one-full-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/card-two-cut-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/card-two-cut-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/card-two-full-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/card-two-full-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/mockup-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/mockup-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/result/women-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/result/women-result.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/checkbox-active-search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/checkbox-active-search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/checkbox-inactive-search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/checkbox-inactive-search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/document-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/document-search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/folders-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/folders-search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/man-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/man-search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/img/search/Страница поиска. Десктоп.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/images/search/Страница поиска. Десктоп.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/scripts/customscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/scripts/customscript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/styles/fonts/ferry_black.otf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/assets/fonts/ferry_black.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Main/Factoids/Factoids.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Main/Factoids/Factoids.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Main/Main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
