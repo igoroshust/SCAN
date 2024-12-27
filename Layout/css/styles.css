@@ -186,15 +186,9 @@ img {
 }
 
 .paragraph-22-500-white {
-    color:
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.paragraph-22-500-white {
     color: var(--bg-color-white);
     font-size: 22px;
-    font-weight:
+    font-weight: 500;
 }
 
 .paragraph-25-500 { /* Старая цена в разделе "Наши тарифы" */
@@ -1395,7 +1389,7 @@ img {
     height: 22px;
     padding: 4px 11px 3px 14px;
 
-    text-align-center;
+    text-align: center;
     border-radius: 5px;
     background: var(--result-badge-yellow);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import logoHeader from '../../img/main/logo-header.png';
-import userPhoto from '../../img/main/user-nav.png';
-import Spinner from '../../img/main/spinner.svg';
+import logoHeader from '../../assets/images/main/logo-header.png';
+import userPhoto from '../../assets/images/main/user-nav.png';
+import Spinner from '../../assets/images/UI/spinner.svg';
 
 const Header = () => {
     return (

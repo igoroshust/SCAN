@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () { // код выполняется после загрузки DOM
+import logoFooter from '../assets/images/main/logo-footer.png';
+
+window.onload = () => { // код выполняется после загрузки DOM
 
     const navBtn = document.querySelector('.nav__toggle'); // находим кнопку
     const nav = document.querySelector('.nav');
@@ -17,26 +19,25 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
 
             // замена изображения (логотип на подложке в бургер-меню)
             if (nav.classList.contains('nav--mobile')) { // изменяем логотип в зависимости от состояния меню
-                logo.src = './img/main/logo-footer.png';
+                logo.src = '../../assets/images/main/logo-footer.png';
             } else {
-                logo.src = './img/main/logo-header.png';
+                logo.src = '../../assets/images/main/logo-header.png';
             }
         };
     } else {
         console.error('Элемент с классом `.nav__toggle` не был найден');
     }
 
-    label.addEventListener('click', function() {
-    // Переключаем фокус между селектами
-    if (document.activeElement === select1) {
-        select2.focus();
-    } else {
-        select1.focus();
-    }});
 
-});
+//    label.addEventListener('click', function() {
+//    // Переключаем фокус между селектами
+//    if (document.activeElement === select1) {
+//        select2.focus();
+//    } else {
+//        select1.focus();
+//    }});
 
-    function scrollTable(direction) {
+        function scrollTable(direction) {
     const tableRow = document.querySelector('.table__row');
     const scrollAmount = 133; // Ширина одной ячейки
     tableRow.scrollBy({
@@ -53,3 +54,6 @@ document.addEventListener('DOMContentLoaded', function () { // код выпол
         behavior: 'smooth'
     });
 }
+
+};
+
