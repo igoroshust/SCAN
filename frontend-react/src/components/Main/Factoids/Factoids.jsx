@@ -9,19 +9,19 @@ import manFactoids from '../../../assets/images/main/man-factoids.png';
 
 const Factoids = () => {
 
-    const carouselRef = React.useRef(null);
+  const sliderRef = React.useRef(null);
 
-    const scrollLeft = () => {
-        if (carouselRef.current) {
-          carouselRef.current.scrollLeft -= window.innerWidth / 3;
-        }
-    };
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft -= window.innerWidth / 3;
+    }
+  };
 
-    const scrollRight = () => {
-        if (carouselRef.current) {
-          carouselRef.current.scrollLeft += window.innerWidth / 3;
-        }
-    };
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += window.innerWidth / 3;
+    }
+  };
 
     return (
          <section className="factoids">
@@ -33,7 +33,7 @@ const Factoids = () => {
                         <img src={arrowLeft} alt="СКАН стрелочка влево" />
                     </button>
 
-                    <div className="factoids__content" ref={carouselRef}>
+                    <div className="factoids__content" ref={sliderRef} style={{ transition: 'transform 0.3s ease' }}>
                         <div className="factoids__item item-1">
                             <img src={clockFacts} alt="СКАН Высокая и оперативная скорость обработки заявки" />
                             <p className="factoids-paragraph paragraph-18">Высокая и оперативная скорость обработки заявки</p>
