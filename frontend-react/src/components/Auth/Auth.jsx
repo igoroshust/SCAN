@@ -10,9 +10,12 @@ import yandexAuth from '../../assets/images/auth/yandex.svg';
 const Auth = () => {
 
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
     const [usernameError, setUsernameError] = useState(false);
+
+    const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState(false);
+
+    const isButtonActive = username.trim().length > 0 || password.trim().length > 0;
 
     const navigate = useNavigate();
     const { isLoggedIn, setIsLoggedIn } = useAuth; // получаем контекст
@@ -93,7 +96,10 @@ const Auth = () => {
 
                                 <div className="authorization-form__navigation">
                                     <button className="authorization-form__btn authorization-form__btn-login paragraph-16">Войти</button>
-                                    <button className="authorization-form__btn authorization-form__btn-signup paragraph-16-200">Зарегистрироваться</button>
+                                    <button
+                                        className="authorization-form__btn authorization-form__btn-signup paragraph-16-200"
+                                        title="Недоступно для перехода"
+                                    >Зарегистрироваться</button>
                                 </div>
 
                                 <div className="authorization-form__content">
@@ -133,10 +139,15 @@ const Auth = () => {
                                         className="btn auth-btn__btn-login paragraph-22"
                                         type="submit"
                                         name="authButton"
-                                        disabled={!username || !password}
+                                        disabled={!isButtonActive} // Делаем кнопку неактивной, если поля не заполнены
+                                        style={{ opacity: isButtonActive ? 1 : 0.5 }}
                                     >Войти</button>
 
-                                    <a className="auth-btn__btn-recovery paragraph-14" href="#!">Восстановить пароль</a>
+                                    <a
+                                        className="auth-btn__btn-recovery paragraph-14"
+                                        href="#!"
+                                        title="Опция недоступна"
+                                    >Восстановить пароль</a>
                                 </div>
 
                                 <div className="authorization-form__oauth">

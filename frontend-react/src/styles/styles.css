@@ -899,7 +899,6 @@ img {
 /* Обнуление стилей для кнопки "Войти" */
 .auth-btn__btn-login:hover,
 .auth-btn__btn-login:active {
-    opacity: 0.5;
     position: none;
     top: 0;
 }
