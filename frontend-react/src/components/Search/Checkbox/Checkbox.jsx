@@ -13,10 +13,9 @@ const Checkbox = ({ checkboxState, handleCheckboxChange }) => {
     };
 
     return (
-        <div className="search-form__checkboxes">
             <div className="search-form__checkboxes__column">
                 {Object.keys(checkboxState).map((key) => (
-                    <div key={key} className="check">
+                    <div key={key} className={`check check${key}`}>
                         <input
                          type="checkbox"
                          className="checkbox"
@@ -33,7 +32,6 @@ const Checkbox = ({ checkboxState, handleCheckboxChange }) => {
                     </div>
                 ))}
             </div>
-       </div>
     );
 };
 
