@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// Создаём контекст
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
