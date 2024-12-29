@@ -7,7 +7,7 @@ const Checkbox = ({ checkboxState, handleCheckboxChange }) => {
         businessContextMentions: 'Упоминания в бизнес-контексте',
         leadingRole: 'Главная роль в публикации',
         riskFactorsPublicationsOnly: 'Публикации только с риск факторами',
-        addTechnicalNews: 'Включать технические новости рынков',
+        addTechNews: 'Включать технические новости рынков',
         addAnnouncements: 'Включать анонсы и календари',
         addNewsBulletins: 'Включать сводки новостей',
     };

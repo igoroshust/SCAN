@@ -17,7 +17,7 @@ const DocumentCardList = React.memo(({ documentsData }) => {
                 date: new Date(doc.ok.issueDate).toLocaleDateString("ru-RU"),
                 sourceName: doc.ok.source.name,
                 title: doc.ok.title.text,
-                isTechnicalNews: doc.ok.attributes.isTechnicalNews,
+                isTechNews: doc.ok.attributes.isTechNews,
                 isAnnouncement: doc.ok.attributes.isAnnouncement,
                 isDigest: doc.ok.attributes.isDigest,
                 image: cardOne,

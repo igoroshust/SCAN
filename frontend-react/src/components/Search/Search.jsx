@@ -23,7 +23,7 @@ const Search = () => {
         businessContextMentions: false,
         leadingRole: false,
         riskFactorsPublicationsOnly: false,
-        addTechnicalNews: true,
+        addTechNews: true,
         addAnnouncements: true,
         addNewsBulletins: true,
     });
@@ -94,7 +94,7 @@ const Search = () => {
               targetSearchEntitiesContext: {
                 targetSearchEntities: [{
                   type: "company",
-                  tin: companyTIN,
+                  inn: companyTIN,
                   maxFullness: checkboxState.maxCompleteness,
                 }],
                 // Указываем, нужно ли искать только по основной роли

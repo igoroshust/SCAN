@@ -23,7 +23,7 @@ const DocumentCard = (props) => {
         setCleanContent(cleanHtmlContent(props.content));
     }, [props.content]);
 
-    const badge = props.isTechnicalNews ? "Технические новости" : props.isAnnouncement ? "Анонсы и события" : "Сводки новостей";
+    const badge = props.isTechNews ? "Технические новости" : props.isAnnouncement ? "Анонсы и события" : "Сводки новостей";
 
     return (
          <div className="documents__card documents__card_card-1">
