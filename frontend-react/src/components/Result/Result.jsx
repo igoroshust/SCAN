@@ -98,6 +98,10 @@ const Result = () => {
         credentials: 'omit',
       });
 
+      console.log("DOCUMENT - ", documentsResponse);
+      console.log("PUBLICATION IDS - ", publicationIdsData);
+      console.log("publicationIds IDS - ", publicationIds);
+
       // Проверяем документ на успешность
       if (!documentsResponse.ok) {
         throw new Error(`Ошибка HTTP! Статус: ${documentsResponse.status}`);
@@ -127,10 +131,10 @@ const Result = () => {
     fetchResult();
   }, [fetchResult]);
 
-  return (
+return (
     <div className="container">
-        <section className="result">
-            {isLoading && (
+        {isLoading && (
+            <section className="result">
                 <div className="result__row">
                     <div className="result__content">
                         <h2 className="result__title paragraph-40">ИЩЕМ. СКОРО БУДУТ РЕЗУЛЬТАТЫ</h2>
@@ -145,36 +149,10 @@ const Result = () => {
                         <img src={womenResult} alt="СКАН Результаты поиска" />
                     </div>
                 </div>
-            )}
-        </section>
+            </section>
+        )}
 
-        <section className="summary">
-            <div className="summary__column">
-                <h3 className="summary__title paragraph-30">Общая сводка</h3>
-                <p className="summary__paragraph paragraph-18-300">
-                    Найдено {searchData ? searchData.totalCount : 0} вариантов
-                </p>
-
-                <div className="table-section">
-                    <div className="table">
-                        <div className="table__header paragraph-20-500">
-                            <div>Период</div>
-                            <div>Всего</div>
-                            <div>Риски</div>
-                        </div>
-                        <div className="table__row paragraph-20">
-                            {searchData && searchData.histogram.map((item, index) => (
-                                <div className="table__data" key={index}>
-                                    <div>{item.period}</div>
-                                    <div>{item.total}</div>
-                                    <div>{item.risks}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <SummaryTable searchData={searchData} isLoading={isLoading} isError={isError} />
 
         <section className="documents">
             <h3 className="documents__title paragraph-30">Список документов</h3>

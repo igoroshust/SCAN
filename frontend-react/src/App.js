@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 import Search from './components/Search/Search';
 import Auth from './components/Auth/Auth';
+import Result from './components/Result/Result';
 
 import DocumentCard from './components/Result/DocumentCard/DocumentCard';
 import DocumentCardList from './components/Result/DocumentCardList/DocumentCardList';
@@ -14,7 +15,8 @@ import DocumentCardList from './components/Result/DocumentCardList/DocumentCardL
 function App() {
   return (
     <div className="App">
-
+        <Header />
+        <Result />
     </div>
   );
 }
