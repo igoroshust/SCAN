@@ -1062,7 +1062,7 @@ img {
     overflow-y: auto;
 }
 
-.search-from__checkbox.inactive {
+.search-form__checkbox.inactive {
     color: var(--search-form-placeholder);
 }
 

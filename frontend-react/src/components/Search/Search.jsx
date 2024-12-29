@@ -8,6 +8,8 @@ import Tonality from './Tonality/Tonality';
 import Document from './Document/Document';
 import DateRange from './DateRange/DateRange';
 
+import manSearch from '../../assets/images/search/man-search.png';
+
 const Search = () => {
 
     const [companyTIN, setCompanyTIN] = useState('');
@@ -134,6 +136,14 @@ const Search = () => {
             <section className="search">
                 <div className="container">
                     <div className="search__row">
+
+                        <div class="search__content">
+                            <h2 class="search__title paragraph-40">НАЙДИТЕ НЕОБХОДИМЫЕ <br /> ДАННЫЕ В ПАРУ КЛИКОВ.</h2>
+                            <div class="search__text">
+                                <p class="search__paragraph paragraph-20">Задайте параметры поиска. <br /> Чем больше заполните, тем точнее поиск</p>
+                            </div>
+
+                            <div class="search__form">
                                 <form className="search-form" onSubmit={handleSubmit}>
                                         <div className="search-form__row">
 
@@ -162,17 +172,19 @@ const Search = () => {
                                                             <p className="search-paragraph paragraph-14-300">* Обязательные к заполнению поля</p>
                                                         </div>
                                             </div>
-                                      </div>
+                                        </div>
                                 </form>
                             </div>
 
                             <div className="search__secret-img none">
-                                <img src="./img/search/man-search.png" alt="СКАН поиск данных" />
+                                <img src={manSearch} alt="СКАН поиск данных" />
                             </div>
+                        </div>
 
                             <div className="search__img">
-                                <img src="./img/search/man-search.png" alt="СКАН поиск данных" />
+                                <img src={manSearch} alt="СКАН поиск данных" />
                             </div>
+                        </div>
                 </div>
     </section>
         );
