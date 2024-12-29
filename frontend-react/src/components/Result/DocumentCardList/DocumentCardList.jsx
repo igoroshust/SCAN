@@ -63,6 +63,6 @@ const DocumentCardList = React.memo(({ documentsData }) => {
                 </div>
         </section>
     );
-};
+});
 
 export default DocumentCardList;
