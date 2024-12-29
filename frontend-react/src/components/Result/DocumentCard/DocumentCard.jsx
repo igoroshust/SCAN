@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
-
+// Декодирование html-сущностей в обычный текст
 function decodeHtml(html) {
-  const txt = document.createElement("textarea");
-  txt.innerHTML = html;
-  return txt.value;
+  const txt = document.createElement("textarea"); // созданный textarea автоматически обрабатывает html-сущности
+  txt.innerHTML = html; // устанавливаем содержимое элемента textarea равным переданному html-коду
+  return txt.value; // получаем декодированное значение
 }
 
+// Очистка html-контента (удаляем все html-теги, оставляем только текст)
 function cleanHtmlContent(htmlContent) {
-  const decodedHtml = decodeHtml(htmlContent);
-  const cleanedContent = decodedHtml.replace(/(<([^>]+)>)/gi, "");
-  return cleanedContent;
+  const decodedHtml = decodeHtml(htmlContent); // декодируем любые html-сущности
+  const cleanedContent = decodedHtml.replace(/(<([^>]+)>)/gi, ""); // удаляем все html-теги из декодированного текста
+  return cleanedContent; // получаем очищенный контент
 }
 
 const DocumentCard = (props) => {
 
     const [cleanContent, setCleanContent] = useState('');
 
+    // Устанавливаем очищенный контент при монтировании или изменении props.content
     useEffect(() => {
         setCleanContent(cleanHtmlContent(props.content));
     }, [props.content]);
@@ -46,7 +48,7 @@ const DocumentCard = (props) => {
 
                       {/* Изображение */}
                       <div className="documents-card__img">
-                          <img src={props.img} alt="СКАН изображение документа" />
+                          <img src={props.image} alt="СКАН изображение документа" />
                       </div>
 
                       {/* Текст */}
