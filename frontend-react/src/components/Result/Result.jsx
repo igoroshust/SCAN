@@ -132,6 +132,7 @@ const Result = () => {
   }, [fetchResult]);
 
 return (
+    <div class="results">
     <div className="container">
         {isLoading && (
             <section className="result">
@@ -172,6 +173,7 @@ return (
             </div>
         </section>
     </div>
+</div>
 );
 
 };

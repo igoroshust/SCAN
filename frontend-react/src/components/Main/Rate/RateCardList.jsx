@@ -8,7 +8,7 @@ import RateCard from './RateCard';
 
 const Rate = ({ isLoggedIn, userRate }) => {
     return (
-        <section className="rate">
+        <section className="rate" id="rate">
             <div className="container">
               <h2 className="container__title rate__title paragraph-45">НАШИ ТАРИФЫ</h2>
                 <div className="rate__row">

@@ -12,8 +12,8 @@ const Navigation = memo(() => {
                 </NavLink>
             </li>
 
-            <li><a className="anchor paragraph-14" href="#!">Тарифы</a></li>
-            <li><a className="anchor paragraph-14" href="#!">FAQ</a></li>
+            <li><a className="anchor paragraph-14" href="#rate">Тарифы</a></li>
+            <li><a className="anchor paragraph-14" href="#factoids">FAQ</a></li>
         </ul>
     );
 });

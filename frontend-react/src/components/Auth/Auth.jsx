@@ -15,7 +15,7 @@ const Auth = () => {
     const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState(false);
 
-    const isButtonActive = username.trim().length > 0 || password.trim().length > 0;
+    const isButtonActive = password.trim().length > 0;
 
     const navigate = useNavigate();
     const { isLoggedIn, setIsLoggedIn } = useAuth(); // получаем контекст
@@ -148,6 +148,7 @@ const Auth = () => {
                                         className="auth-btn__btn-recovery paragraph-14"
                                         href="#!"
                                         title="Опция недоступна"
+                                        role="button"
                                     >Восстановить пароль</a>
                                 </div>
 

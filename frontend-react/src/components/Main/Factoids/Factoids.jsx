@@ -24,7 +24,7 @@ const Factoids = () => {
   };
 
     return (
-         <section className="factoids">
+         <section className="factoids" id="factoids">
             <div className="container">
               <h2 className="factoids__title paragraph-45">ПОЧЕМУ ИМЕННО МЫ</h2>
                 <div className="factoids__column">

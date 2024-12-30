@@ -286,9 +286,20 @@ img {
 
 /* ---------------------------------------------------- HEADER ------------------------------------------------------ */
 
+.main {
+    margin-top: 150px;
+}
+
 .header {
     min-height: 93px;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--bg-color-white);
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -771,6 +782,10 @@ img {
 
 /* ------------------------------------------------ Авторизация/Регистрация ----------------------------------------- */
 
+.auth {
+    margin-top: 120px;
+}
+
 .auth__row {
     display: flex;
     gap: 60px;
@@ -900,7 +915,7 @@ img {
 .auth-btn__btn-login:hover,
 .auth-btn__btn-login:active {
     position: none;
-    top: 0;
+    top: 3;
 }
 
 /* Восстановить пароль */
@@ -949,7 +964,7 @@ img {
 /* -------------------------------------------------- Поиск Данных -------------------------------------------------- */
 
 .search {
-    margin-top: 69px;
+    margin-top: 150px;
 }
 
 .search__row {
@@ -1027,7 +1042,7 @@ img {
 }
 
 .search-form__select-small {
-    width: 176px;
+    width: 140px;
     height: 43px;
     text-align: center;
     color: var(--search-form-placeholder);
@@ -1178,9 +1193,8 @@ img {
 
 /* ----------------------------------------------- Результаты Поиска ------------------------------------------------ */
 
-/* Ищем. Скоро будут результаты */
-.result {
-    margin-top: 25px;
+.results {
+    margin-top: 150px;
 }
 
 .result__row {
@@ -2022,7 +2036,7 @@ img {
     }
 
     .auth-btn__btn-login {
-        width: 325px; /* Здесь был min-width!! */
+        width: 325px;
         padding: 16px 80px;
     }
 

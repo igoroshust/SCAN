@@ -58,7 +58,9 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
                  />
+
             </div>
+            {error && <div style={{ color: 'red', fontSize: '12px', textAlign: 'left'}}>{error}</div>}
         </div>
     );
 };

@@ -14,7 +14,7 @@ const RateCard = ({
 
 }) => {
     return(
-                    <div className="rate__card">
+                    <div className={`rate__card rate__card-${title.toLowerCase()}`}>
 
                         <div className={`rate__header rate__header-${title.toLowerCase()}`}>
                             <div className="rate__title">

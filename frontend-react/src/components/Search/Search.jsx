@@ -78,7 +78,7 @@ const Search = () => {
         }
 
       // Если форма валидна, формируем объект searchParams, содержащий параметры для запроса;
-      // Затем перенаправляем пользователя на страницу с резальтатами
+      // Затем перенаправляем пользователя на страницу с результатами
       if (isFormValid) {
 
           const searchParams = {
@@ -167,7 +167,17 @@ const Search = () => {
 
                                             {/* Кнопка "Поиск" */}
                                             <div className="search-button__button">
-                                                    <button className="btn auth-btn__btn-login search-btn paragraph-22-500" name="searchButton">Поиск</button>
+                                                    <button
+                                                        className="btn auth-btn__btn-login search-btn paragraph-22-500"
+                                                        type="submit"
+                                                        name="searchButton"
+                                                        style={{
+                                                            opacity: isFormValid ? 1 : 0.5,
+                                                            pointerEvents: isFormValid ? 'auto' : 'none',
+                                                        }}
+                                                        >
+                                                        Поиск
+                                                        </button>
                                                         <div className="search-paragraph-container">
                                                             <p className="search-paragraph paragraph-14-300">* Обязательные к заполнению поля</p>
                                                         </div>
