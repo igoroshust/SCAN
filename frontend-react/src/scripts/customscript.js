@@ -1,4 +1,5 @@
 import logoFooter from '../assets/images/main/logo-footer.png';
+import logoHeader from '../assets/images/main/logo-header.png';
 
 window.onload = () => { // код выполняется после загрузки DOM
 
@@ -19,9 +20,9 @@ window.onload = () => { // код выполняется после загруз
 
             // замена изображения (логотип на подложке в бургер-меню)
             if (nav.classList.contains('nav--mobile')) { // изменяем логотип в зависимости от состояния меню
-                logo.src = '../../assets/images/main/logo-footer.png';
+                logo.src = logoFooter;
             } else {
-                logo.src = '../../assets/images/main/logo-header.png';
+                logo.src = logoHeader;
             }
         };
     } else {
