@@ -9,7 +9,7 @@ const Main = ({ isLoggedIn, userRate }) => {
         <main className="main">
             <MeetUs isLoggedIn={isLoggedIn} />
             <Factoids />
-            <RateCardList />
+            <RateCardList isLoggedIn={isLoggedIn} userRate={userRate} />
         </main>
     );
 };

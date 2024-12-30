@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { formatDate, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
 
-import spinner from '../../../assets/images/UI/spinner.svg';
+import Spinner from '../../UI/Spinner';
 
 const SummaryTable = ({ searchData, isLoading, isError }) => {
     const [combinedData, setCombinedData] = useState([]);
@@ -58,7 +58,7 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
                         <div className="table__row paragraph-20" ref={tableRow}>
                             {isLoading ? (
                                 <div className="loading-container">
-                                    <img src={spinner} alt="Loading" />
+                                    <Spinner />
                                     <p>Загружаем данные...</p>
                                 </div>
                             ) : isError ? (

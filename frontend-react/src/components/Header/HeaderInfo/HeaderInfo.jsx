@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 import '../../../scripts/customscript.js';
-import Spinner from '../../../assets/images/UI/spinner.svg';
+import Spinner from '../../UI/Spinner';
 
 const HeaderInfo = ({ isLoggedIn }) => {
 
@@ -61,7 +61,7 @@ const HeaderInfo = ({ isLoggedIn }) => {
     return(
         <div className="header__info">
             {isLoading ? (
-                <img src={Spinner} alt="СКАН loader spinner" />
+                <Spinner />
             ) : (
                 <>
                     <p className="paragraph-10">Использовано компаний: <span className="header-info__span header-info__span_first-value paragraph-14-700">{usedCompanyCount}</span></p>

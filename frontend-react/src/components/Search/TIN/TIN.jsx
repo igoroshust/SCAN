@@ -24,10 +24,10 @@ const TIN = ({ companyTIN, setCompanyTIN }) => {
           errorObj.code = 3;
           errorObj.message = 'Введите корректные данные';
         } else {
-          const checkDigit = (inn, coef) => {
+          const checkDigit = (inn, coefficients) => {
             let n = 0;
-            for (let i = 0; i < coef.length; i++) {
-              n += coef[i] * inn[i];
+            for (let i = 0; i < coefficients.length; i++) {
+              n += coefficients[i] * inn[i];
             }
             return parseInt(n % 11 % 10, 10);
           };
@@ -67,14 +67,15 @@ const TIN = ({ companyTIN, setCompanyTIN }) => {
             <input
                 className="search-form__input paragraph-14"
                 placeholder="10 цифр"
-                maxlength="10"
+                maxLength="10"
                 type="text"
                 id="companyTIN"
                 name="companyTIN"
                 value={companyTIN}
                 onChange={(e) => setCompanyTIN(e.target.value)}
-                onBlur={() => validTIN(companyTIN)}
+                onFocus={() => validTIN(companyTIN)}
              />
+             {error && <div style={{ color: 'red', fontSize: '12px' }}>{error}</div>}
         </div>
     );
 };

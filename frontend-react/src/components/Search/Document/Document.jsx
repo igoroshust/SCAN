@@ -32,7 +32,7 @@ const Document = ({ documentsCount, setDocumentsCount }) => {
                 name="documentsCount"
                 value={documentsCount}
                 placeholder="От 1 до 1000"
-                maxlength="4"
+                maxLength="4"
                 onChange={(e) => {
                     const newValue = e.target.value;
                     setDocumentsCount(newValue);
@@ -40,7 +40,7 @@ const Document = ({ documentsCount, setDocumentsCount }) => {
                 }}
                 onBlur={validDocument}
             />
-            {error && <div style={{ color: 'red' }}>{ error }</div>}
+            {error && <div style={{ color: 'red', fontSize: '12px' }}>{error}</div>}
         </div>
     );
 };

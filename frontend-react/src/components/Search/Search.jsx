@@ -44,7 +44,7 @@ const Search = () => {
 
     // Все обязательные поля должны быть заполнены
     useEffect(() => {
-        const isValid = companyTIN && documentsCount && startDate && endDate && checkboxState;
+        const isValid = companyTIN && documentsCount && startDate && endDate;
         setIsFormValid(isValid);
     }, [companyTIN, documentsCount, startDate, endDate, checkboxState]);
 
@@ -137,13 +137,13 @@ const Search = () => {
                 <div className="container">
                     <div className="search__row">
 
-                        <div class="search__content">
-                            <h2 class="search__title paragraph-40">НАЙДИТЕ НЕОБХОДИМЫЕ <br /> ДАННЫЕ В ПАРУ КЛИКОВ.</h2>
-                            <div class="search__text">
-                                <p class="search__paragraph paragraph-20">Задайте параметры поиска. <br /> Чем больше заполните, тем точнее поиск</p>
+                        <div className="search__content">
+                            <h2 className="search__title paragraph-40">НАЙДИТЕ НЕОБХОДИМЫЕ <br /> ДАННЫЕ В ПАРУ КЛИКОВ.</h2>
+                            <div className="search__text">
+                                <p className="search__paragraph paragraph-20">Задайте параметры поиска. <br /> Чем больше заполните, тем точнее поиск</p>
                             </div>
 
-                            <div class="search__form">
+                            <div className="search__form">
                                 <form className="search-form" onSubmit={handleSubmit}>
                                         <div className="search-form__row">
 

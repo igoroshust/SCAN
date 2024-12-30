@@ -1,17 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
-
+import { formatName } from '../../utils/Main/formatName';
 import Navigation from './Navigation/Navigation';
 import HeaderInfo from './HeaderInfo/HeaderInfo';
 import HeaderUser from './HeaderUser/HeaderUser';
 import HeaderRegister from './HeaderRegister/HeaderRegister';
 import Burger from './Burger/Burger';
-
+import userPhotoDefault from '../../assets/images/main/user-nav.png';
 import logoHeader from '../../assets/images/main/logo-header.png';
 
 const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUserLogo }) => {
 
+    const [isLoadingActions, setIsLoadingActions] = useState(true);
     const { setIsLoggedIn } = useAuth(); // аутентификация
+
+    // Загрузка обработанных данных о пользователе
+    useEffect(() => {
+        setIsLoadingActions(true);
+        setTimeout(() => {
+            const userData = {
+                name: 'Игорь Ошуsadasdст',
+                picture: userPhotoDefault
+            };
+            setUserName(formatName(userData.name));
+            setUserLogo(userData.picture);
+            setIsLoadingActions(false);
+        }, 2000);
+    }, [setUserName, setUserLogo]);
 
     // Проверяем срок истечения токена
     useEffect(() => {
@@ -57,10 +72,11 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
                         {/* Учётная запись пользователя */}
                         <HeaderUser
                             isLoggedIn={isLoggedIn}
-                            userName="Александр А."
+                            userName={userName}
                             userLogo={userLogo}
                             setUserName={setUserName}
                             setUserLogo={setUserLogo}
+                            isLoading={isLoadingActions}
                          />
 
                         </>
@@ -79,8 +95,6 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
                         {/* Бургер-меню */}
                         <Burger />
 
-                         {/* Спиннер (Loader) */}
-                        {/* <img src={Spinner} alt="СКАН loader spinner" /> */}
                     </nav>
                 </div>
             </div>

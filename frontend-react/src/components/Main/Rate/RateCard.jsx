@@ -14,7 +14,7 @@ const RateCard = ({
 
 }) => {
     return(
-                    <div className={`rate__card ${isActive && isLoggedIn ? activeColorClass : ''}`}>
+                    <div className="rate__card">
 
                         <div className={`rate__header rate__header-${title.toLowerCase()}`}>
                             <div className="rate__title">
@@ -49,9 +49,9 @@ const RateCard = ({
                                 ))}
                             </div>
 
-                                {isActive && isLoggedIn
-                                ? <a className={`btn btn__rate btn__rate-${title.toLowerCase()} paragraph-20`} href="#!">Перейти в личный кабинет</a>
-                                : <a class="btn btn__rate btn__rate-md paragraph-20" href="#!">Подробнее</a>
+                                {isLoggedIn && isActive
+                                    ? <a className={`btn btn__rate btn__rate-${title.toLowerCase()} paragraph-20`} href="#!">Перейти в личный кабинет</a>
+                                    : <a className="btn btn__rate btn__rate-md paragraph-20" href="#!">Подробнее</a>
                                 }
                         </div>
                     </div>

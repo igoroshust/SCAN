@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 import userPhotoDefault from '../../../assets/images/main/user-nav.png';
 import '../../../scripts/customscript.js';
-import Spinner from '../../../assets/images/UI/spinner.svg';
+import Spinner from '../../UI/Spinner';
 
 const HeaderUser = ({ isLoggedIn, userName, userLogo, setUserName, setUserLogo, isLoading }) => {
 
@@ -23,9 +23,9 @@ const HeaderUser = ({ isLoggedIn, userName, userLogo, setUserName, setUserLogo, 
             </div>
             <div className="user__logo">
                 {isLoading ? (
-                    <img src={Spinner} alt="СКАН spinner loader"/>
+                    <Spinner />
                 ) : (
-                    <a className="user__logo user__logo_image" href="#!"><img src={userLogo} alt="user profile" /></a>
+                    <a className="user__logo user__logo_image" href="#!"><img src={userLogo} alt="СКАН профиль пользователя" /></a>
                 )}
             </div>
         </div>
