@@ -57,7 +57,7 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
                         {/* Учётная запись пользователя */}
                         <HeaderUser
                             isLoggedIn={isLoggedIn}
-                            userName={userName}
+                            userName="Александр А."
                             userLogo={userLogo}
                             setUserName={setUserName}
                             setUserLogo={setUserLogo}

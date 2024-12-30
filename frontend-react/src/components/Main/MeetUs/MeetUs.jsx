@@ -1,18 +1,18 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import womenHeader from '../../../assets/images/main/women-header-2.png';
 
 const MeetUs = ({ isLoggedIn }) => {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleRequestDataClick = () => {
-//         if (isLoggedIn) {
-//             navigate('/search');
-//         } else {
-//             navigate('/auth');
-//         }
+        if (isLoggedIn) {
+            navigate('/search');
+        } else {
+            navigate('/auth');
+        }
     };
 
     return(

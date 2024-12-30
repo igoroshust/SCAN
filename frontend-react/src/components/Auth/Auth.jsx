@@ -18,7 +18,7 @@ const Auth = () => {
     const isButtonActive = username.trim().length > 0 || password.trim().length > 0;
 
     const navigate = useNavigate();
-    const { isLoggedIn, setIsLoggedIn } = useAuth; // получаем контекст
+    const { isLoggedIn, setIsLoggedIn } = useAuth(); // получаем контекст
 
     useEffect(() => {
         if (isLoggedIn) {
@@ -43,6 +43,7 @@ const Auth = () => {
       });
 
       const data = await response.json();
+
       if (response.ok) {
         localStorage.setItem('accessToken', data.accessToken);
         localStorage.setItem('tokenExpire', data.expire);
