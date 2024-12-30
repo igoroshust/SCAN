@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './styles/styles.css';
 import './scripts/customscript.js';
 
@@ -14,9 +16,9 @@ import DocumentCardList from './components/Result/DocumentCardList/DocumentCardL
 
 function App() {
   return (
-    <div className="App">
-        <Header />
-    </div>
+        <div className="App">
+            <Header />
+        </div>
   );
 }
 

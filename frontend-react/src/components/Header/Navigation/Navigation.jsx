@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../../../scripts/customscript.js';
 
-const Navigation = () => {
+const Navigation = memo(() => {
 
     return(
         <ul className="nav__list nav__list-header">
-            <li><a className="anchor paragraph-14" href="#!">Главная</a></li>
+
+            <li>
+               <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+                    <a className="anchor paragraph-14" href="#!">Главная</a>
+                </NavLink>
+            </li>
+
             <li><a className="anchor paragraph-14" href="#!">Тарифы</a></li>
             <li><a className="anchor paragraph-14" href="#!">FAQ</a></li>
         </ul>
     );
-};
+});
 
 export default Navigation;

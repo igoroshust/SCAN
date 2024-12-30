@@ -8,7 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-react/src/scripts/customscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/scripts/customscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderInfo/HeaderInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderInfo/HeaderInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderRegister/HeaderRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderRegister/HeaderRegister.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderUser/HeaderUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/HeaderUser/HeaderUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-react/src/components/Header/Navigation/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-react/src/components/Header/Navigation/Navigation.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
