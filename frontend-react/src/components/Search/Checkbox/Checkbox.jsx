@@ -25,7 +25,7 @@ const Checkbox = ({ checkboxState, handleCheckboxChange }) => {
                          checked={checkboxState[key]}
                          />
 
-                        <label className="label" for={`checkbox${key}`}>
+                        <label className="label" htmlFor={`checkbox${key}`}>
                             <span className="checkmark"></span>
                             <span className="label-text paragraph-18">{ labels[key] }</span>
                         </label>

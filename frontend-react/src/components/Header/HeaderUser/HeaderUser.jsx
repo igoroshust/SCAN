@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from '../../../context/AuthContext';
-import userPhoto from '../../../assets/images/main/user-nav.png';
+import userPhotoDefault from '../../../assets/images/main/user-nav.png';
 import '../../../scripts/customscript.js';
 import Spinner from '../../../assets/images/UI/spinner.svg';
 

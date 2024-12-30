@@ -104,7 +104,7 @@ const Auth = () => {
 
                                 <div className="authorization-form__content">
                                     <div className="authorization-form__content authorization-form__content_input_login">
-                                        <label className="authorization-form__label paragraph-16-gray" for="login">Логин или номер телефона:</label>
+                                        <label className="authorization-form__label paragraph-16-gray" htmlFor="login">Логин или номер телефона:</label>
                                         <input
                                             className="authorization-form__input"
                                             type="text"
@@ -119,7 +119,7 @@ const Auth = () => {
                                     </div>
 
                                     <div className="authorization-form__content authorization-form__content_input_password">
-                                        <label className="authorization-form__label paragraph-16-gray" for="password">Пароль: </label>
+                                        <label className="authorization-form__label paragraph-16-gray" htmlFor="password">Пароль: </label>
                                         <input
                                             className="authorization-form__input"
                                             type="password"
@@ -165,7 +165,7 @@ const Auth = () => {
                         </form>
                     </div>
 
-                    <div class="under__image none">
+                    <div className="under__image none">
                         <img src={keyAuth} alt="СКАН Авторизация Регистрация Оформление подписки на тариф" />
                     </div>
 

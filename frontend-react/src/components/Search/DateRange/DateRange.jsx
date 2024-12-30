@@ -27,7 +27,7 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
 
     return(
         <div className="search-form__section search-form__section_item-4">
-            <label className="paragraph-18" for="startDate">Диапазон поиска<span className="paragraph-25-500">*</span></label><br />
+            <label className="paragraph-18" htmlFor="startDate">Диапазон поиска<span className="paragraph-25-500">*</span></label><br />
             <div className="search-form_section__row">
                 <input
                     className="search-form__select-small search-form__select-small_item-1 paragraph-14"

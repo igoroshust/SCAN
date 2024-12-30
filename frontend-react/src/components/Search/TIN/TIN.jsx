@@ -63,7 +63,7 @@ const TIN = ({ companyTIN, setCompanyTIN }) => {
 
       return(
         <div className="search-form__section search-form__section_item-1">
-            <label className="paragraph-18" for="companyTIN">ИНН компании<span className="paragraph-25-500">*</span></label><br />
+            <label className="paragraph-18" htmlFor="companyTIN">ИНН компании<span className="paragraph-25-500">*</span></label><br />
             <input
                 className="search-form__input paragraph-14"
                 placeholder="10 цифр"

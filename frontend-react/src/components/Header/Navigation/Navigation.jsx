@@ -6,10 +6,9 @@ const Navigation = memo(() => {
 
     return(
         <ul className="nav__list nav__list-header">
-
             <li>
-               <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-                    <a className="anchor paragraph-14" href="#!">Главная</a>
+               <NavLink to="/" className={"anchor paragraph-14"}>
+                    Главная
                 </NavLink>
             </li>
 

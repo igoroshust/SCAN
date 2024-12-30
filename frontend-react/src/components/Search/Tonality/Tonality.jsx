@@ -4,7 +4,7 @@ const Tonality = ({ tonality, setTonality }) => {
 
     return (
         <div className="search-form__section search-form__section_item-2">
-            <label className="paragraph-18" for="tonality">Тональность</label><br />
+            <label className="paragraph-18" htmlFor="tonality">Тональность</label><br />
             <select
                 className="search-form__select-big search-form__select-big_item-1"
                 id="tonality"

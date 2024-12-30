@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
 import Navigation from './Navigation/Navigation';
@@ -9,13 +8,10 @@ import HeaderRegister from './HeaderRegister/HeaderRegister';
 import Burger from './Burger/Burger';
 
 import logoHeader from '../../assets/images/main/logo-header.png';
-import Spinner from '../../assets/images/UI/spinner.svg';
 
 const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUserLogo }) => {
 
     const { setIsLoggedIn } = useAuth(); // аутентификация
-    const navigate = useNavigate(); // маршрутизация
-    const location = useLocation(); // локация (сведения о текущем URL)
 
     // Проверяем срок истечения токена
     useEffect(() => {
