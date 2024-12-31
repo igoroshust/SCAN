@@ -67,11 +67,37 @@ const Auth = () => {
     setPasswordError(false);
   };
 
-  const handleUsernameChange = (e) => {
-    const input = e.target.value;
-    setUsername(input);
-    validateUsername(input);
-  };
+    const handleUsernameChange = (e) => {
+        const input = e.target.value;
+
+        // Проверяем, начинается ли ввод с цифры
+        if (input === '' || /^\d/.test(input)) {
+            // Удаляем все символы, кроме цифр
+            const digits = input.replace(/\D/g, '');
+
+            // Ограничиваем количество цифр до 10
+            const limitedDigits = digits.slice(0, 10);
+
+            // Форматируем номер телефона
+            const formattedNumber = formatPhoneNumber(limitedDigits);
+            setUsername(formattedNumber);
+        } else {
+            // Если первый символ не цифра, просто обновляем состояние
+            setUsername(input);
+        }
+        validateUsername(input);
+    };
+
+    // Принцип форматирования номера телефона
+    const formatPhoneNumber = (digits) => {
+        if (digits.length === 0) return '';
+        if (digits.length === 1) return `+7 ${digits}`;
+        if (digits.length === 2) return `+7 (${digits.slice(0, 1)}) ${digits.slice(1)}`;
+        if (digits.length === 3) return `+7 (${digits.slice(0, 3)}) `;
+        if (digits.length <= 6) return `+7 (${digits.slice(0, 3)}) ${digits.slice(3)}`;
+        if (digits.length <= 8) return `+7 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+        return `+7 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 8)}-${digits.slice(8, 10)}`;
+    };
 
   const handlePasswordChange = (e) => {
     const input = e.target.value;
@@ -111,6 +137,8 @@ const Auth = () => {
                                             type="text"
                                             id="login"
                                             name="login"
+                                            autoComplete="username"
+                                            maxLength="13"
                                             value={username}
                                             onChange={handleUsernameChange}
                                             required

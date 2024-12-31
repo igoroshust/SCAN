@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { fetchResults } from '../../API/API';
 
 import SummaryTable from './SummaryTable/SummaryTable';
 import DocumentCardList from './DocumentCardList/DocumentCardList';
@@ -36,95 +37,9 @@ const Result = () => {
         setIsLoading(true);
         setIsError(false);
 
-    // Выполняем запросы к API
-    try {
-
-      // Получаем гистрограммы
-      const histogramResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('accessToken')}`, // извлекаем токен доступа из localStorage
-        },
-        body: JSON.stringify(searchParams), // сериализуем searchParams в JSON и передаём в теле запроса
-        credentials: 'omit',
-      });
-
-      // Проверяем ответ на успешность
-      if (!histogramResponse.ok) {
-        throw new Error(`Ошибка HTTP! Статус: ${histogramResponse.status}`);
-      }
-
-      // Получение данных гистограммы
-      const histogramData = await histogramResponse.json(); // ответ преобразуется в JSON
-
-      // Получение идентификаторов публикаций
-      const publicationIdsResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
-        },
-        body: JSON.stringify(searchParams),
-        credentials: 'omit',
-      });
-
-      // Проверка ответа на успешность
-      if (!publicationIdsResponse.ok) {
-        throw new Error(`Ошибка HTTP! Статус: ${publicationIdsResponse.status}`);
-      }
-
-      // Извлечение идентификаторов публикаций
-      const publicationIdsData = await publicationIdsResponse.json(); // преобразуем ответ в JSON
-      const publicationIds = publicationIdsData.items.map(item => item.encodedId); // сохраняем идентификаторы публикаций
-      console.log("Количество публикаций:", publicationIds.length);
-
-      // Проверка наличия идентификаторов публикаций
-      if (publicationIds.length === 0) {
-        console.error('Публикации с указанными ID не найдены.');
-        setIsError(true);
-        setIsLoading(false);
-        return;
-      }
-
-      // Получение списка документов
-      const documentsResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/documents', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
-        },
-        body: JSON.stringify({ ids: publicationIds }), // используем идентификатор публикаций для получения документов
-        credentials: 'omit',
-      });
-
-      console.log("DOCUMENT - ", documentsResponse);
-      console.log("PUBLICATION IDS - ", publicationIdsData);
-      console.log("publicationIds IDS - ", publicationIds);
-
-      // Проверяем документ на успешность
-      if (!documentsResponse.ok) {
-        throw new Error(`Ошибка HTTP! Статус: ${documentsResponse.status}`);
-      }
-
-      // Извлечение данных документов
-      const documentsData = await documentsResponse.json(); // Преобразуем ответ от API в JSON
-
-      // Устанавливаем состояние с полученными данными
-      setSearchData(histogramData); // Фиксируем состояние, используя данные гистограммы из первого запроса
-      setDocumentsData(documentsData); // Фиксируем состояние, используя данные документов из третьего запроса
-      setIsAllDataLoaded(true); // Фиксируем состояние, указывающее, что все данные были успешно загружены
-    }
-    // Обработка ошибок
-    catch (error) {
-      console.error("Ошибка при выполнении запроса:", error.message);
-      setIsError(true);
-    }
-    // Завершение загрузки
-    finally {
-      setIsLoading(false);
-    }
-  }, [location.state?.searchParams]);
+        // Вызов функции API для получения данных
+        await fetchResults(searchParams, setSearchData, setDocumentsData, setIsError, setIsLoading, setIsAllDataLoaded);
+    }, [location.state]);
 
   // Автоматическая загрузка данных при монтировании компонента или изменении параметров поиска
   useEffect(() => {

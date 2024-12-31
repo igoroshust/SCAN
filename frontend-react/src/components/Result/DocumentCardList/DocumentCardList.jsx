@@ -6,7 +6,7 @@ import cardOne from '../../../assets/images/result/card-one-full-result.png';
 const DocumentCardList = React.memo(({ documentsData }) => {
 
     const [documents, setDocuments] = useState([]);
-    const [shownDocuments, setShownDocuments] = useState(2); // Количество отображаемых документов
+    const [shownDocuments, setShownDocuments] = useState(10); // Количество отображаемых документов
 
     useEffect(() => {
         // Проверяем, существует ли documentsData и является ли он массивом
@@ -41,7 +41,7 @@ const DocumentCardList = React.memo(({ documentsData }) => {
 
     // Подгрузка документов
     const showMoreDocuments = () => {
-        setShownDocuments(prev => prev + 2);
+        setShownDocuments(prev => prev + 10);
     };
 
     return (
