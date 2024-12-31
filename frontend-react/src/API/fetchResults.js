@@ -1,4 +1,4 @@
-// API.js
+// Получаем данные о постах на основании запроса
 export async function fetchResults(searchParams, setSearchData, setDocumentsData, setIsError, setIsLoading, setIsAllDataLoaded) {
     try {
         // Получаем гистограммы

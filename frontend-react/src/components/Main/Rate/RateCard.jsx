@@ -14,7 +14,10 @@ const RateCard = ({
 
 }) => {
     return(
-                    <div className={`rate__card rate__card-${title.toLowerCase()}`}>
+
+                    <div
+                        className={`rate__card rate__card-${title.toLowerCase()}`}
+                        style={{ outline: isActive && isLoggedIn ? '2px solid #FFB64F': ''}}>
 
                         <div className={`rate__header rate__header-${title.toLowerCase()}`}>
                             <div className="rate__title">

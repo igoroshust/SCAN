@@ -30,6 +30,8 @@
     --btn-signup: #C7C7C7;
     --auth-label-color: #949494;
     --result-badge-yellow: #FFB64F;
+
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
 body {
@@ -40,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+
 }
 
 h1, h2, h3 {

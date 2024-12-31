@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { formatPhoneNumber } from '../../utils/Auth/formatPhoneNumber';
+import { AuthAPI } from '../../API/authAPI';
 
 import keyAuth from '../../assets/images/auth/key.png';
 import googleAuth from '../../assets/images/auth/google.svg';
@@ -29,34 +31,9 @@ const Auth = () => {
     const handleLogin = async (event) => {
         event.preventDefault(); // предотвращение перезагрузки страницы по умолчанию
 
-    try {
-      const response = await fetch('https://gateway.scan-interfax.ru/api/v1/account/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify({
-          login: username,
-          password: password,
-        }),
-      });
+    // Вызов функции API для получения данных
+        await AuthAPI(username, password, navigate, setIsLoggedIn, setUsernameError, setPasswordError);
 
-      const data = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem('accessToken', data.accessToken);
-        localStorage.setItem('tokenExpire', data.expire);
-        setIsLoggedIn(true);
-        navigate('/');
-      } else {
-        throw new Error(data.message || 'Ошибка при входе');
-      }
-    } catch (error) {
-      console.error('Ошибка аутентификации:', error);
-      setUsernameError(true);
-      setPasswordError(true);
-    }
   };
 
   const validateUsername = (input) => {
@@ -86,17 +63,6 @@ const Auth = () => {
             setUsername(input);
         }
         validateUsername(input);
-    };
-
-    // Принцип форматирования номера телефона
-    const formatPhoneNumber = (digits) => {
-        if (digits.length === 0) return '';
-        if (digits.length === 1) return `+7 ${digits}`;
-        if (digits.length === 2) return `+7 (${digits.slice(0, 1)}) ${digits.slice(1)}`;
-        if (digits.length === 3) return `+7 (${digits.slice(0, 3)}) `;
-        if (digits.length <= 6) return `+7 (${digits.slice(0, 3)}) ${digits.slice(3)}`;
-        if (digits.length <= 8) return `+7 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
-        return `+7 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6, 8)}-${digits.slice(8, 10)}`;
     };
 
   const handlePasswordChange = (e) => {

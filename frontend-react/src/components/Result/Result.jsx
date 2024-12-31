@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { fetchResults } from '../../API/API';
+import { fetchResults } from '../../API/fetchResults';
 
 import SummaryTable from './SummaryTable/SummaryTable';
 import DocumentCardList from './DocumentCardList/DocumentCardList';
