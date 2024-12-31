@@ -155,23 +155,17 @@ return (
 
         <SummaryTable searchData={searchData} isLoading={isLoading} isError={isError} />
 
-        <section className="documents">
-            <h3 className="documents__title paragraph-30">Список документов</h3>
-            <div className="documents__column">
-                {isError ? (
-                    <p className="error-message">Произошла ошибка при загрузке данных. Пожалуйста, попробуйте позже.</p>
-                ) : (
+        {isError ? (
+            <p className="error-message">Произошла ошибка при загрузке данных. Пожалуйста, попробуйте позже.</p>
+        ) : (
+            <>
+                {!isLoading && isAllDataLoaded && (
                     <>
-                        {!isLoading && isAllDataLoaded && (
-                            <>
-                                <DocumentCardList documentsData={documentsData} />
-                                <button className="btn documents__btn documents__btn_show-more paragraph-22-500-white">Показать больше</button>
-                            </>
-                        )}
+                        <DocumentCardList documentsData={documentsData} />
                     </>
                 )}
-            </div>
-        </section>
+            </>
+        )}
     </div>
 </div>
 );

@@ -49,6 +49,9 @@ const DocumentCardList = React.memo(({ documentsData }) => {
             <h3 className="documents__title paragraph-30">Список документов</h3>
 
                 <div className="documents__column">
+
+
+
                      <div className="documents__row">
                         {renderedDocuments}
                      </div>

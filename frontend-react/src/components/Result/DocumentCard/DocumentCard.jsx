@@ -43,7 +43,7 @@ const DocumentCard = (props) => {
 
                       {/* Категория (бэйджик) */}
                       <div className="documents-card__badge">
-                          <p className="documents-card__badge documents-card__badge-technical-news paragraph-12">{ props.badge }</p>
+                          <p className="documents-card__badge documents-card__badge-technical-news paragraph-12">{ badge }</p>
                       </div>
 
                       {/* Изображение */}
@@ -59,7 +59,7 @@ const DocumentCard = (props) => {
                       {/* Читать в источнике + счётчик слов */}
                       <div className="documents-card__footer">
                           <a className="btn documents-card__footer-btn paragraph-16-black" href={props.url} target='_blank' rel="noopener noreferrer">Читать в источнике</a>
-                          <p className="documents-card__footer-paragraph paragraph-16-gray">{ props.wordCount }</p>
+                          <p className="documents-card__footer-paragraph paragraph-16-gray">{ props.wordCount } слов</p>
                       </div>
 
                   </div>

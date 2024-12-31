@@ -109,9 +109,9 @@ const Search = () => {
             // Фильтры для атрибутов
             attributeFilters: {
               // Нужно ли исключать определённые типы новостей (значения берутся из состояния чек-боксов)
-              excludeTechNews: !checkboxState.includeMarketNews,
-              excludeAnnouncements: !checkboxState.includeAnnouncements,
-              excludeDigests: !checkboxState.includeNewsSummaries,
+              excludeTechNews: !checkboxState.addTechNews,
+              excludeAnnouncements: !checkboxState.addAnnouncements,
+              excludeDigests: !checkboxState.addNewsBulletins,
             },
 
             // Максимальное количество возвращаемых документов

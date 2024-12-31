@@ -1208,7 +1208,7 @@ img {
 .result__content {
     width: 509px;
     /* height: 180px; */
-    padding: 40px 20px 40px 0px;
+    padding: 0px 20px 40px 0px;
 }
 
 .result__text {
