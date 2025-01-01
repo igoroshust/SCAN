@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import arrowLeft from '../../../assets/images/UI/arrow-left.svg';
 import arrowRight from '../../../assets/images/UI/arrow-right.svg';
@@ -9,19 +9,19 @@ import manFactoids from '../../../assets/images/main/man-factoids.png';
 
 const Factoids = () => {
 
-  const sliderRef = React.useRef(null);
+  const sliderRef = useRef(null);
 
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft -= window.innerWidth / 3;
-    }
-  };
+  // Управление горизонтальной прокруткой элемента таблицы
+    const scrollFactoids = (direction) => {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const scrollAmount = direction === 'left'
+            ? -parseInt(rootStyles.getPropertyValue('--scroll-factoids-amount-left'))
+            : parseInt(rootStyles.getPropertyValue('--scroll-factoids-amount-right'));
 
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft += window.innerWidth / 3;
-    }
-  };
+        if (sliderRef.current) {
+            sliderRef.current.scrollLeft += scrollAmount; // прокрутка элемента
+        }
+    };
 
     return (
          <section className="factoids" id="factoids">
@@ -29,7 +29,7 @@ const Factoids = () => {
               <h2 className="factoids__title paragraph-45">ПОЧЕМУ ИМЕННО МЫ</h2>
                 <div className="factoids__column">
 
-                    <button className="slider__btn slider__btn-prev" onClick={scrollLeft}>
+                    <button className="slider__btn slider__btn-prev" onClick={() => scrollFactoids('left')}>
                         <img src={arrowLeft} alt="СКАН стрелочка влево" />
                     </button>
 
@@ -50,7 +50,7 @@ const Factoids = () => {
                         </div>
                     </div>
 
-                    <button className="slider__btn slider__btn-next" onClick={scrollRight}>
+                    <button className="slider__btn slider__btn-next" onClick={() => scrollFactoids('right')}>
                         <img src={arrowRight}  alt="СКАН стрелочка вправо" />
                     </button>
 

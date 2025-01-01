@@ -19,6 +19,7 @@ const Result = () => {
     const [isError, setIsError] = useState(false);
     const [isAllDataLoaded, setIsAllDataLoaded] = useState(false);
 
+
     useEffect(() => {
         if (!isLoggedIn) {
           navigate('/auth');

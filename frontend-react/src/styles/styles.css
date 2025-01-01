@@ -33,8 +33,10 @@
 
     scroll-behavior: smooth; /* Плавная прокрутка */
 
-    --scroll-amount-left: 300px; /* Значение по умолчанию */
-    --scroll-amount-right: 300px; /* Значение по умолчанию */
+    --scroll-factoids-amount-left: 425px;
+    --scroll-factoids-amount-right: 425px;
+    --scroll-amount-left: 300px;
+    --scroll-amount-right: 300px;
 }
 
 body {
@@ -1714,6 +1716,10 @@ img {
 
 /* ---------------- Поиск (search) ----------------*/
 
+    .search__content >:nth-child(3) {
+        margin-top: 35px;
+    }
+
     .search__title {
         font-size: 35px;
     }
@@ -1758,7 +1764,6 @@ img {
 
     .search-btn {
         width: 343px;
-        font-size: 18px;
     }
 
     .auth-btn__btn-login.search-btn {
@@ -2289,6 +2294,10 @@ img {
         font-size: 18px;
     }
 
+    .header__text_btn {
+        width: 400px;
+    }
+
     .header__img {
         bottom: 0px;
         width: 100%;
@@ -2299,6 +2308,7 @@ img {
         width: 550px;
         height: 517px;
     }
+
 
     /* Factoids */
 
@@ -2382,11 +2392,16 @@ img {
 
     /* Factoids */
     .factoids__content {
-        width: 40%;
+        width: 420px;
     }
 
     .slider__btn-next {
-        right: 720px;
+        left: 185px;
+    }
+
+     :root {
+        --scroll-factoids-amount-left: 425px;
+        --scroll-factoids-amount-right: 425px;
     }
 
     .factoids__item {
@@ -2454,6 +2469,10 @@ img {
 
     .header__paragraph {
         font-size: 16px;
+    }
+
+    .header__text_btn {
+        width: 360px;
     }
 
     .header__img {
@@ -2581,7 +2600,16 @@ img {
 
     /* Factoids */
     .factoids__content {
-        width: 32%;
+        width: 420px;
+    }
+
+    .slider__btn-next {
+        left: 425px;
+    }
+
+    :root {
+        --scroll-factoids-amount-left: 425px;
+        --scroll-factoids-amount-right: 425px;
     }
 
     .factoids__column {
@@ -2611,7 +2639,7 @@ img {
     }
 
     .slider__btn {
-        top: 20%;
+        top: 115px;
     }
 
     /* ---------------- Результаты Поиска ----------- */
@@ -2731,7 +2759,28 @@ img {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 510px) {
+
+  /* ---------------- Главная страница ---------------- */
+  /* Factoids */
+    .factoids__content {
+        width: 320px;
+    }
+
+    :root {
+        --scroll-factoids-amount-left: 325px;
+        --scroll-factoids-amount-right: 325px;
+    }
+
+    .slider__btn-next {
+        left: 160px;
+    }
+
+    .factoids__item {
+        flex: 0 0 300px; /* Устанавливаем фиксированную ширину для каждого элемента */
+    }
+
+
 
   /* ---------------- Поиск (search) ----------------*/
     .container {
@@ -2845,6 +2894,12 @@ img {
         font-size: 30px;
     }
 
+    .header__text_btn {
+        width: 260px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .header__paragraph {
         font-size: 14px;
         width: 300px;
@@ -2876,16 +2931,20 @@ img {
     }
 
     .factoids__content {
-        width: 25%;
+        width: 310px;
+    }
+
+    :root {
+        --scroll-factoids-amount-left: 325px;
+        --scroll-factoids-amount-right: 325px;
     }
 
     .slider__btn-next {
-        right: 995px;
+        left: 120px;
     }
 
     .factoids__item {
-        flex: 0 0 340px;
-        padding: 10px;
+        flex: 0 0 300px; /* Устанавливаем фиксированную ширину для каждого элемента */
     }
 
     .factoids__img img{
@@ -2896,7 +2955,6 @@ img {
     .factoids-paragraph {
         font-size: 15px;
     }
-
 
 }
 
@@ -3032,18 +3090,25 @@ img {
     }
 
     .factoids__content {
-        width: 20%;
+        width: 290px;
+    }
+
+    :root {
+        --scroll-factoids-amount-left: 305px;
+        --scroll-factoids-amount-right: 305px;
     }
 
     .slider__btn-next {
-        right: 1075px;
+        left: 75px;
     }
 
     .factoids__item {
-        flex: 0 0 278px;
-        padding: 10px;
+        flex: 0 0 280px;/* Устанавливаем фиксированную ширину для каждого элемента */
     }
 
+    .factoids__item img {
+        width: 50px;
+    }
 
     .factoids-paragraph {
         font-size: 15px;
@@ -3115,6 +3180,11 @@ img {
         left: 280px;
     }
 
+    /* Factoids */
+    .factoids__item {
+        height: 240px;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -3136,19 +3206,21 @@ img {
     }
 
     .factoids__content {
-        width: 18%;
+        width: 230px;
+    }
+
+    :root {
+        --scroll-factoids-amount-left: 245px;
+        --scroll-factoids-amount-right: 245px;
     }
 
     .slider__btn-next {
-        right: 1105px;
+        width: 30px;
+        left: 260px;
     }
 
     .factoids__item {
-        flex: 0 0 250px;
-        padding: 10px;
-    }
-
-    .factoids__img {
+        flex: 0 0 220px; /* Устанавливаем фиксированную ширину для каждого элемента */
     }
 
     .factoids-paragraph {

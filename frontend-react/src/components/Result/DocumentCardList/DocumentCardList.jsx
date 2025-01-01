@@ -54,8 +54,6 @@ const DocumentCardList = React.memo(({ documentsData }) => {
 
                 <div className="documents__column">
 
-
-
                      <div className="documents__row">
                         {renderedDocuments}
                      </div>

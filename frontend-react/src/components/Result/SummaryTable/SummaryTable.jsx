@@ -5,7 +5,7 @@ import Spinner from '../../UI/Spinner';
 const SummaryTable = ({ searchData, isLoading, isError }) => {
     const [combinedData, setCombinedData] = useState([]);
     const [totalDataCount, setTotalDataCount] = useState(0);
-    const tableRow = useRef(null); // tableWrapperRef
+    const tableRow = useRef(null);
 
     // Управление прокруткой элемента
     useEffect(() => {
@@ -57,7 +57,7 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
                         {/* Класс для выравнивания ячеек в линию и расположению стрелочек */}
                         <div className="table__row paragraph-20" ref={tableRow}>
                             {isLoading ? (
-                                <div className="loading-container">
+                                <div className="loading-container" style={{ textAlign: 'center' }}>
                                     <Spinner />
                                     <p>Загружаем данные...</p>
                                 </div>
