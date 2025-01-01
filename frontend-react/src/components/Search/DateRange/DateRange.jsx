@@ -27,10 +27,10 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
 
     return(
         <div className="search-form__section search-form__section_item-4">
-            <label className="paragraph-18" htmlFor="startDate">Диапазон поиска<span className="paragraph-25-500">*</span></label><br />
+            <label className="paragraph-18" htmlFor="startDate">Диапазон поиска<span className="paragraph-25-500">*</span></label>
             <div className="search-form_section__row">
                 <input
-                    className="search-form__select-small search-form__select-small_item-1 paragraph-14"
+                    className="search-form__select-small search-form__select-small_item-1 sf_el paragraph-14"
                     type={startValue}
                     onFocus={() => setStartValue('date')}
                     onBlur={() => {
@@ -45,7 +45,7 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
                  />
 
                 <input
-                    className="search-form__select-small search-form__select-small_item-2 paragraph-14"
+                    className="search-form__select-small search-form__select-small_item-2 sf_el paragraph-14"
                     type={endValue}
                     onFocus={() => setEndValue('date')}
                     onBlur={() => {

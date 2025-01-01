@@ -24,9 +24,9 @@ const Document = ({ documentsCount, setDocumentsCount }) => {
 
     return(
         <div className="search-form__section search-form__section_item-3">
-            <label className="paragraph-18" htmlFor="documentsCount">Количество документов в выдаче<span className="paragraph-25-500">*</span></label><br />
+            <label className="paragraph-18" htmlFor="documentsCount">Количество документов в выдаче<span className="paragraph-25-500">*</span></label>
             <input
-                className="search-form__input paragraph-14"
+                className="search-form__input sf_el paragraph-14"
                 type="number"
                 id="documentsCount"
                 name="documentsCount"
