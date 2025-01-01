@@ -33,7 +33,7 @@ const DocumentCard = (props) => {
                       {/* Дата и источник документа */}
                       <div className="documents-card__info">
                           <p className="documents-card__info_paragraph documents-card__info_paragraph-date paragraph-16-gray">{ props.date }</p>
-                          <a className="anchor-gray documents-card__info_paragraph documents-card__info_paragraph-source paragraph-16-gray">{ props.sourceName }</a>
+                          <p className="documents-card__info_paragraph documents-card__info_paragraph-source paragraph-16-gray" style={{ hover : 'unset' }}>{ props.sourceName }</p>
                       </div>
 
                       {/* Заголовок */}

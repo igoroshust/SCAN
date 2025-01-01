@@ -737,7 +737,7 @@ img {
 }
 
 .rate__list {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .rate__list li {
@@ -769,7 +769,6 @@ img {
 
     text-align: center;
     border-radius: 5px;
-
 }
 
 .btn__rate-beginner {
@@ -1228,6 +1227,11 @@ img {
 }
 
 /* Таблица */
+.table-section {
+    margin-top: 30px;
+    position: relative;
+}
+
 .table {
     width: 1260px; /* 1260 */
     height: 158px;
@@ -1241,11 +1245,6 @@ img {
     background: var(--bg-color-white);
     border-radius: 8px;
     border: 3px solid var(--footer-color);
-}
-
-.table-section {
-    margin-top: 30px;
-    position: relative;
 }
 
 .table__header {
@@ -1605,6 +1604,17 @@ img {
 @media (max-width: 1386px) {
 
     /* ---------------- Главная страница ----------------*/
+    .header__title {
+        font-size: 45px;
+    }
+
+    .header__text_btn {
+        font-size: 20px;
+    }
+
+    .header__paragraph {
+        font-size: 18px;
+    }
 
     /* Factoids */
     .factoids__content {
@@ -1627,24 +1637,18 @@ img {
         font-size: 15px;
     }
 
-    .header__title {
-        font-size: 45px;
+    .factoids__img {
+        width: 1200px;
     }
 
-    .header__text_btn {
-        font-size: 20px;
+    .factoids__img img {
+        width: 500px;
     }
 
-    .header__paragraph {
-        font-size: 18px;
-    }
-
-    .rate__row {
-        flex-wrap: nowrap;
-    }
-
-    .rate__card {
-        width: calc((100% - 37px) / 2);
+    .factoids__img::after {
+        content: "";
+        width: 600px;
+        height: 500px;
     }
 
     .rate__title {
@@ -1663,6 +1667,27 @@ img {
         font-size: 16px;
     }
 
+    .rate__tax-paragraph {
+        font-size: 19px;
+    }
+
+    .rate__list li {
+        font-size: 16px;
+    }
+
+    .rate__row {
+        flex-wrap: nowrap;
+    }
+
+    .rate__card {
+        width: calc((100% - 37px) / 2);
+    }
+
+    .btn__rate {
+        padding: 17px 5px 0px 5px;
+        font-size: 18px;
+    }
+
 /* ---------------- Поиск (search) ----------------*/
 
     .search__title {
@@ -1673,9 +1698,20 @@ img {
         font-size: 18px;
     }
 
+    .search__form {
+        padding: 20px 20px 70px 20px;
+    }
+
+    .search-form__checkboxes__column {
+        margin-left: 20px;
+    }
+
     .search-form__section,
-     .search-form__section label,
-      .check label {
+     .search-form__section label {
+        font-size: 16px;
+    }
+
+    .check span {
         font-size: 16px;
     }
 
@@ -1692,11 +1728,15 @@ img {
     }
 
     .search-button__button {
-       margin-bottom: 15px;
+
     }
 
     .search-btn {
         width: 310px;
+    }
+
+    .auth-btn__btn-login.search-btn {
+        font-size: 18px;
     }
 
     .search__img img {
@@ -1747,6 +1787,52 @@ img {
     .auth-btn__btn-login {
         font-size: 18px;
     }
+
+    /* ------------------------ Результаты Поиска ---------------------- */
+
+    .result__title {
+        font-size: 35px;
+    }
+
+    .result__paragraph {
+        font-size: 18px;
+    }
+
+    .summary__title,
+    .documents__title {
+        font-size: 30px;
+    }
+
+    .summary__paragraph {
+        font-size: 16px;
+    }
+
+    .table {
+        width: 1200px; /* 1260 */
+    }
+
+    .table__header,
+    .table__row {
+        font-size: 18px;
+    }
+
+    .carousel-button.right {
+        right: 75px;
+    }
+
+    .documents-card__info_paragraph {
+        font-size: 14px;
+    }
+
+    .documents-card__title {
+        font-size: 23px;
+    }
+
+    .documents-card__badge {
+        font-size: 12px;
+    }
+
+
 }
 
 @media (max-width: 1345px) {
@@ -1764,6 +1850,20 @@ img {
     .result__row {
         gap: 50px;
     }
+}
+
+@media (max-width: 1326px) {
+
+    /* ------------------------ Результаты Поиска ---------------------- */
+
+    .table {
+        width: 1120px; /* 1260 */
+    }
+
+    .carousel-button.right {
+        right: 155px;
+    }
+
 }
 
 @media (max-width: 1248px) {
@@ -1794,6 +1894,29 @@ img {
 
     .documents__btn_show-more {
         transform: translateX(309px);
+    }
+
+    /* ------------------------ Результаты Поиска ---------------------- */
+
+    .table {
+        width: 1050px;
+    }
+
+    .carousel-button.right {
+        right: 225px;
+    }
+
+}
+
+@media (max-width: 1170px) {
+   /* ------------------------ Результаты Поиска ---------------------- */
+
+    .table {
+        width: 950px;
+    }
+
+    .carousel-button.right {
+        right: 325px;
     }
 }
 
@@ -1868,7 +1991,29 @@ img {
     }
 }
 
+@media (max-width: 1070px) {
+   /* ------------------------ Результаты Поиска ---------------------- */
+    .table {
+        width: 880px;
+    }
+
+    .carousel-button.right {
+        right: 395px;
+    }
+}
+
+
 @media (max-width: 1000px) {
+
+    /* ------------------------ Результаты Поиска ---------------------- */
+    .table {
+        width: 800px;
+    }
+
+    .carousel-button.right {
+        right: 475px;
+    }
+
     .documents__row {
         flex-direction: column;
     }
@@ -2160,6 +2305,37 @@ img {
         gap: 0px;
     }
 
+    .table {
+        width: 725px;
+    }
+
+    .carousel-button.right {
+        right: 550px;
+    }
+}
+
+@media (max-width: 845px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        width: 680px;
+    }
+
+    .carousel-button.right {
+        right: 595px;
+    }
+}
+
+@media (max-width: 801px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        width: 600px;
+    }
+
+    .carousel-button.right {
+        right: 675px;
+    }
 }
 
 @media (max-width: 776px) {
@@ -2263,6 +2439,18 @@ img {
     .auth__title {
         font-size: 25px;
         /* margin-left: 120px; */
+    }
+}
+
+@media (max-width: 721px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        width: 525px;
+    }
+
+    .carousel-button.right {
+        right: 750px;
     }
 }
 
@@ -2370,6 +2558,56 @@ img {
         width: 450px;
     }
 
+}
+
+@media (max-width: 645px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        flex-direction: column;
+        height: auto;
+        width: 450px;
+    }
+
+    .table__header {
+        width: 447px;
+        flex-direction: row;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .table__data {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0px;
+        min-width: 430px;
+    }
+
+    .table__data::after {
+        display: none;
+    }
+
+    .carousel-button.right {
+        left: 480px;
+    }
+
+}
+
+@media (max-width: 571px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        width: 380px;
+    }
+
+    .table__header {
+        width: 377px;
+    }
+    .table__data {
+        min-width: 380px;
+    }
+
+    .carousel-button.right {
+        left: 410px;
+    }
 }
 
 
@@ -2481,6 +2719,26 @@ img {
     }
 }
 
+@media (max-width: 469px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        width: 320px;
+    }
+
+    .table__header {
+        width: 317px;
+        font-size: 14px;
+    }
+    .table__data {
+        min-width: 300px;
+        font-size: 14px;
+    }
+
+    .carousel-button.right {
+        left: 350px;
+    }
+}
 
 @media (max-width: 450px) {
 
@@ -2583,30 +2841,7 @@ img {
         font-size: 15px;
     }
 
-    /* --------------- Результаты Поиска ----------- */
-    .table {
-        flex-direction: column;
-        height: auto;
-        width: 350px;
-    }
 
-    .table__header {
-        width: 347px;
-        flex-direction: row;
-        border-radius: 5px 5px 0px 0px;
-    }
-    .table__data {
-        flex-direction: row;
-        min-width: 350px;
-    }
-
-    .table__data::after {
-        display: none;
-    }
-
-    .carousel-button.right {
-        left: 380px;
-    }
 }
 
 @media (max-width: 390px) {
@@ -2784,6 +3019,40 @@ img {
         font-size: 14px;
         margin-left: 10px;
     }
+
+    .table {
+        width: 290px;
+    }
+
+    .table__header {
+        width: 287px;
+    }
+    .table__data {
+        min-width: 300px;
+    }
+
+    .carousel-button.right {
+        left: 320px;
+    }
+}
+
+@media (max-width: 353px) {
+    /* ----------- Результаты Поиска ------------- */
+    .table {
+        width: 250px;
+    }
+
+    .table__header {
+        width: 247px;
+    }
+    .table__data {
+        min-width: 240px;
+    }
+
+    .carousel-button.right {
+        left: 300px;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -2822,6 +3091,11 @@ img {
 
     .factoids-paragraph {
         font-size: 15px;
+    }
+
+    /* ----------- Результаты Поиска ------------- */
+    .carousel-button.right {
+        left: 280px;
     }
 }
 

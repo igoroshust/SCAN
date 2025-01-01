@@ -43,7 +43,7 @@ const RateCard = ({
                             </div>
 
                             <div className="rate__tax">
-                                <p className="rate__tax-paragraph paragraph-20-500">В тариф входит:</p>
+                                <p className="rate__tax-paragraph paragraph-20-500">В тариф входит:</p> <br />
 
                                 {traits.map((trait, index) => (
                                 <ul key={index} className="rate__list">
