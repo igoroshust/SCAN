@@ -1,12 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { formatDate, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
-
 import Spinner from '../../UI/Spinner';
 
 const SummaryTable = ({ searchData, isLoading, isError }) => {
     const [combinedData, setCombinedData] = useState([]);
     const [totalDataCount, setTotalDataCount] = useState(0);
-
     const tableRow = useRef(null); // tableWrapperRef
 
     // Управление прокруткой элемента
@@ -18,22 +16,24 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
 
     useEffect(() => {
         if (searchData && !isError) {
-            // Получаем данные из общего количества документов
             const totalDocuments = searchData.data.find(histogram => histogram.histogramType === 'totalDocuments');
-            // Если totalDocuments найден
             if (totalDocuments) {
-                const total = totalDocuments.data.reduce((acc, item) => acc + item.value, 0); // суммируем значения item.value
-                setTotalDataCount(total); // устанавливаем общее количество в состояние для дальнейшего использования в компоненте.
+                const total = totalDocuments.data.reduce((acc, item) => acc + item.value, 0);
+                setTotalDataCount(total);
             }
 
-            const combined = combineDataByDate(searchData.data); // объединяем данные
-            setCombinedData(combined); // устанавливаем объединенные данные в состояние для дальнейшего использования
+            const combined = combineDataByDate(searchData.data);
+            setCombinedData(combined);
         }
     }, [searchData, isError]);
 
     // Управление горизонтальной прокруткой элемента таблицы
     const scrollTable = (direction) => {
-        const scrollAmount = direction === 'left' ? -300 : 300; // определяем величину прокрутки
+        const rootStyles = getComputedStyle(document.documentElement);
+        const scrollAmount = direction === 'left'
+            ? -parseInt(rootStyles.getPropertyValue('--scroll-amount-left'))
+            : parseInt(rootStyles.getPropertyValue('--scroll-amount-right'));
+
         if (tableRow.current) {
             tableRow.current.scrollLeft += scrollAmount; // прокрутка элемента
         }

@@ -60,7 +60,7 @@ const DocumentCard = (props) => {
                           {props.url ? (
                           <a className="btn documents-card__footer-btn paragraph-16-black" href={props.url} target='_blank' rel="noopener noreferrer">Читать в источнике</a>
                            ) : (
-                          <a className={`btn documents-card__footer-btn paragraph-16-black disabled`} style={{ opacity: 0.5 }} tabIndex="-1">Читать в источнике</a>
+                          <a className={`btn documents-card__footer-btn paragraph-16-black disabled`} style={{ opacity: 0.5 }}>Читать в источнике</a>
                              )}
                           <p className="documents-card__footer-paragraph paragraph-16-gray">{ props.wordCount } слов</p>
                       </div>

@@ -2,11 +2,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import DocumentCard from '../DocumentCard/DocumentCard';
 
 import cardOne from '../../../assets/images/result/card-one-full-result.png';
+import cardTwo from '../../../assets/images/result/card-two-full-result.png';
 
 const DocumentCardList = React.memo(({ documentsData }) => {
 
     const [documents, setDocuments] = useState([]);
     const [shownDocuments, setShownDocuments] = useState(10); // Количество отображаемых документов
+
+    // Массив изображений
+    const cardImages = [cardOne, cardTwo];
 
     useEffect(() => {
         // Проверяем, существует ли documentsData и является ли он массивом
@@ -20,7 +24,7 @@ const DocumentCardList = React.memo(({ documentsData }) => {
                 isTechNews: doc.ok.attributes.isTechNews,
                 isAnnouncement: doc.ok.attributes.isAnnouncement,
                 isDigest: doc.ok.attributes.isDigest,
-                image: cardOne,
+                image: cardImages[Math.floor(Math.random() * cardImages.length)],
                 content: doc.ok.content.markup,
                 url: doc.ok.url,
                 wordCount: doc.ok.attributes.wordCount,
@@ -31,9 +35,9 @@ const DocumentCardList = React.memo(({ documentsData }) => {
         }
     }, [documentsData]); // Выполняем каждый раз, когда значение documentsData изменяется
 
+    // Получаем необходимые для отображения документы
     const renderedDocuments = useMemo(() => {
 
-        // Получаем необходимые для отображения документы
         return documents.slice(0, shownDocuments).map((document, index) => (
             <DocumentCard key={index} {...document} />
         ));

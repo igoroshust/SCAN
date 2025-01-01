@@ -32,6 +32,9 @@
     --result-badge-yellow: #FFB64F;
 
     scroll-behavior: smooth; /* Плавная прокрутка */
+
+    --scroll-amount-left: 300px; /* Значение по умолчанию */
+    --scroll-amount-right: 300px; /* Значение по умолчанию */
 }
 
 body {
@@ -1355,6 +1358,7 @@ img {
     margin-top: 58px;
 
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 38px;
 }
@@ -1365,10 +1369,11 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 38px;
+
 }
 
 .documents__card {
-    width: calc((100% - 2 * 38px) / 2); /* flex-direction: column, width: auto; */
+    width: calc((100% - 2 * 38px) / 2);
     height: 720px;
 
     border-radius: 10px;
@@ -1386,7 +1391,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Возможно, не обязательный параметр */
+    height: 100%;
 }
 
 /* Отступы для flex-элементов */
@@ -2496,6 +2501,42 @@ img {
     }
 }
 
+@media (max-width: 645px) {
+
+    /* ---------------- Результаты Поиска ----------- */
+    .table {
+        flex-direction: column;
+        height: auto;
+        width: 450px;
+    }
+
+     :root {
+        --scroll-amount-left: 430px; /* Значение для мобильных устройств */
+        --scroll-amount-right: 430px; /* Значение для мобильных устройств */
+    }
+
+    .table__header {
+        width: 447px;
+        flex-direction: row;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .table__data {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0px;
+        min-width: 430px;
+    }
+
+    .table__data::after {
+        display: none;
+    }
+
+    .carousel-button.right {
+        left: 480px;
+    }
+
+}
+
 @media (max-width: 600px) {
 
   /* ---------------- Поиск (search) ----------------*/
@@ -2598,42 +2639,16 @@ img {
 
 }
 
-@media (max-width: 645px) {
-
-    /* ---------------- Результаты Поиска ----------- */
-    .table {
-        flex-direction: column;
-        height: auto;
-        width: 450px;
-    }
-
-    .table__header {
-        width: 447px;
-        flex-direction: row;
-        border-radius: 5px 5px 0px 0px;
-    }
-    .table__data {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 0px;
-        min-width: 430px;
-    }
-
-    .table__data::after {
-        display: none;
-    }
-
-    .carousel-button.right {
-        left: 480px;
-    }
-
-}
-
 @media (max-width: 571px) {
 
     /* ---------------- Результаты Поиска ----------- */
     .table {
         width: 380px;
+    }
+
+    :root {
+        --scroll-amount-left: 380px; /* Значение для мобильных устройств */
+        --scroll-amount-right: 380px; /* Значение для мобильных устройств */
     }
 
     .table__header {
@@ -2758,6 +2773,12 @@ img {
     /* ---------------- Результаты Поиска ----------- */
     .table {
         width: 320px;
+    }
+
+
+    :root {
+        --scroll-amount-left: 300px; /* Значение для мобильных устройств */
+        --scroll-amount-right: 300px; /* Значение для мобильных устройств */
     }
 
     .table__header {
@@ -3055,6 +3076,11 @@ img {
         width: 290px;
     }
 
+    :root {
+        --scroll-amount-left: 300px; /* Значение для мобильных устройств */
+        --scroll-amount-right: 300px; /* Значение для мобильных устройств */
+    }
+
     .table__header {
         width: 287px;
     }
@@ -3071,6 +3097,11 @@ img {
     /* ----------- Результаты Поиска ------------- */
     .table {
         width: 250px;
+    }
+
+    :root {
+        --scroll-amount-left: 240px; /* Значение для мобильных устройств */
+        --scroll-amount-right: 240px; /* Значение для мобильных устройств */
     }
 
     .table__header {
