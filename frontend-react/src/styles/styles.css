@@ -99,6 +99,21 @@ img {
     border-bottom: 2px solid var(--auth-label-color);
 }
 
+.btn {
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.btn.disabled {
+    pointer-events: none; /* Отключает все события мыши */
+    cursor: not-allowed; /* Изменяет курсор на "недоступно" */
+    opacity: 0.5; /* Уменьшает непрозрачность */
+}
+
+.btn.disabled:hover {
+    background-color: initial; /* Убираем эффект ховера для неактивной кнопки */
+    color: inherit; /* Убираем изменение цвета текста при ховере */
+}
+
 
 /* ----------------------------------------- Параграфы (форматирование текста) -------------------------------------- */
 
@@ -1466,7 +1481,7 @@ img {
     border-radius: 5px;
     background: var(--btn-bg-color);
 
-    transform: translateX(509px);
+    transform: translateX(480px);
 }
 
 
@@ -1838,7 +1853,10 @@ img {
         font-size: 12px;
     }
 
-
+    /* Кнопка "Показать больше" */
+    .documents__btn_show-more {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1345px) {

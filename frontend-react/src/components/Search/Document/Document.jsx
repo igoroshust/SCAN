@@ -4,6 +4,7 @@ const Document = ({ documentsCount, setDocumentsCount }) => {
 
     const [error, setError] = useState('');
 
+    // Валидация поля "Количество документов"
     const validDocument = () => {
         const count = parseInt(documentsCount, 10);
 

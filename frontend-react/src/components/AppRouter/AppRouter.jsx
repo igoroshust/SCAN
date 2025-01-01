@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import '../../styles/styles.css';
 import userPhotoDefault from '../../assets/images/main/user-nav.png';
@@ -30,6 +30,28 @@ const AppRouter = () => {
     useEffect(() => {
         checkAuthStatus();
     }, [checkAuthStatus]);
+
+    // Изменение заголовка страницы в зависимости от текущего маршрута
+    const location = useLocation();
+
+    useEffect(() => {
+        switch (location.pathname) {
+            case '/':
+                document.title = 'СКАН - Сервис по поиску публикаций о компании';
+                break;
+            case '/auth':
+                document.title = 'СКАН - Авторизация';
+                break;
+            case '/search':
+                document.title = 'СКАН - Поиск информации о компании';
+                break;
+            case '/results':
+                document.title = 'СКАН - Результаты поиска';
+                break;
+            default:
+                document.title = 'СКАН - Сервис по поиску публикаций о компании';
+        }
+    }, [location]);
 
     return(
                <>

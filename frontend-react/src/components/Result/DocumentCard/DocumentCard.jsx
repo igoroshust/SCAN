@@ -2,23 +2,22 @@ import React, { useEffect, useState } from 'react';
 
 // Декодирование html-сущностей в обычный текст
 function decodeHtml(html) {
-  const txt = document.createElement("textarea"); // созданный textarea автоматически обрабатывает html-сущности
-  txt.innerHTML = html; // устанавливаем содержимое элемента textarea равным переданному html-коду
-  return txt.value; // получаем декодированное значение
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
 }
 
-// Очистка html-контента (удаляем все html-теги, оставляем только текст)
+// Очистка html-контента
 function cleanHtmlContent(htmlContent) {
-  const decodedHtml = decodeHtml(htmlContent); // декодируем любые html-сущности
-  const cleanedContent = decodedHtml.replace(/(<([^>]+)>)/gi, ""); // удаляем все html-теги из декодированного текста
-  return cleanedContent; // получаем очищенный контент
+  const decodedHtml = decodeHtml(htmlContent);
+  const cleanedContent = decodedHtml.replace(/(<([^>]+)>)/gi, "");
+  return cleanedContent;
 }
 
 const DocumentCard = (props) => {
-
     const [cleanContent, setCleanContent] = useState('');
+    const isActive = Boolean(props.url); // Определяем, активна ли кнопка
 
-    // Устанавливаем очищенный контент при монтировании или изменении props.content
     useEffect(() => {
         setCleanContent(cleanHtmlContent(props.content));
     }, [props.content]);
@@ -33,7 +32,7 @@ const DocumentCard = (props) => {
                       {/* Дата и источник документа */}
                       <div className="documents-card__info">
                           <p className="documents-card__info_paragraph documents-card__info_paragraph-date paragraph-16-gray">{ props.date }</p>
-                          <p className="documents-card__info_paragraph documents-card__info_paragraph-source paragraph-16-gray" style={{ hover : 'unset' }}>{ props.sourceName }</p>
+                          <p className="documents-card__info_paragraph documents-card__info_paragraph-source paragraph-16-gray">{ props.sourceName }</p>
                       </div>
 
                       {/* Заголовок */}
@@ -58,7 +57,11 @@ const DocumentCard = (props) => {
 
                       {/* Читать в источнике + счётчик слов */}
                       <div className="documents-card__footer">
+                          {props.url ? (
                           <a className="btn documents-card__footer-btn paragraph-16-black" href={props.url} target='_blank' rel="noopener noreferrer">Читать в источнике</a>
+                           ) : (
+                          <a className={`btn documents-card__footer-btn paragraph-16-black disabled`} style={{ opacity: 0.5 }} tabIndex="-1">Читать в источнике</a>
+                             )}
                           <p className="documents-card__footer-paragraph paragraph-16-gray">{ props.wordCount } слов</p>
                       </div>
 

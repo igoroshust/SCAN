@@ -4,6 +4,7 @@ const TIN = ({ companyTIN, setCompanyTIN }) => {
 
     const [error, setError] = useState('');
 
+    // Валидация поля ИНН
     const validTIN = (inn) => {
         let errorObj = { code: 0, message: '' };
         let result = false;

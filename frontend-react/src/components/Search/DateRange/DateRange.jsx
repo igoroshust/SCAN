@@ -6,10 +6,7 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
     const [startValue, setStartValue] = useState('text');
     const [endValue, setEndValue] = useState('text');
 
-    useEffect(() => {
-        validDateRange();
-    }, [startDate, endDate]);
-
+    // Валидация поля "Диапазон Поиска"
     const validDateRange = () => {
         const currentDate = new Date();
         currentDate.setHours(0, 0, 0, 0);
@@ -24,6 +21,10 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
             setError("");
         }
     };
+
+     useEffect(() => {
+        validDateRange();
+    }, [startDate, endDate]);
 
     return(
         <div className="search-form__section search-form__section_item-4">
