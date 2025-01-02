@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { validDocument } from '../../../utils/Search/FormValidation';
 
 const Document = ({ documentsCount, setDocumentsCount }) => {
 
     const [error, setError] = useState('');
 
-    // Валидация поля "Количество документов"
-    const validDocument = () => {
-        const count = parseInt(documentsCount, 10);
-
-        if (!documentsCount) {
-            setError("Обязательное поле");
-        } else if (isNaN(count) || count < 1) {
-            setError("Введите корректные данные");
-        } else if (count > 1000) {
-            setError("Введите корректные данные");
-        } else {
-            setError("");
-        }
-    };
-
+    // Валидация
     useEffect(() => {
-        validDocument();
+        const validationError = validDocument(documentsCount);
+        setError(validationError);
     }, [documentsCount]);
 
     return(

@@ -1373,6 +1373,7 @@ img {
 }
 
 .documents__card {
+    max-width: 100%;
     width: calc((100% - 2 * 38px) / 2);
     height: 720px;
 
