@@ -29,3 +29,12 @@ export const combineDataByDate = (data) => {
      // возвращаем массив значений, отсортированный по дате (периоду)
     return Object.values(combinedData).sort((a, b) => new Date(a.period) - new Date(b.period));
 };
+
+// Функция для форматирования числа
+export const formatNumber = (num) => {
+    if (num > 9999) {
+        const strNum = num.toString();
+        return `${strNum.slice(0, 2)} ${strNum.slice(2)}`; // добавляем пробел между первыми двумя цифрами и остальными
+    }
+    return num.toString(); // возвращаем число как строку, если оно меньше или равно 9999
+};

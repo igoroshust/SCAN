@@ -1494,6 +1494,13 @@ img {
 
 /* ---------------------------------------------------- Footer ------------------------------------------------------ */
 
+/* Стили для родительского компонента для фиксации футера в React */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Устанавливаем минимальную высоту для всего приложения */
+}
+
 .footer__sticky {
     flex-grow: 1;
 }
@@ -2757,6 +2764,23 @@ img {
     .nav > :nth-child(2) {
         margin-left: 0px; /* 100px для шапки с кнопками "Зарегистрироваться | Войти" */
     }
+
+    /* Страница не найдена */
+
+    .not-found {
+        width: 400px;
+    }
+
+    .result__title-not-found {
+        font-size: 25px;
+    }
+
+    .result__paragraph-not-found {
+        font-size: 16x;
+    }
+
+
+
 }
 
 @media (max-width: 510px) {
@@ -3183,6 +3207,16 @@ img {
     /* Factoids */
     .factoids__item {
         height: 240px;
+    }
+
+    /* Страница не найдена */
+
+    .not-found {
+        width: 300px;
+    }
+
+    .result__img-not-found img {
+        width: 350px !important;
     }
 
 }

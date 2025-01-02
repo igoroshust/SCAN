@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router
 import { useAuth } from '../../context/AuthContext';
 import '../../styles/styles.css';
 import userPhotoDefault from '../../assets/images/main/user-nav.png';
+import NotFound from '../NotFound/NotFound';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
@@ -54,7 +55,8 @@ const AppRouter = () => {
     }, [location]);
 
     return(
-               <>
+        <>
+            <div className="footer__sticky">
                    <Header
                     isLoggedIn={isLoggedIn}
                     userName={userName}
@@ -71,12 +73,13 @@ const AppRouter = () => {
                     <Route path="/auth" element={<Auth />} />
                     <Route path="/search" element={isLoggedIn ? <Search /> : <Auth redirectBack="/search" />} />
                     <Route path="/results" element={isLoggedIn ? <Result /> : <Auth redirectBack="/results" />} />
+                    <Route path="*" element={<NotFound />}/>
                 </Routes>
 
                 </Suspense>
-                <Footer />
-
-                </>
+              </div>
+             <Footer />
+             </>
     );
 };
 

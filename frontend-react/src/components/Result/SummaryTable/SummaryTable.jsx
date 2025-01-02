@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { formatDate, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
+import { formatDate, formatNumber, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
 import Spinner from '../../UI/Spinner';
 
 const SummaryTable = ({ searchData, isLoading, isError }) => {
@@ -7,21 +7,17 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
     const [totalDataCount, setTotalDataCount] = useState(0);
     const tableRow = useRef(null);
 
-    // Управление прокруткой элемента
-    useEffect(() => {
-        if (tableRow.current) {
-            tableRow.current.scrollLeft = 0;
-        }
-    }, [combinedData]);
-
+    /* Обаботка данных поиска документов */
     useEffect(() => {
         if (searchData && !isError) {
+            // Поиск данных на соотстветствие
             const totalDocuments = searchData.data.find(histogram => histogram.histogramType === 'totalDocuments');
             if (totalDocuments) {
+                // Расчёт общего количества документов
                 const total = totalDocuments.data.reduce((acc, item) => acc + item.value, 0);
                 setTotalDataCount(total);
             }
-
+            // Комбинирование данных по дате
             const combined = combineDataByDate(searchData.data);
             setCombinedData(combined);
         }
@@ -43,7 +39,7 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
         <section className="summary">
             <div className="summary__column">
                 <h3 className="summary__title paragraph-30">Общая сводка</h3>
-                <p className="summary__paragraph paragraph-18-300">Найдено {totalDataCount} вариантов</p>
+                <p className="summary__paragraph paragraph-18-300">Найдено {formatNumber(totalDataCount)} вариантов</p>
 
                 <div className="table-section">
                     <div className="table">
