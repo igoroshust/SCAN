@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { formatDate, formatNumber, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
+import { formatNumber, combineDataByDate } from '../../../utils/Result/SummaryTableFormat'; // форматирование данных
 import Spinner from '../../UI/Spinner';
 
 const SummaryTable = ({ searchData, isLoading, isError }) => {
+
     const [combinedData, setCombinedData] = useState([]);
     const [totalDataCount, setTotalDataCount] = useState(0);
     const tableRow = useRef(null);
@@ -69,8 +70,10 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
                                 ))
                             )}
                         </div>
+
                         <button className="carousel-button left" onClick={() => scrollTable('left')}></button>
                         <button className="carousel-button right" onClick={() => scrollTable('right')}></button>
+
                     </div>
                 </div>
             </div>

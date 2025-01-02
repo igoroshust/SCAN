@@ -1,5 +1,5 @@
 // Авторизация пользователя (отправка данных)
-export async function AuthAPI(username, password, navigate, setIsLoggedIn, setUsernameError, setPasswordError) {
+export async function authAPI(username, password, navigate, setIsLoggedIn, setUsernameError, setPasswordError) {
 
     try {
       const response = await fetch('https://gateway.scan-interfax.ru/api/v1/account/login', {
@@ -24,6 +24,7 @@ export async function AuthAPI(username, password, navigate, setIsLoggedIn, setUs
       } else {
         throw new Error(data.message || 'Ошибка при входе');
       }
+
     } catch (error) {
       console.error('Ошибка аутентификации:', error);
       setUsernameError(true);

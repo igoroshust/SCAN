@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useAuth } from '../../../context/AuthContext';
-import userPhotoDefault from '../../../assets/images/main/user-nav.png';
 import '../../../scripts/customscript.js';
 import Spinner from '../../UI/Spinner';
 

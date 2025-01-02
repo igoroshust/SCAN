@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-
 import arrowLeft from '../../../assets/images/UI/arrow-left.svg';
 import arrowRight from '../../../assets/images/UI/arrow-right.svg';
 import clockFacts from '../../../assets/images/main/clock-facts.svg';

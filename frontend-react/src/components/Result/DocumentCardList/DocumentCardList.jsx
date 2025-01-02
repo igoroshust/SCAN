@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import DocumentCard from '../DocumentCard/DocumentCard';
-
 import cardOne from '../../../assets/images/result/card-one-full-result.png';
 import cardTwo from '../../../assets/images/result/card-two-full-result.png';
 

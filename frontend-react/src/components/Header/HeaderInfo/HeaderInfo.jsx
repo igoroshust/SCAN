@@ -5,7 +5,7 @@ import Spinner from '../../UI/Spinner';
 
 const HeaderInfo = ({ isLoggedIn }) => {
 
-    const { setIsLoggedIn } = useAuth();
+    const { setIsLoggedIn } = useAuth(); // аутентификация
 
     const [usedCompanyCount, setUsedCompanyCount] = useState(0); // Использовано компаний
     const [companyLimit, setCompanyLimit] = useState(0); // Лимит по компаниям

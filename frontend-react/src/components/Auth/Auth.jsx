@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { formatPhoneNumber } from '../../utils/Auth/formatPhoneNumber';
-import { AuthAPI } from '../../API/authAPI';
-
+import { authAPI } from '../../API/authAPI';
 import keyAuth from '../../assets/images/auth/key.png';
 import googleAuth from '../../assets/images/auth/google.svg';
 import facebookAuth from '../../assets/images/auth/facebook.svg';
 import yandexAuth from '../../assets/images/auth/yandex.svg';
 
 const Auth = () => {
+
     const [username, setUsername] = useState('');
-    const [usernameError, setUsernameError] = useState(false);
     const [password, setPassword] = useState('');
+    const [usernameError, setUsernameError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
     const isButtonActive = password.trim().length > 0;
 
@@ -27,7 +27,7 @@ const Auth = () => {
 
     const handleLogin = async (event) => {
         event.preventDefault();
-        await AuthAPI(username, password, navigate, setIsLoggedIn, setUsernameError, setPasswordError);
+        await authAPI(username, password, navigate, setIsLoggedIn, setUsernameError, setPasswordError);
     };
 
     const validateUsername = (input) => {
@@ -127,7 +127,8 @@ const Auth = () => {
                                         href="#!"
                                         title="Опция недоступна"
                                         role="button"
-                                    >Восстановить пароль</a>
+                                    >
+                                    Восстановить пароль</a>
                                 </div>
 
                                 <div className="authorization-form__oauth">

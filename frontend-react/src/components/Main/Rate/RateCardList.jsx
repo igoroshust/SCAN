@@ -1,10 +1,8 @@
 import React from 'react';
-
+import RateCard from './RateCard';
 import lampRate from '../../../assets/images/main/lamp-rate.png';
 import goalRate from '../../../assets/images/main/goal-rate.png';
 import laptopRate from '../../../assets/images/main/laptop-rate.png';
-
-import RateCard from './RateCard';
 
 const Rate = ({ isLoggedIn, userRate }) => {
     return (

@@ -47,7 +47,6 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
     return () => clearInterval(interval);
   }, [setIsLoggedIn]);
 
-
     return (
         <header className="header">
             <div className="container">

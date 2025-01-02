@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import womenHeader from '../../../assets/images/main/women-header-2.png';
 
 const MeetUs = ({ isLoggedIn }) => {

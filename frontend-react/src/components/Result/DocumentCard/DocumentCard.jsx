@@ -15,6 +15,7 @@ function cleanHtmlContent(htmlContent) {
 }
 
 const DocumentCard = (props) => {
+
     const [cleanContent, setCleanContent] = useState('');
     const isActive = Boolean(props.url); // Определяем, активна ли кнопка
 

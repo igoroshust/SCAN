@@ -9,10 +9,10 @@ const NotFound = () => {
                 <section className="result">
                         <div className="result__row">
                             <div className="result__content not-found">
-                                <h2 className="result__title result__title-not-found">Страница не найдена.</h2>
+                                <h2 className="result__title result__title-not-found"><span style={{ color: 'var(--footer-color)' }}>404</span> <br /> Страница не найдена.</h2>
                                 <div className="result__text result__text-not-found">
                                     <p className="result__paragraph result__paragraph-not-found paragraph-20">
-                                        Проверьте корректность указанного адреса, и повторите попытку снова.
+                                        Проверьте корректность адреса и повторите попытку снова.
                                     </p>
                                 </div>
                             </div>
@@ -21,8 +21,8 @@ const NotFound = () => {
                             </div>
                         </div>
                     </section>
-                    </div>
-                    </div>
+               </div>
+          </div>
     );
 };
 

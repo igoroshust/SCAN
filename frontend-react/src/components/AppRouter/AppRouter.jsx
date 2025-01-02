@@ -35,7 +35,7 @@ const AppRouter = () => {
     // Изменение заголовка страницы в зависимости от текущего маршрута
     const location = useLocation();
 
-    useEffect(() => {
+       useEffect(() => {
         switch (location.pathname) {
             case '/':
                 document.title = 'СКАН - Сервис по поиску публикаций о компании';
@@ -50,7 +50,7 @@ const AppRouter = () => {
                 document.title = 'СКАН - Результаты поиска';
                 break;
             default:
-                document.title = 'СКАН - Сервис по поиску публикаций о компании';
+                document.title = 'СКАН - Страница не найдена';
         }
     }, [location]);
 

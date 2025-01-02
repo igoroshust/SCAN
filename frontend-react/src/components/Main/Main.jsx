@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
 import MeetUs from './MeetUs/MeetUs';
 import Factoids from './Factoids/Factoids';
 import RateCardList from './Rate/RateCardList';

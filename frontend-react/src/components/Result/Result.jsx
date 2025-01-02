@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { fetchResults } from '../../API/fetchResults';
-
 import SummaryTable from './SummaryTable/SummaryTable';
 import DocumentCardList from './DocumentCardList/DocumentCardList';
 import womenResult from '../../assets/images/result/women-result.png';
@@ -49,41 +48,41 @@ const Result = () => {
 
 return (
     <div class="results">
-    <div className="container">
-        {isLoading && (
-            <section className="result">
-                <div className="result__row">
-                    <div className="result__content">
-                        <h2 className="result__title paragraph-40">ИЩЕМ. СКОРО БУДУТ РЕЗУЛЬТАТЫ</h2>
-                        <div className="result__text">
-                            <p className="result__paragraph paragraph-20">
-                                Поиск может занять некоторое время, <br />
-                                просим сохранять терпение.
-                            </p>
+        <div className="container">
+            {isLoading && (
+                <section className="result">
+                    <div className="result__row">
+                        <div className="result__content">
+                            <h2 className="result__title paragraph-40">ИЩЕМ. СКОРО БУДУТ РЕЗУЛЬТАТЫ</h2>
+                            <div className="result__text">
+                                <p className="result__paragraph paragraph-20">
+                                    Поиск может занять некоторое время, <br />
+                                    просим сохранять терпение.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="result__img">
+                            <img src={womenResult} alt="СКАН Результаты поиска" />
                         </div>
                     </div>
-                    <div className="result__img">
-                        <img src={womenResult} alt="СКАН Результаты поиска" />
-                    </div>
-                </div>
-            </section>
-        )}
+                </section>
+            )}
 
-        <SummaryTable searchData={searchData} isLoading={isLoading} isError={isError} />
+            <SummaryTable searchData={searchData} isLoading={isLoading} isError={isError} />
 
-        {isError ? (
-            <p className="error-message">Произошла ошибка при загрузке данных. Пожалуйста, попробуйте позже.</p>
-        ) : (
-            <>
-                {!isLoading && isAllDataLoaded && (
-                    <>
-                        <DocumentCardList documentsData={documentsData} />
-                    </>
-                )}
-            </>
-        )}
+            {isError ? (
+                <p className="error-message">Произошла ошибка при загрузке данных. Пожалуйста, попробуйте позже.</p>
+            ) : (
+                <>
+                    {!isLoading && isAllDataLoaded && (
+                        <>
+                            <DocumentCardList documentsData={documentsData} />
+                        </>
+                    )}
+                </>
+            )}
+        </div>
     </div>
-</div>
 );
 
 };
