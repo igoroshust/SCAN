@@ -1,19 +1,19 @@
 import React, { memo } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
-const Navigation = memo(() => {
+const Navigation = memo(({ onNavItemClick }) => { // добавляем пропс
 
     const navigate = useNavigate();
 
-    /* Переход на главную страницу при клике на якорную ссылку */
     const handleAnchorClick = (anchor) => {
         navigate('/', { state: { anchor } });
+        onNavItemClick(); // вызываем функцию для скрытия подложки
     };
 
     return (
         <ul className="nav__list nav__list-header">
             <li>
-                <NavLink to="/" className={"anchor paragraph-14"}>
+                <NavLink to="/" className={"anchor paragraph-14"} onClick={onNavItemClick}>
                     Главная
                 </NavLink>
             </li>

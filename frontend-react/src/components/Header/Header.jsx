@@ -47,6 +47,20 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
     return () => clearInterval(interval);
   }, [setIsLoggedIn]);
 
+     // Функция для скрытия подложки
+    const hideNav = () => {
+        const nav = document.querySelector('.nav');
+        const menuIcon = document.querySelector('.menu-icon');
+        const logo = document.querySelector('.nav__logo_logo-header img');
+
+        nav.classList.remove('nav--mobile'); // скрываем подложку
+        menuIcon.classList.remove('menu-icon-active'); // убираем анимацию кнопки
+        document.body.classList.remove('no-scroll'); // восстанавливаем скролл на подложке
+
+        // Восстанавливаем логотип
+        logo.src = logoHeader;
+    };
+
     return (
         <header className="header">
             <div className="container">
@@ -57,7 +71,7 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
                         </div>
 
                         {/* Главная, тарифы, FAQ */}
-                        <Navigation />
+                        <Navigation onNavItemClick={hideNav}/>
 
                         {isLoggedIn ? (
 

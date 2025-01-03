@@ -1,9 +1,11 @@
 import logoFooter from '../assets/images/main/logo-footer.png';
 import logoHeader from '../assets/images/main/logo-header.png';
 
+
 window.onload = () => { // код выполняется после загрузки DOM
 
     const navBtn = document.querySelector('.nav__toggle'); // находим кнопку
+    const navList = document.querySelector('.nav__list-header');
     const nav = document.querySelector('.nav');
     const menuIcon = document.querySelector('.menu-icon');
     const logo = document.querySelector('.nav__logo_logo-header img');
@@ -26,6 +28,5 @@ window.onload = () => { // код выполняется после загруз
     } else {
         console.error('Элемент с классом `.nav__toggle` не был найден');
     }
-
 };
 

@@ -1458,25 +1458,25 @@ img {
 .documents-card__footer {
     display: flex;
     justify-content: space-between;
-
-    align-items: flex-end;
-
+    align-items: center; /* Изменено на center для лучшего выравнивания */
     margin-top: auto;
-    position: absolute;
-    bottom: 30px;
-    width: calc(100% - 30px * 2);
+    gap: 60px;
+    position: absolute; /* Изменено с absolute на relative */
+    bottom: 30px; /* Установите ширину в 100% */
+    width: 90%;
 }
 
 .documents-card__footer-btn {
-    width: 223px;
+    flex: 1; /* Позволяет кнопке занимать доступное пространство */
     height: 47px;
-
     padding: 14px 33px;
     text-align: center;
-
     border-radius: 5px;
     background: var(--aquamarine);
+    width: 100%;
 }
+
+
 
 /* Кнопка "Показать больше" */
 .documents__btn_show-more {
@@ -2461,8 +2461,15 @@ img {
     }
 
     .search-button__button {
+       width: 100%;
+       max-width: 460px;
        margin-bottom: -10px;
-       margin-right: 50px;
+       margin-right: -10px;
+    }
+
+    .search-btn {
+        width: 100%;
+        max-width: 460px;
     }
 
     .search-paragraph-container {
@@ -2669,6 +2676,14 @@ img {
 
     .result__img img {
         width: 450px;
+    }
+
+    .documents-card__container {
+        padding: 19px 15px 20px 15px;
+    }
+
+    .documents-card__footer {
+        gap: 30px;
     }
 
     /* ---------------------- Поиск ---------------- */
@@ -3080,11 +3095,11 @@ img {
     .search-button__button {
        width: 100%;
        margin-bottom: -10px;
-       margin-right: -50px;
+       margin-right: -55px;
     }
 
     .search-btn {
-        width: 305px;
+        width: 300px;
     }
 
     .search-paragraph-container {
