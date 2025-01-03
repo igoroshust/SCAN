@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import userPhotoDefault from '../../assets/images/main/user-nav.png';
 import NotFound from '../NotFound/NotFound';
@@ -62,8 +62,7 @@ const AppRouter = () => {
                     setUserName={setUserName}
                     userLogo={userLogo}
                     setUserLogo={setUserLogo}
-
-                />
+                    />
 
                 <Suspense fallback={<div>Загрузка...</div>}>
 

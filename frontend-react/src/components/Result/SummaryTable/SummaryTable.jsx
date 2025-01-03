@@ -54,7 +54,7 @@ const SummaryTable = ({ searchData, isLoading, isError }) => {
                         {/* Класс для выравнивания ячеек в линию и расположению стрелочек */}
                         <div className="table__row paragraph-20" ref={tableRow}>
                             {isLoading ? (
-                                <div className="loading-container" style={{ textAlign: 'center' }}>
+                                <div className="loading-container">
                                     <Spinner />
                                     <p>Загружаем данные...</p>
                                 </div>

@@ -381,7 +381,6 @@ img {
     display: flex;
     gap: 3px;
     align-items: center;
-
 }
 
 .header__user-info {
@@ -915,7 +914,7 @@ img {
     padding: 0px 20px;
     margin-top: 15px;
 
-    border: 1px solid var(--search-form-placeholder); /* можно использовать inset */
+    border: 1px inset var(--search-form-placeholder);
     border-radius: 5px;
 }
 
@@ -1346,6 +1345,22 @@ img {
     right: 15px;
 
     position: absolute;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Список документов */
@@ -1904,6 +1919,10 @@ img {
         width: 1120px; /* 1260 */
     }
 
+    .loading-container {
+        right: 150px;
+    }
+
     .carousel-button.right {
         right: 155px;
     }
@@ -1957,6 +1976,10 @@ img {
 
     .table {
         width: 950px;
+    }
+
+    .loading-container {
+        right: 250px;
     }
 
     .carousel-button.right {
@@ -2041,6 +2064,10 @@ img {
         width: 880px;
     }
 
+    .loading-container {
+        left: -40px;
+    }
+
     .carousel-button.right {
         right: 395px;
     }
@@ -2052,6 +2079,10 @@ img {
     /* ------------------------ Результаты Поиска ---------------------- */
     .table {
         width: 800px;
+    }
+
+     .loading-container {
+        left: -110px;
     }
 
     .carousel-button.right {
@@ -2367,6 +2398,10 @@ img {
         width: 725px;
     }
 
+    .loading-container {
+        left: -180px;
+    }
+
     .carousel-button.right {
         right: 550px;
     }
@@ -2379,6 +2414,10 @@ img {
         width: 680px;
     }
 
+    .loading-container {
+        left: -200px;
+    }
+
     .carousel-button.right {
         right: 595px;
     }
@@ -2389,6 +2428,10 @@ img {
     /* ---------------- Результаты Поиска ----------- */
     .table {
         width: 600px;
+    }
+
+     .loading-container {
+        left: -270px;
     }
 
     .carousel-button.right {
@@ -2523,6 +2566,10 @@ img {
         width: 525px;
     }
 
+     .loading-container {
+        left: -350px;
+    }
+
     .carousel-button.right {
         right: 750px;
     }
@@ -2544,6 +2591,11 @@ img {
         flex-direction: column;
         height: auto;
         width: 450px;
+    }
+
+    .loading-container {
+        top: 60px;
+        left: -550px;
     }
 
      :root {
@@ -2697,6 +2749,11 @@ img {
     /* ---------------- Результаты Поиска ----------- */
     .table {
         width: 380px;
+    }
+
+    .loading-container {
+        top: 60px;
+        left: -620px;
     }
 
     :root {
@@ -2866,6 +2923,9 @@ img {
         width: 320px;
     }
 
+    .loading-container {
+        left: -700px;
+    }
 
     :root {
         --scroll-amount-left: 300px; /* Значение для мобильных устройств */
@@ -3183,6 +3243,10 @@ img {
         width: 290px;
     }
 
+     .loading-container {
+        left: -730px;
+    }
+
     :root {
         --scroll-amount-left: 300px; /* Значение для мобильных устройств */
         --scroll-amount-right: 300px; /* Значение для мобильных устройств */
@@ -3204,6 +3268,10 @@ img {
     /* ----------- Результаты Поиска ------------- */
     .table {
         width: 250px;
+    }
+
+    .loading-container {
+        left: -760px;
     }
 
     :root {

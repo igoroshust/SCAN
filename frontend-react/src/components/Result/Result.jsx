@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useLayoutEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { fetchResults } from '../../API/fetchResults';
@@ -46,8 +46,15 @@ const Result = () => {
     fetchResult();
   }, [fetchResult]);
 
+    // Прокрутка к началу страницы при обработке результатов поиска
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0); // Прокрутка к началу страницы
+        fetchResult();
+    }, [fetchResult]);
+
+
 return (
-    <div class="results">
+    <div className="results">
         <div className="container">
             {isLoading && (
                 <section className="result">
