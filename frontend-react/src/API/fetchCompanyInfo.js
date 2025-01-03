@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // Получаем информацию о компаниях
 export async function fetchCompanyInfo(setIsLoading, setUsedCompanyCount, setCompanyLimit) {
     setIsLoading(true); // устанавливаем состояние загрузки
@@ -11,8 +13,7 @@ export async function fetchCompanyInfo(setIsLoading, setUsedCompanyCount, setCom
     }
 
     try {
-        const response = await fetch(url, {
-            method: 'GET',
+        const response = await axios.get(url, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
@@ -20,20 +21,12 @@ export async function fetchCompanyInfo(setIsLoading, setUsedCompanyCount, setCom
             },
         });
 
-        // Проверяем, успешен ли ответ
-        if (!response.ok) {
-            throw new Error(`Ошибка HTTP! Статус: ${response.status}`);
-        }
-
-        // Парсим ответ как JSON
-        const data = await response.json();
-
         // Обновляем состояние с полученными данными
-        if (data.eventFiltersInfo) {
-            setUsedCompanyCount(data.eventFiltersInfo.usedCompanyCount); // Количество использованных компаний
-            setCompanyLimit(data.eventFiltersInfo.companyLimit); // Лимит компаний
+        if (response.data.eventFiltersInfo) {
+            setUsedCompanyCount(response.data.eventFiltersInfo.usedCompanyCount); // Количество использованных компаний
+            setCompanyLimit(response.data.eventFiltersInfo.companyLimit); // Лимит компаний
         } else {
-            console.log("Неверная структура данных: ", data);
+            console.log("Неверная структура данных: ", response.data);
         }
 
     } catch (error) {

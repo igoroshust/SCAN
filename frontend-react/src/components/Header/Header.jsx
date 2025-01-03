@@ -19,7 +19,7 @@ const Header = React.memo(({ isLoggedIn, userName, userLogo, setUserName, setUse
         setIsLoadingActions(true);
         setTimeout(() => {
             const userData = {
-                name: 'Игорь Ошуsadasdст',
+                name: 'Игорь Ошуст',
                 picture: userPhotoDefault
             };
             setUserName(formatName(userData.name));

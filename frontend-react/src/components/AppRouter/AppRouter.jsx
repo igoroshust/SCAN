@@ -1,7 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import '../../styles/styles.css';
 import userPhotoDefault from '../../assets/images/main/user-nav.png';
 import NotFound from '../NotFound/NotFound';
 import Header from '../Header/Header';

@@ -40,6 +40,7 @@ const Auth = () => {
 
     const handleUsernameChange = (e) => {
         const input = e.target.value;
+
         if (input === '' || /^\d/.test(input)) {
             const digits = input.replace(/\D/g, '');
             const limitedDigits = digits.slice(0, 10);

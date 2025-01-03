@@ -11,10 +11,6 @@ const HeaderInfo = ({ isLoggedIn }) => {
 
     /* Вызываем функцию для получения информации о компаниях */
    useEffect(() => {
-        // Отладочные сообщения
-        console.log("setIsLoading:", setIsLoading);
-        console.log("setUsedCompanyCount:", setUsedCompanyCount);
-        console.log("setCompanyLimit:", setCompanyLimit);
 
         // Вызываем функцию для получения информации о компаниях
         fetchCompanyInfo(setIsLoading, setUsedCompanyCount, setCompanyLimit);

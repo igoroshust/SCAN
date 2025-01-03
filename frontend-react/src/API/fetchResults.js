@@ -1,39 +1,27 @@
+import axios from 'axios';
+
 // Получаем данные о постах на основании запроса
 export async function fetchResults(searchParams, setSearchData, setDocumentsData, setIsError, setIsLoading, setIsAllDataLoaded) {
     try {
         // Получаем гистограммы
-        const histogramResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', {
-            method: 'POST',
+        const histogramResponse = await axios.post('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', searchParams, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
             },
-            body: JSON.stringify(searchParams),
-            credentials: 'omit',
         });
 
-        if (!histogramResponse.ok) {
-            throw new Error(`Ошибка HTTP! Статус: ${histogramResponse.status}`);
-        }
-
-        const histogramData = await histogramResponse.json();
+        const histogramData = histogramResponse.data;
 
         // Получение идентификаторов публикаций
-        const publicationIdsResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch', {
-            method: 'POST',
+        const publicationIdsResponse = await axios.post('https://gateway.scan-interfax.ru/api/v1/objectsearch', searchParams, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
             },
-            body: JSON.stringify(searchParams),
-            credentials: 'omit',
         });
 
-        if (!publicationIdsResponse.ok) {
-            throw new Error(`Ошибка HTTP! Статус: ${publicationIdsResponse.status}`);
-        }
-
-        const publicationIdsData = await publicationIdsResponse.json();
+        const publicationIdsData = publicationIdsResponse.data;
         const publicationIds = publicationIdsData.items.map(item => item.encodedId);
 
         if (publicationIds.length === 0) {
@@ -43,26 +31,20 @@ export async function fetchResults(searchParams, setSearchData, setDocumentsData
         }
 
         // Получение списка документов
-        const documentsResponse = await fetch('https://gateway.scan-interfax.ru/api/v1/documents', {
-            method: 'POST',
+        const documentsResponse = await axios.post('https://gateway.scan-interfax.ru/api/v1/documents', { ids: publicationIds }, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
             },
-            body: JSON.stringify({ ids: publicationIds }),
-            credentials: 'omit',
         });
 
-        if (!documentsResponse.ok) {
-            throw new Error(`Ошибка HTTP! Статус: ${documentsResponse.status}`);
-        }
-
-        const documentsData = await documentsResponse.json();
+        const documentsData = documentsResponse.data;
 
         // Устанавливаем состояние с полученными данными
         setSearchData(histogramData);
         setDocumentsData(documentsData);
         setIsAllDataLoaded(true);
+
     } catch (error) {
         console.error("Ошибка при выполнении запроса:", error.message);
         setIsError(true);
