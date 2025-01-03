@@ -10,11 +10,12 @@ export const validTIN = (inn) => {
         inn = '';
     }
 
-    // Проверка на пустое значение
-    if (!inn.length) {
-        errorMessage = 'Обязательное поле';
-      // Проверка на корректность данных
-    } else if (/[^0-9]/.test(inn)) {
+    // Проверка на пустую строку
+    if (inn.trim() === '') {
+        return { isValid: true, errorMessage: '' }; // Возвращаем, если строка пустая
+    }
+
+    if (/[^0-9]/.test(inn)) {
         errorMessage = 'Введите корректные данные';
     } else if ([10, 12].indexOf(inn.length) === -1) {
         errorMessage = 'Введите корректные данные';
@@ -52,13 +53,11 @@ export const validTIN = (inn) => {
     return { isValid: result, errorMessage }; // Возвращаем объект с результатом и сообщением об ошибке
 };
 
-// Валидация поля "Количество документов"
+// Валидация поля "Количество документов в выдаче"
 export const validDocument = (documentsCount) => {
     const count = parseInt(documentsCount, 10);
 
-    if (!documentsCount) {
-        return "Обязательное поле";
-    } else if (isNaN(count) || count < 1) {
+    if (count < 1) {
         return "Введите корректные данные";
     } else if (count > 1000) {
         return "Введите корректные данные";
@@ -72,9 +71,7 @@ export const validateDateRange = (startDate, endDate) => {
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
 
-    if (!startDate || !endDate) {
-        return "Обязательное поле";
-    } else if (new Date(startDate) > new Date(endDate)) {
+    if (new Date(startDate) > new Date(endDate)) {
         return "Введите корректные данные";
     } else if (new Date(startDate) > currentDate || new Date(endDate) > currentDate) {
         return "Невалидное значение";

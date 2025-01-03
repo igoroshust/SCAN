@@ -41,13 +41,27 @@ const Auth = () => {
     const handleUsernameChange = (e) => {
         const input = e.target.value;
 
-        if (input === '' || /^\d/.test(input)) {
-            const digits = input.replace(/\D/g, '');
-            const limitedDigits = digits.slice(0, 10);
-            const formattedNumber = formatPhoneNumber(limitedDigits);
-            setUsername(formattedNumber);
-        } else {
+        // Проверяем, стирает ли пользователь символы
+        const isDeleting = input.length < username.length;
+
+        if (isDeleting) {
+            // Если пользователь стирает символы, просто обновляем состояние без форматирования
             setUsername(input);
+        } else {
+            // Иначе применяем форматирование
+            const isPhoneStart = input && input.length === 1 && /^\d/.test(input?.[0]);
+            const isPhoneFormatted = input && input.startsWith('+');
+
+            if (isPhoneStart) {
+                const formattedPhone = formatPhoneNumber(input);
+                setUsername(formattedPhone);
+            } else if (isPhoneFormatted) {
+                const digits = input.replace(/\D/g, '').slice(1);
+                const formattedNumber = formatPhoneNumber(digits);
+                setUsername(formattedNumber);
+            } else {
+                setUsername(input);
+            }
         }
         validateUsername(input);
     };
@@ -89,7 +103,7 @@ const Auth = () => {
                                         id="login"
                                         name="login"
                                         autoComplete="username"
-                                        maxLength="13"
+                                        maxLength="20"
                                         value={username}
                                         onChange={handleUsernameChange}
                                         required

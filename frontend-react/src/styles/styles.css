@@ -1006,7 +1006,7 @@ img {
 
 .search__form {
     width: 872px;
-    height: 543px;
+    height: 510px;
     padding: 21px 38px 70px 45px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
@@ -1061,7 +1061,6 @@ img {
 
 .search-form_section__row {
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -1740,7 +1739,7 @@ img {
     }
 
     .search__form {
-        height: 500px;
+        height: 470px;
         padding: 20px 30px 70px 30px;
     }
 
@@ -2255,7 +2254,7 @@ img {
 
     .search__form {
         width: 700px;
-        height: 505px;
+        height: 477px;
         padding: 25px 25px 70px 25px;
     }
 
@@ -2443,7 +2442,7 @@ img {
 
     .search__form {
         width: 500px;
-        height: 600px;
+        height: 560px;
         padding: 20px 20px 50px 20px;
     }
 
@@ -2587,7 +2586,7 @@ img {
 
     .search__form {
         width: 400px;
-        height: 670px;
+        height: 630px;
         padding: 20px 20px 50px 20px;
     }
 
