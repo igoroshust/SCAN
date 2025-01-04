@@ -37,10 +37,10 @@ const AppRouter = () => {
        useEffect(() => {
         switch (location.pathname) {
             case '/':
-                document.title = 'СКАН - Сервис по поиску публикаций о компании';
+                document.title = 'СКАН - Главная страница';
                 break;
             case '/auth':
-                document.title = 'СКАН - Авторизация';
+                document.title = 'СКАН - Войти или зарегистрироваться';
                 break;
             case '/search':
                 document.title = 'СКАН - Поиск информации о компании';

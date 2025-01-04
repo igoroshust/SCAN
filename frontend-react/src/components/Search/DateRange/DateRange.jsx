@@ -24,6 +24,7 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
                     placeholder="Дата начала"
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
+                    onClick={(e) => e.target.showPicker()} // Способствует отображению в Firefox
                 />
 
                 <input
@@ -34,6 +35,7 @@ const DateRange = ({ startDate, setStartDate, endDate, setEndDate }) => {
                     placeholder="Дата конца"
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
+                    onClick={(e) => e.target.showPicker()}
                 />
             </div>
             {error && <div style={{ color: 'red', fontSize: '12px', textAlign: 'left' }}>{error}</div>}
